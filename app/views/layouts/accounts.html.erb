@@ -9,7 +9,11 @@
 </head>
 <body>
 
-<p style="color: green"><%= flash[:notice] %></p>
+<div id="flash">
+      <% flash.each do |key, value| -%>
+        <div id="flash_<%= key %>"><%=h value %></div>
+      <% end -%>
+</div>
 
 <%= yield %>
 

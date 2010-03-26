@@ -578,3 +578,559 @@ Processing AccountsController#index (for 127.0.0.1 at 2010-03-26 14:01:07) [GET]
 Rendering template within layouts/accounts
 Rendering accounts/index
 Completed in 53ms (View: 38, DB: 2) | 200 OK [http://0.0.0.0/]
+
+
+Processing AccountsController#new (for 127.0.0.1 at 2010-03-26 16:59:14) [GET]
+Rendering template within layouts/accounts
+Rendering accounts/new
+Completed in 54ms (View: 16, DB: 0) | 200 OK [http://0.0.0.0/accounts/new]
+
+
+Processing AccountsController#create (for 127.0.0.1 at 2010-03-26 16:59:32) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"Is6csqMj151ui8oXqJdu90C/QNo4DBJX0VqJw8wAuO8=", "account"=>{"comment"=>"", "name"=>"shrek", "url"=>"veilleur.tifauve.net", "password"=>"cacti13", "login"=>"admin"}}
+  [4;36;1mAccount Create (14.0ms)[0m   [0;1mINSERT INTO "accounts" ("name", "comment", "created_at", "updated_at", "url", "login", "password") VALUES('shrek', '', '2010-03-26 15:59:32', '2010-03-26 15:59:32', 'veilleur.tifauve.net', 'admin', 'cacti13')[0m
+Redirected to http://0.0.0.0:3000/accounts
+Completed in 55ms (DB: 14) | 302 Found [http://0.0.0.0/accounts]
+
+
+Processing AccountsController#index (for 127.0.0.1 at 2010-03-26 16:59:32) [GET]
+  [4;35;1mAccount Load (1.8ms)[0m   [0mSELECT * FROM "accounts" [0m
+Rendering template within layouts/accounts
+Rendering accounts/index
+Completed in 58ms (View: 42, DB: 2) | 200 OK [http://0.0.0.0/accounts]
+  [4;36;1mSQL (15.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateAccounts (20100313080135)
+Migrating to ClearanceCreateUsers (20100326185020)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255), "encrypted_password" varchar(128), "salt" varchar(128), "confirmation_token" varchar(128), "remember_token" varchar(128), "email_confirmed" boolean DEFAULT 'f' NOT NULL, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCREATE INDEX "index_users_on_id_and_confirmation_token" ON "users" ("id", "confirmation_token")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCREATE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCREATE INDEX "index_users_on_remember_token" ON "users" ("remember_token")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100326185020')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("accounts")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mPRAGMA index_list("users")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_info('index_users_on_remember_token')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_info('index_users_on_email')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_info('index_users_on_id_and_confirmation_token')[0m
+
+
+Processing AccountsController#index (for 127.0.0.1 at 2010-03-26 20:42:55) [GET]
+Redirected to http://0.0.0.0:3000/sign_in
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://0.0.0.0/accounts]
+
+
+Processing Clearance::SessionsController#new (for 127.0.0.1 at 2010-03-26 20:42:55) [GET]
+  Parameters: {"action"=>"new", "controller"=>"clearance/sessions"}
+Rendering sessions/new
+Completed in 124ms (View: 122, DB: 0) | 200 OK [http://0.0.0.0/sign_in]
+
+
+Processing Clearance::SessionsController#create (for 127.0.0.1 at 2010-03-26 20:42:59) [POST]
+  Parameters: {"commit"=>"Sign in", "session"=>{"password"=>"[FILTERED]", "email"=>""}, "action"=>"create", "authenticity_token"=>"Is6csqMj151ui8oXqJdu90C/QNo4DBJX0VqJw8wAuO8=", "controller"=>"clearance/sessions"}
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" = '') LIMIT 1[0m
+Rendering sessions/new (unauthorized)
+Completed in 95ms (View: 15, DB: 1) | 401 Unauthorized [http://0.0.0.0/session]
+
+
+Processing Clearance::SessionsController#create (for 127.0.0.1 at 2010-03-26 20:44:15) [POST]
+  Parameters: {"commit"=>"Sign in", "session"=>{"password"=>"[FILTERED]", "email"=>"toto"}, "action"=>"create", "authenticity_token"=>"Is6csqMj151ui8oXqJdu90C/QNo4DBJX0VqJw8wAuO8=", "controller"=>"clearance/sessions"}
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."email" = 'toto') LIMIT 1[0m
+Rendering sessions/new (unauthorized)
+Completed in 13ms (View: 5, DB: 0) | 401 Unauthorized [http://0.0.0.0/session]
+
+
+Processing Clearance::UsersController#new (for 127.0.0.1 at 2010-03-26 22:58:40) [GET]
+  Parameters: {"action"=>"new", "controller"=>"clearance/users"}
+Rendering users/new
+Rendered users/_form (12.2ms)
+Completed in 72ms (View: 53, DB: 0) | 200 OK [http://0.0.0.0/sign_up]
+
+
+Processing Clearance::UsersController#create (for 127.0.0.1 at 2010-03-26 22:58:47) [POST]
+  Parameters: {"commit"=>"Sign up", "action"=>"create", "authenticity_token"=>"Is6csqMj151ui8oXqJdu90C/QNo4DBJX0VqJw8wAuO8=", "controller"=>"clearance/users", "user"=>{"password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>"openlf@free.fr"}}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'openlf@free.fr') LIMIT 1[0m
+  [4;35;1mUser Create (0.4ms)[0m   [0mINSERT INTO "users" ("encrypted_password", "salt", "created_at", "updated_at", "remember_token", "confirmation_token", "email_confirmed", "email") VALUES('1dcdc8aaa8e2249a88eeb3543537bdb24614c09d', '5cf5d465a7d26aa13cc12429603c404fc9d5abab', '2010-03-26 21:58:48', '2010-03-26 21:58:48', 'a1536369cc9b844325b165a4488a0ce98954d3a2', '97fe6dab52301e3a7ca059f054ca3aaed8328ba6', 'f', 'openlf@free.fr')[0m
+Sent mail to openlf@free.fr
+
+Date: Fri, 26 Mar 2010 22:58:48 +0100
+From: donotreply@example.com
+To: openlf@free.fr
+Subject: Account confirmation
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+
+http://localhost:3000/users/1/confirmation/new?token=97fe6dab52301e3a7ca059f054ca3aaed8328ba6
+Redirected to http://0.0.0.0:3000/sign_in
+Completed in 313ms (DB: 1) | 302 Found [http://0.0.0.0/users]
+
+
+Processing Clearance::SessionsController#new (for 127.0.0.1 at 2010-03-26 22:58:48) [GET]
+  Parameters: {"action"=>"new", "controller"=>"clearance/sessions"}
+Rendering sessions/new
+Completed in 11ms (View: 8, DB: 0) | 200 OK [http://0.0.0.0/sign_in]
+
+
+Processing Clearance::SessionsController#create (for 127.0.0.1 at 2010-03-26 22:59:00) [POST]
+  Parameters: {"commit"=>"Sign in", "session"=>{"password"=>"[FILTERED]", "email"=>"openlf@free.fr"}, "action"=>"create", "authenticity_token"=>"Is6csqMj151ui8oXqJdu90C/QNo4DBJX0VqJw8wAuO8=", "controller"=>"clearance/sessions"}
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" = 'openlf@free.fr') LIMIT 1[0m
+Sent mail to openlf@free.fr
+
+Date: Fri, 26 Mar 2010 22:59:00 +0100
+From: donotreply@example.com
+To: openlf@free.fr
+Subject: Account confirmation
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+
+http://localhost:3000/users/1/confirmation/new?token=97fe6dab52301e3a7ca059f054ca3aaed8328ba6
+Redirected to http://0.0.0.0:3000/sign_in
+Completed in 59ms (DB: 1) | 302 Found [http://0.0.0.0/session]
+
+
+Processing Clearance::SessionsController#new (for 127.0.0.1 at 2010-03-26 22:59:00) [GET]
+  Parameters: {"action"=>"new", "controller"=>"clearance/sessions"}
+Rendering sessions/new
+Completed in 21ms (View: 15, DB: 0) | 200 OK [http://0.0.0.0/sign_in]
+
+
+Processing Clearance::SessionsController#create (for 127.0.0.1 at 2010-03-26 22:59:53) [POST]
+  Parameters: {"commit"=>"Sign in", "session"=>{"password"=>"[FILTERED]", "email"=>"openlf@free.fr"}, "action"=>"create", "authenticity_token"=>"Is6csqMj151ui8oXqJdu90C/QNo4DBJX0VqJw8wAuO8=", "controller"=>"clearance/sessions"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."email" = 'openlf@free.fr') LIMIT 1[0m
+Sent mail to openlf@free.fr
+
+Date: Fri, 26 Mar 2010 22:59:53 +0100
+From: donotreply@example.com
+To: openlf@free.fr
+Subject: Account confirmation
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+
+http://localhost:3000/users/1/confirmation/new?token=97fe6dab52301e3a7ca059f054ca3aaed8328ba6
+Redirected to http://0.0.0.0:3000/sign_in
+Completed in 15ms (DB: 0) | 302 Found [http://0.0.0.0/session]
+
+
+Processing Clearance::SessionsController#new (for 127.0.0.1 at 2010-03-26 22:59:53) [GET]
+  Parameters: {"action"=>"new", "controller"=>"clearance/sessions"}
+Rendering sessions/new
+Completed in 7ms (View: 5, DB: 0) | 200 OK [http://0.0.0.0/sign_in]
+
+
+Processing Clearance::ConfirmationsController#new (for 127.0.0.1 at 2010-03-26 23:00:24) [GET]
+  Parameters: {"token"=>"[FILTERED]", "action"=>"new", "user_id"=>"1", "controller"=>"clearance/confirmations"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."confirmation_token" = '97fe6dab52301e3a7ca059f054ca3aaed8328ba6' AND "users"."id" = '1') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."confirmation_token" = '97fe6dab52301e3a7ca059f054ca3aaed8328ba6' AND "users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-03-26 22:00:24', "confirmation_token" = NULL, "email_confirmed" = 't' WHERE "id" = 1[0m
+Redirected to http://localhost:3000/
+Completed in 887ms (DB: 1) | 302 Found [http://localhost/users/1/confirmation/new?token=97fe6dab52301e3a7ca059f054ca3aaed8328ba6]
+
+
+Processing AccountsController#index (for 127.0.0.1 at 2010-03-26 23:00:25) [GET]
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."remember_token" = 'a1536369cc9b844325b165a4488a0ce98954d3a2') LIMIT 1[0m
+  [4;36;1mAccount Load (0.5ms)[0m   [0;1mSELECT * FROM "accounts" [0m
+Rendering template within layouts/accounts
+Rendering accounts/index
+Completed in 120ms (View: 54, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-26 23:00:36) [GET]
+
+ActionController::RoutingError (No route matches "/login" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing AccountsController#index (for 127.0.0.1 at 2010-03-26 23:00:40) [GET]
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."remember_token" = 'a1536369cc9b844325b165a4488a0ce98954d3a2') LIMIT 1[0m
+  [4;36;1mAccount Load (1.4ms)[0m   [0;1mSELECT * FROM "accounts" [0m
+Rendering template within layouts/accounts
+Rendering accounts/index
+Completed in 129ms (View: 96, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing AccountsController#new (for 127.0.0.1 at 2010-03-26 23:00:49) [GET]
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."remember_token" = 'a1536369cc9b844325b165a4488a0ce98954d3a2') LIMIT 1[0m
+Rendering template within layouts/accounts
+Rendering accounts/new
+Completed in 81ms (View: 46, DB: 1) | 200 OK [http://localhost/accounts/new]
+
+
+Processing AccountsController#index (for 127.0.0.1 at 2010-03-26 23:00:50) [GET]
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = 'a1536369cc9b844325b165a4488a0ce98954d3a2') LIMIT 1[0m
+  [4;35;1mAccount Load (1.4ms)[0m   [0mSELECT * FROM "accounts" [0m
+Rendering template within layouts/accounts
+Rendering accounts/index
+Completed in 56ms (View: 19, DB: 2) | 200 OK [http://localhost/accounts]
+
+
+Processing Clearance::SessionsController#new (for 127.0.0.1 at 2010-03-26 23:01:39) [GET]
+  Parameters: {"action"=>"new", "controller"=>"clearance/sessions"}
+Rendering sessions/new
+Completed in 21ms (View: 15, DB: 0) | 200 OK [http://0.0.0.0/sign_in]
+
+
+Processing Clearance::UsersController#new (for 127.0.0.1 at 2010-03-26 23:01:42) [GET]
+  Parameters: {"action"=>"new", "controller"=>"clearance/users"}
+Rendering users/new
+Rendered users/_form (8.9ms)
+Completed in 41ms (View: 23, DB: 0) | 200 OK [http://0.0.0.0/sign_up]
+
+
+Processing Clearance::PasswordsController#new (for 127.0.0.1 at 2010-03-26 23:01:45) [GET]
+  Parameters: {"action"=>"new", "controller"=>"clearance/passwords"}
+Rendering passwords/new
+Completed in 36ms (View: 29, DB: 0) | 200 OK [http://0.0.0.0/passwords/new]
+
+
+Processing AccountsController#index (for 127.0.0.1 at 2010-03-26 23:01:49) [GET]
+Redirected to http://0.0.0.0:3000/sign_in
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 2ms (DB: 0) | 302 Found [http://0.0.0.0/]
+
+
+Processing Clearance::SessionsController#new (for 127.0.0.1 at 2010-03-26 23:01:49) [GET]
+  Parameters: {"action"=>"new", "controller"=>"clearance/sessions"}
+Rendering sessions/new
+Completed in 7ms (View: 5, DB: 0) | 200 OK [http://0.0.0.0/sign_in]
+
+
+Processing AccountsController#index (for 127.0.0.1 at 2010-03-26 23:01:57) [GET]
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = 'a1536369cc9b844325b165a4488a0ce98954d3a2') LIMIT 1[0m
+  [4;35;1mAccount Load (0.5ms)[0m   [0mSELECT * FROM "accounts" [0m
+Rendering template within layouts/accounts
+Rendering accounts/index
+Completed in 96ms (View: 13, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing Clearance::SessionsController#destroy (for 127.0.0.1 at 2010-03-26 23:08:19) [GET]
+  Parameters: {"method"=>:delete, "action"=>"destroy", "controller"=>"clearance/sessions"}
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = 'a1536369cc9b844325b165a4488a0ce98954d3a2') LIMIT 1[0m
+  [4;35;1mUser Update (0.7ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-03-26 22:08:19', "remember_token" = 'fc6e59aa950db649f1c472a25fb94dfac1328787' WHERE "id" = 1[0m
+Redirected to http://localhost:3000/sign_in
+Completed in 88ms (DB: 2) | 302 Found [http://localhost/sign_out]
+
+
+Processing Clearance::SessionsController#new (for 127.0.0.1 at 2010-03-26 23:08:19) [GET]
+  Parameters: {"action"=>"new", "controller"=>"clearance/sessions"}
+Rendering sessions/new
+Completed in 22ms (View: 15, DB: 0) | 200 OK [http://localhost/sign_in]
+
+
+Processing Clearance::SessionsController#create (for 127.0.0.1 at 2010-03-26 23:08:25) [POST]
+  Parameters: {"commit"=>"Sign in", "session"=>{"password"=>"[FILTERED]", "email"=>"openlf@free.fr"}, "action"=>"create", "authenticity_token"=>"lMCBMo5fmSPR6ppp46BkDv/r3wJ7eznJWVR6eqJP6Qg=", "controller"=>"clearance/sessions"}
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" = 'openlf@free.fr') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 32ms (DB: 1) | 302 Found [http://localhost/session]
+
+
+Processing AccountsController#index (for 127.0.0.1 at 2010-03-26 23:08:25) [GET]
+  [4;35;1mUser Load (11.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."remember_token" = 'fc6e59aa950db649f1c472a25fb94dfac1328787') LIMIT 1[0m
+  [4;36;1mAccount Load (1.4ms)[0m   [0;1mSELECT * FROM "accounts" [0m
+Rendering template within layouts/accounts
+Rendering accounts/index
+Completed in 81ms (View: 39, DB: 13) | 200 OK [http://localhost/]
+
+
+Processing Clearance::SessionsController#destroy (for 127.0.0.1 at 2010-03-26 23:13:34) [GET]
+  Parameters: {"method"=>:delete, "action"=>"destroy", "controller"=>"clearance/sessions"}
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."remember_token" = 'fc6e59aa950db649f1c472a25fb94dfac1328787') LIMIT 1[0m
+  [4;36;1mUser Update (0.6ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-03-26 22:13:34', "remember_token" = 'ba58931df8ead30f32dbb5b07aecc32af2ca9650' WHERE "id" = 1[0m
+Redirected to http://localhost:3000/sign_in
+Completed in 62ms (DB: 2) | 302 Found [http://localhost/sign_out]
+
+
+Processing Clearance::SessionsController#new (for 127.0.0.1 at 2010-03-26 23:13:34) [GET]
+  Parameters: {"action"=>"new", "controller"=>"clearance/sessions"}
+Rendering sessions/new
+Completed in 21ms (View: 15, DB: 0) | 200 OK [http://localhost/sign_in]
+
+
+Processing Clearance::SessionsController#destroy (for 127.0.0.1 at 2010-03-26 23:13:38) [GET]
+  Parameters: {"method"=>:delete, "action"=>"destroy", "controller"=>"clearance/sessions"}
+Redirected to http://localhost:3000/sign_in
+Completed in 13ms (DB: 0) | 302 Found [http://localhost/sign_out]
+
+
+Processing Clearance::SessionsController#new (for 127.0.0.1 at 2010-03-26 23:13:38) [GET]
+  Parameters: {"action"=>"new", "controller"=>"clearance/sessions"}
+Rendering sessions/new
+Completed in 7ms (View: 5, DB: 0) | 200 OK [http://localhost/sign_in]
+
+
+Processing Clearance::SessionsController#create (for 127.0.0.1 at 2010-03-26 23:13:42) [POST]
+  Parameters: {"commit"=>"Sign in", "session"=>{"password"=>"[FILTERED]", "email"=>"openlf@free.fr"}, "action"=>"create", "authenticity_token"=>"lMCBMo5fmSPR6ppp46BkDv/r3wJ7eznJWVR6eqJP6Qg=", "controller"=>"clearance/sessions"}
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."email" = 'openlf@free.fr') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 34ms (DB: 1) | 302 Found [http://localhost/session]
+
+
+Processing AccountsController#index (for 127.0.0.1 at 2010-03-26 23:13:42) [GET]
+  [4;36;1mUser Load (1.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = 'ba58931df8ead30f32dbb5b07aecc32af2ca9650') LIMIT 1[0m
+  [4;35;1mAccount Load (0.5ms)[0m   [0mSELECT * FROM "accounts" [0m
+Rendering template within layouts/accounts
+Rendering accounts/index
+Completed in 27ms (View: 15, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing AccountsController#index (for 127.0.0.1 at 2010-03-26 23:18:26) [GET]
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = 'ba58931df8ead30f32dbb5b07aecc32af2ca9650') LIMIT 1[0m
+  [4;35;1mAccount Load (1.4ms)[0m   [0mSELECT * FROM "accounts" [0m
+Rendering template within layouts/accounts
+Rendering accounts/index
+Completed in 68ms (View: 36, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing AccountsController#index (for 127.0.0.1 at 2010-03-26 23:19:34) [GET]
+  [4;36;1mUser Load (2.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = 'ba58931df8ead30f32dbb5b07aecc32af2ca9650') LIMIT 1[0m
+  [4;35;1mAccount Load (1.5ms)[0m   [0mSELECT * FROM "accounts" [0m
+Rendering template within layouts/accounts
+Rendering accounts/index
+
+ActionView::TemplateError (undefined local variable or method `clearance' for #<ActionView::Base:0xb56dbcd4>) on line #23 of app/views/accounts/index.html.erb:
+20: <br />
+21: 
+22: <%= link_to 'Créer un nouveau compte', new_account_path %>
+23: <%= link_to 'Se déconnecter', clearance/sessions, :method => :delete %>
+
+    app/views/accounts/index.html.erb:23
+    app/controllers/accounts_controller.rb:8:in `index'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (100.9ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing AccountsController#index (for 127.0.0.1 at 2010-03-26 23:19:51) [GET]
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = 'ba58931df8ead30f32dbb5b07aecc32af2ca9650') LIMIT 1[0m
+  [4;35;1mAccount Load (1.4ms)[0m   [0mSELECT * FROM "accounts" [0m
+Rendering template within layouts/accounts
+Rendering accounts/index
+Completed in 85ms (View: 52, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing Clearance::SessionsController#index (for 127.0.0.1 at 2010-03-26 23:19:59) [DELETE]
+  Parameters: {"action"=>"index", "_method"=>"delete", "authenticity_token"=>"lMCBMo5fmSPR6ppp46BkDv/r3wJ7eznJWVR6eqJP6Qg=", "controller"=>"clearance/sessions"}
+
+ActionController::UnknownAction (No action responded to index. Actions: create, destroy, and new):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing AccountsController#index (for 127.0.0.1 at 2010-03-26 23:20:30) [GET]
+  [4;36;1mUser Load (1.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = 'ba58931df8ead30f32dbb5b07aecc32af2ca9650') LIMIT 1[0m
+  [4;35;1mAccount Load (1.4ms)[0m   [0mSELECT * FROM "accounts" [0m
+Rendering template within layouts/accounts
+Rendering accounts/index
+Completed in 56ms (View: 24, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing Clearance::SessionsController#index (for 127.0.0.1 at 2010-03-26 23:20:34) [GET]
+  Parameters: {"method"=>"delete", "action"=>"index", "controller"=>"clearance/sessions"}
+
+ActionController::UnknownAction (No action responded to index. Actions: create, destroy, and new):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing AccountsController#index (for 127.0.0.1 at 2010-03-26 23:22:15) [GET]
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = 'ba58931df8ead30f32dbb5b07aecc32af2ca9650') LIMIT 1[0m
+  [4;35;1mAccount Load (1.4ms)[0m   [0mSELECT * FROM "accounts" [0m
+Rendering template within layouts/accounts
+Rendering accounts/index
+Completed in 143ms (View: 108, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing Clearance::SessionsController#index (for 127.0.0.1 at 2010-03-26 23:22:17) [GET]
+  Parameters: {"action"=>"index", "controller"=>"clearance/sessions"}
+
+ActionController::UnknownAction (No action responded to index. Actions: create, destroy, and new):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing AccountsController#index (for 127.0.0.1 at 2010-03-26 23:22:25) [GET]
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = 'ba58931df8ead30f32dbb5b07aecc32af2ca9650') LIMIT 1[0m
+  [4;35;1mAccount Load (0.4ms)[0m   [0mSELECT * FROM "accounts" [0m
+Rendering template within layouts/accounts
+Rendering accounts/index
+Completed in 23ms (View: 12, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing Clearance::SessionsController#index (for 127.0.0.1 at 2010-03-26 23:24:48) [GET]
+  Parameters: {"action"=>"index", "controller"=>"clearance/sessions"}
+
+ActionController::UnknownAction (No action responded to index. Actions: create, destroy, and new):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing AccountsController#index (for 127.0.0.1 at 2010-03-26 23:26:20) [GET]
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = 'ba58931df8ead30f32dbb5b07aecc32af2ca9650') LIMIT 1[0m
+  [4;35;1mAccount Load (0.4ms)[0m   [0mSELECT * FROM "accounts" [0m
+Rendering template within layouts/accounts
+Rendering accounts/index
+Completed in 37ms (View: 16, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing Clearance::SessionsController#destroy (for 127.0.0.1 at 2010-03-26 23:26:23) [GET]
+  Parameters: {"method"=>:delete, "action"=>"destroy", "controller"=>"clearance/sessions"}
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = 'ba58931df8ead30f32dbb5b07aecc32af2ca9650') LIMIT 1[0m
+  [4;35;1mUser Update (1.5ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-03-26 22:26:23', "remember_token" = '88722864b6b94d694e1e2fe29a05085db4d6d2d0' WHERE "id" = 1[0m
+Redirected to http://localhost:3000/sign_in
+Completed in 134ms (DB: 2) | 302 Found [http://localhost/sign_out]
+
+
+Processing Clearance::SessionsController#new (for 127.0.0.1 at 2010-03-26 23:26:23) [GET]
+  Parameters: {"action"=>"new", "controller"=>"clearance/sessions"}
+Rendering sessions/new
+Completed in 8ms (View: 6, DB: 0) | 200 OK [http://localhost/sign_in]
+
+
+Processing Clearance::PasswordsController#new (for 127.0.0.1 at 2010-03-26 23:26:35) [GET]
+  Parameters: {"action"=>"new", "controller"=>"clearance/passwords"}
+Rendering passwords/new
+Completed in 7ms (View: 5, DB: 0) | 200 OK [http://localhost/passwords/new]
+
+
+Processing Clearance::PasswordsController#create (for 127.0.0.1 at 2010-03-26 23:26:41) [POST]
+  Parameters: {"commit"=>"Reset password", "action"=>"create", "authenticity_token"=>"lMCBMo5fmSPR6ppp46BkDv/r3wJ7eznJWVR6eqJP6Qg=", "controller"=>"clearance/passwords", "password"=>"[FILTERED]"}
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" = 'openlf@free.fr') LIMIT 1[0m
+  [4;35;1mUser Update (0.6ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-03-26 22:26:41', "confirmation_token" = '2d44c4ee351da46bfc764731fbd6427ce49f4176' WHERE "id" = 1[0m
+Sent mail to openlf@free.fr
+
+Date: Fri, 26 Mar 2010 23:26:41 +0100
+From: donotreply@example.com
+To: openlf@free.fr
+Subject: Change your password
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Someone, hopefully you, has requested that we send you a link to change your password.
+
+Here's the link:
+
+http://localhost:3000/users/1/password/edit?token=2d44c4ee351da46bfc764731fbd6427ce49f4176
+
+If you didn't request this, ignore this email. Don't worry. Your password hasn't been changed.
+Redirected to http://localhost:3000/sign_in
+Completed in 64ms (DB: 2) | 302 Found [http://localhost/passwords]
+
+
+Processing Clearance::SessionsController#new (for 127.0.0.1 at 2010-03-26 23:26:41) [GET]
+  Parameters: {"action"=>"new", "controller"=>"clearance/sessions"}
+Rendering sessions/new
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://localhost/sign_in]
+
+
+Processing Clearance::PasswordsController#edit (for 127.0.0.1 at 2010-03-26 23:27:00) [GET]
+  Parameters: {"token"=>"2d44c4ee351da46bfc764731fbd6427ce49f4176", "action"=>"edit", "user_id"=>"1", "controller"=>"clearance/passwords"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."confirmation_token" = '2d44c4ee351da46bfc764731fbd6427ce49f4176' AND "users"."id" = '1') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."confirmation_token" = '2d44c4ee351da46bfc764731fbd6427ce49f4176' AND "users"."id" = '1') LIMIT 1[0m
+Rendering passwords/edit
+Completed in 19ms (View: 11, DB: 0) | 200 OK [http://localhost/users/1/password/edit?token=2d44c4ee351da46bfc764731fbd6427ce49f4176]
+
+
+Processing Clearance::PasswordsController#update (for 127.0.0.1 at 2010-03-26 23:27:07) [PUT]
+  Parameters: {"commit"=>"Save this password", "token"=>"2d44c4ee351da46bfc764731fbd6427ce49f4176", "action"=>"update", "_method"=>"put", "authenticity_token"=>"lMCBMo5fmSPR6ppp46BkDv/r3wJ7eznJWVR6eqJP6Qg=", "user_id"=>"1", "controller"=>"clearance/passwords", "user"=>{"password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]"}}
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."confirmation_token" = '2d44c4ee351da46bfc764731fbd6427ce49f4176' AND "users"."id" = '1') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."confirmation_token" = '2d44c4ee351da46bfc764731fbd6427ce49f4176' AND "users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'openlf@free.fr' AND "users".id <> 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'openlf@free.fr' AND "users".id <> 1) LIMIT 1[0m
+  [4;36;1mUser Update (0.6ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-03-26 22:27:07', "confirmation_token" = NULL WHERE "id" = 1[0m
+Redirected to http://localhost:3000/
+Completed in 66ms (DB: 2) | 302 Found [http://localhost/users/1/password?token=2d44c4ee351da46bfc764731fbd6427ce49f4176]
+
+
+Processing AccountsController#index (for 127.0.0.1 at 2010-03-26 23:27:07) [GET]
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."remember_token" = '88722864b6b94d694e1e2fe29a05085db4d6d2d0') LIMIT 1[0m
+  [4;36;1mAccount Load (1.3ms)[0m   [0;1mSELECT * FROM "accounts" [0m
+Rendering template within layouts/accounts
+Rendering accounts/index
+Completed in 70ms (View: 39, DB: 2) | 200 OK [http://localhost/]

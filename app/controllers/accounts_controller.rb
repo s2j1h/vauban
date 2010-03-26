@@ -1,6 +1,7 @@
 class AccountsController < ApplicationController
   # GET /accounts
   # GET /accounts.xml
+  before_filter :authenticate
   def index
     @accounts = Account.all
 
