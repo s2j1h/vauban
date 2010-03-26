@@ -1,0 +1,22 @@
+<h1>Liste des comptes</h1>
+
+<table>
+  <tr>
+    <th>Nom</th>
+    <th>Url</th>
+  </tr>
+
+<% @accounts.each do |account| %>
+  <tr>
+    <td><%=h account.name %></td>
+    <td><%=h account.url %></td>
+    <td><%= link_to 'Voir', account %></td>
+    <td><%= link_to 'Editer', edit_account_path(account) %></td>
+    <td><%= link_to 'Effacer', account, :confirm => 'Etes vous sûr?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Créer un nouveau compte', new_account_path %>
