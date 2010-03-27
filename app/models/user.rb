@@ -1,3 +1,4 @@
 class User < ActiveRecord::Base
-  include Clearance::User
+  acts_as_authentic
+  #attr_accessible :username, :email, :password, :secretkey
 end

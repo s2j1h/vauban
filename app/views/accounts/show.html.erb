@@ -1,7 +1,6 @@
-<p>
-  <b>Name:</b>
-  <%=h @account.name %>
-</p>
+<% content_for :title do %>Visualiser le compte <%=h @account.name %> <% end %>
+
+<h1><%=h @account.name %></h1>
 
 <p>
   <b>Url:</b>
