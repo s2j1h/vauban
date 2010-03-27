@@ -1850,3 +1850,18 @@ Processing AccountsController#index (for 127.0.0.1 at 2010-03-27 10:38:24) [GET]
 Rendering template within layouts/application
 Rendering accounts/index
 Completed in 35ms (View: 29, DB: 1) | 200 OK [http://127.0.0.1/accounts]
+
+
+Processing AccountsController#index (for 127.0.0.1 at 2010-03-27 10:41:57) [GET]
+  Parameters: {"action"=>"index", "controller"=>"accounts"}
+  [4;36;1mAccount Load (0.8ms)[0m   [0;1mSELECT * FROM "accounts" [0m
+Rendering template within layouts/application
+Rendering accounts/index
+Completed in 50ms (View: 44, DB: 1) | 200 OK [http://127.0.0.1/]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-03-27 10:41:59) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 24ms (View: 10, DB: 0) | 200 OK [http://127.0.0.1/login]
