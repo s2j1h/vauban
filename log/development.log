@@ -2564,3 +2564,1025 @@ Processing AccountsController#index (for 127.0.0.1 at 2010-03-27 16:24:58) [GET]
 Rendering template within layouts/application
 Rendering accounts/index
 Completed in 75ms (View: 17, DB: 2) | 200 OK [http://127.0.0.1/accounts]
+
+
+Processing AccountsController#index (for 127.0.0.1 at 2010-04-02 14:30:57) [GET]
+  Parameters: {"action"=>"index", "controller"=>"accounts"}
+Redirected to http://127.0.0.1:3000/user_sessions/new
+Filter chain halted as [:require_user] rendered_or_redirected.
+Completed in 165ms (DB: 0) | 302 Found [http://127.0.0.1/]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-04-02 14:30:57) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 214ms (View: 179, DB: 0) | 200 OK [http://127.0.0.1/user_sessions/new]
+
+
+Processing AccountsController#index (for 127.0.0.1 at 2010-04-02 14:41:11) [GET]
+  Parameters: {"action"=>"index", "controller"=>"accounts"}
+Redirected to http://localhost:3000/user_sessions/new
+Filter chain halted as [:require_user] rendered_or_redirected.
+Completed in 166ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing AccountsController#index (for 127.0.0.1 at 2010-04-02 15:25:32) [GET]
+  Parameters: {"action"=>"index", "controller"=>"accounts"}
+Redirected to http://127.0.0.1:3000/user_sessions/new
+Filter chain halted as [:require_user] rendered_or_redirected.
+Completed in 11ms (DB: 0) | 302 Found [http://127.0.0.1/]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-04-02 15:25:32) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 189ms (View: 177, DB: 0) | 200 OK [http://127.0.0.1/user_sessions/new]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-04-02 15:28:03) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 21ms (View: 4, DB: 0) | 200 OK [http://127.0.0.1/login]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-04-02 15:28:16) [POST]
+  Parameters: {"commit"=>"Submit", "user_session"=>{"username"=>"test", "password"=>"[FILTERED]"}, "action"=>"create", "authenticity_token"=>"HOzXci11cwbRzWWJHfKrCPMPq+yN+2i7nK28gbTzCkw=", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE (LOWER("users".username) = 'test') LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/
+Completed in 216ms (DB: 0) | 302 Found [http://127.0.0.1/user_sessions]
+
+
+Processing AccountsController#index (for 127.0.0.1 at 2010-04-02 15:28:16) [GET]
+  Parameters: {"action"=>"index", "controller"=>"accounts"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mAccount Load (0.4ms)[0m   [0;1mSELECT * FROM "accounts" [0m
+Rendering template within layouts/application
+Rendering accounts/index
+Completed in 144ms (View: 76, DB: 1) | 200 OK [http://127.0.0.1/]
+
+
+Processing UserSessionsController#destroy (for 127.0.0.1 at 2010-04-04 14:24:47) [GET]
+  Parameters: {"action"=>"destroy", "controller"=>"user_sessions"}
+Redirected to http://127.0.0.1:3000/user_sessions/new
+Filter chain halted as [:require_user] rendered_or_redirected.
+Completed in 157ms (DB: 0) | 302 Found [http://127.0.0.1/logout]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-04-04 14:24:48) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 130ms (View: 118, DB: 0) | 200 OK [http://127.0.0.1/user_sessions/new]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-04-04 14:24:52) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 50ms (View: 12, DB: 0) | 200 OK [http://127.0.0.1/login]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-04-04 14:25:06) [POST]
+  Parameters: {"commit"=>"Submit", "user_session"=>{"username"=>"test", "password"=>"[FILTERED]"}, "action"=>"create", "authenticity_token"=>"XKnCDEGnBcadr03Knf3iI8glPGAEi9p+UoiVnFkpqN4=", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE (LOWER("users".username) = 'test') LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/logout
+Completed in 189ms (DB: 0) | 302 Found [http://127.0.0.1/user_sessions]
+
+
+Processing UserSessionsController#destroy (for 127.0.0.1 at 2010-04-04 14:25:06) [GET]
+  Parameters: {"action"=>"destroy", "controller"=>"user_sessions"}
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/
+Completed in 46ms (DB: 0) | 302 Found [http://127.0.0.1/logout]
+
+
+Processing AccountsController#index (for 127.0.0.1 at 2010-04-04 14:25:06) [GET]
+  Parameters: {"action"=>"index", "controller"=>"accounts"}
+Redirected to http://127.0.0.1:3000/user_sessions/new
+Filter chain halted as [:require_user] rendered_or_redirected.
+Completed in 32ms (DB: 0) | 302 Found [http://127.0.0.1/]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-04-04 14:25:06) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 65ms (View: 4, DB: 0) | 200 OK [http://127.0.0.1/user_sessions/new]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-04-04 14:25:16) [POST]
+  Parameters: {"commit"=>"Submit", "user_session"=>{"username"=>"test", "password"=>"[FILTERED]"}, "action"=>"create", "authenticity_token"=>"XKnCDEGnBcadr03Knf3iI8glPGAEi9p+UoiVnFkpqN4=", "controller"=>"user_sessions"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE (LOWER("users".username) = 'test') LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/
+Completed in 44ms (DB: 0) | 302 Found [http://127.0.0.1/user_sessions]
+
+
+Processing AccountsController#index (for 127.0.0.1 at 2010-04-04 14:25:16) [GET]
+  Parameters: {"action"=>"index", "controller"=>"accounts"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mAccount Load (0.5ms)[0m   [0mSELECT * FROM "accounts" [0m
+Rendering template within layouts/application
+Rendering accounts/index
+Completed in 110ms (View: 70, DB: 1) | 200 OK [http://127.0.0.1/]
+
+
+Processing AccountsController#index (for 127.0.0.1 at 2010-04-04 14:28:29) [GET]
+  Parameters: {"action"=>"index", "controller"=>"accounts"}
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mAccount Load (1.4ms)[0m   [0mSELECT * FROM "accounts" [0m
+Rendering template within layouts/application
+Rendering accounts/index
+Completed in 98ms (View: 36, DB: 2) | 200 OK [http://127.0.0.1/]
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2010-04-04 14:28:35) [GET]
+  Parameters: {"action"=>"edit", "id"=>"current", "controller"=>"users"}
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/edit
+Rendered users/_form (27.2ms)
+Completed in 139ms (View: 93, DB: 1) | 200 OK [http://127.0.0.1/users/current/edit]
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2010-04-04 14:30:05) [GET]
+  Parameters: {"action"=>"edit", "id"=>"current", "controller"=>"users"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/edit
+Rendered users/_form (5.4ms)
+Completed in 25ms (View: 10, DB: 0) | 200 OK [http://127.0.0.1/users/current/edit]
+
+
+Processing AccountsController#index (for 127.0.0.1 at 2010-04-04 14:30:07) [GET]
+  Parameters: {"action"=>"index", "controller"=>"accounts"}
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mAccount Load (1.4ms)[0m   [0mSELECT * FROM "accounts" [0m
+Rendering template within layouts/application
+Rendering accounts/index
+Completed in 83ms (View: 25, DB: 2) | 200 OK [http://127.0.0.1/accounts]
+
+
+Processing AccountsController#index (for 127.0.0.1 at 2010-04-04 14:31:08) [GET]
+  Parameters: {"action"=>"index", "controller"=>"accounts"}
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mAccount Load (1.3ms)[0m   [0mSELECT * FROM "accounts" [0m
+Rendering template within layouts/application
+Rendering accounts/index
+Completed in 111ms (View: 52, DB: 2) | 200 OK [http://127.0.0.1/accounts]
+
+
+Processing AccountsController#index (for 127.0.0.1 at 2010-04-04 14:31:38) [GET]
+  Parameters: {"action"=>"index", "controller"=>"accounts"}
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mAccount Load (1.3ms)[0m   [0mSELECT * FROM "accounts" [0m
+Rendering template within layouts/application
+Rendering accounts/index
+
+ActionView::TemplateError (undefined local variable or method `rcurrent_user' for #<ActionView::Base:0xb605934c>) on line #3 of app/views/accounts/index.html.erb:
+1: <% content_for :title do %>Your identities<% end %>
+2: 
+3:   <h1>welcome, <%=h rcurrent_user %>, here are your identities</h1>
+4: 
+5: 
+6: <table>
+
+    app/views/accounts/index.html.erb:3
+    app/controllers/accounts_controller.rb:11:in `index'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (41.0ms)
+Rendered rescues/_request_and_response (1.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing AccountsController#index (for 127.0.0.1 at 2010-04-04 14:31:46) [GET]
+  Parameters: {"action"=>"index", "controller"=>"accounts"}
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mAccount Load (0.9ms)[0m   [0mSELECT * FROM "accounts" [0m
+Rendering template within layouts/application
+Rendering accounts/index
+Completed in 70ms (View: 34, DB: 2) | 200 OK [http://127.0.0.1/accounts]
+
+
+Processing AccountsController#index (for 127.0.0.1 at 2010-04-04 14:33:45) [GET]
+  Parameters: {"action"=>"index", "controller"=>"accounts"}
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mAccount Load (1.3ms)[0m   [0mSELECT * FROM "accounts" [0m
+Rendering template within layouts/application
+Rendering accounts/index
+Completed in 106ms (View: 52, DB: 2) | 200 OK [http://127.0.0.1/accounts]
+
+
+Processing AccountsController#index (for 127.0.0.1 at 2010-04-04 14:34:18) [GET]
+  Parameters: {"action"=>"index", "controller"=>"accounts"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mAccount Load (0.5ms)[0m   [0mSELECT * FROM "accounts" [0m
+Rendering template within layouts/application
+Rendering accounts/index
+Completed in 150ms (View: 17, DB: 1) | 200 OK [http://127.0.0.1/accounts]
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (54.5ms)[0m   [0;1mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "url" varchar(255), "login" varchar(255), "password" varchar(255), "comment" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (49.0ms)[0m   [0;1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255), "email" varchar(255), "crypted_password" varchar(255), "password_salt" varchar(255), "persistence_token" varchar(255), "secretkey" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (9.9ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (49.4ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (50.3ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100327080857')[0m
+  [4;35;1mSQL (84.3ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100313080135')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("accounts")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("users")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (4.6ms)[0m   [0;1mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "url" varchar(255), "login" varchar(255), "password" varchar(255), "comment" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (3.1ms)[0m   [0;1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255), "email" varchar(255), "crypted_password" varchar(255), "password_salt" varchar(255), "persistence_token" varchar(255), "secretkey" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (4.4ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (3.4ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (2.8ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100327080857')[0m
+  [4;35;1mSQL (2.7ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100313080135')[0m
+
+
+Processing AccountsController#new (for 127.0.0.1 at 2010-04-04 14:57:10) [GET]
+  Parameters: {"action"=>"new", "controller"=>"accounts"}
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering accounts/new
+Completed in 59ms (View: 22, DB: 1) | 200 OK [http://127.0.0.1/accounts/new]
+
+
+Processing AccountsController#create (for 127.0.0.1 at 2010-04-04 14:57:12) [POST]
+  Parameters: {"commit"=>"Create", "action"=>"create", "authenticity_token"=>"XKnCDEGnBcadr03Knf3iI8glPGAEi9p+UoiVnFkpqN4=", "account"=>{"comment"=>"", "name"=>"", "url"=>"", "password"=>"[FILTERED]", "login"=>""}, "controller"=>"accounts"}
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering accounts/new
+Completed in 76ms (View: 16, DB: 1) | 200 OK [http://127.0.0.1/accounts]
+
+
+Processing AccountsController#index (for 127.0.0.1 at 2010-04-04 15:07:25) [GET]
+  Parameters: {"action"=>"index", "controller"=>"accounts"}
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mAccount Load (1.3ms)[0m   [0mSELECT * FROM "accounts" [0m
+Rendering template within layouts/application
+Rendering accounts/index
+Completed in 80ms (View: 27, DB: 2) | 200 OK [http://127.0.0.1/accounts]
+
+
+Processing AccountsController#destroy (for 127.0.0.1 at 2010-04-04 15:07:35) [DELETE]
+  Parameters: {"action"=>"destroy", "_method"=>"delete", "authenticity_token"=>"XKnCDEGnBcadr03Knf3iI8glPGAEi9p+UoiVnFkpqN4=", "id"=>"2", "controller"=>"accounts"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mAccount Load (0.3ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 2) [0m
+  [4;36;1mAccount Destroy (0.3ms)[0m   [0;1mDELETE FROM "accounts" WHERE "id" = 2[0m
+Redirected to http://127.0.0.1:3000/accounts
+Completed in 85ms (DB: 1) | 302 Found [http://127.0.0.1/accounts/2]
+
+
+Processing AccountsController#index (for 127.0.0.1 at 2010-04-04 15:07:35) [GET]
+  Parameters: {"action"=>"index", "controller"=>"accounts"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mAccount Load (0.4ms)[0m   [0;1mSELECT * FROM "accounts" [0m
+Rendering template within layouts/application
+Rendering accounts/index
+Completed in 30ms (View: 10, DB: 1) | 200 OK [http://127.0.0.1/accounts]
+
+
+Processing AccountsController#index (for 127.0.0.1 at 2010-04-04 15:07:42) [GET]
+  Parameters: {"action"=>"index", "controller"=>"accounts"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mAccount Load (0.3ms)[0m   [0;1mSELECT * FROM "accounts" [0m
+Rendering template within layouts/application
+Rendering accounts/index
+Completed in 42ms (View: 10, DB: 1) | 200 OK [http://127.0.0.1/]
+
+
+Processing AccountsController#index (for 127.0.0.1 at 2010-04-04 15:09:18) [GET]
+  Parameters: {"action"=>"index", "controller"=>"accounts"}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mAccount Load (1.1ms)[0m   [0;1mSELECT * FROM "accounts" [0m
+Rendering template within layouts/application
+Rendering accounts/index
+Completed in 79ms (View: 15, DB: 2) | 200 OK [http://127.0.0.1/]
+
+
+Processing AccountsController#index (for 127.0.0.1 at 2010-04-04 15:14:29) [GET]
+  Parameters: {"action"=>"index", "controller"=>"accounts"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mAccount Load (0.3ms)[0m   [0;1mSELECT * FROM "accounts" [0m
+Rendering template within layouts/application
+Rendering accounts/index
+Completed in 30ms (View: 10, DB: 1) | 200 OK [http://127.0.0.1/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-04 15:14:50) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+
+ActionView::MissingTemplate (Missing template application/index.erb in view path app/views):
+  app/controllers/application_controller.rb:13:in `index'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-04 15:15:48) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 60ms (View: 53, DB: 1) | 200 OK [http://127.0.0.1/]
+
+
+Processing UserSessionsController#destroy (for 127.0.0.1 at 2010-04-04 15:16:02) [GET]
+  Parameters: {"action"=>"destroy", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/
+Completed in 50ms (DB: 1) | 302 Found [http://127.0.0.1/logout]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-04 15:16:02) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 13ms (View: 11, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-04 15:23:54) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 50ms (View: 43, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-04-04 15:25:18) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (5.5ms)
+Completed in 141ms (View: 10, DB: 0) | 200 OK [http://127.0.0.1/users/new]
+
+
+Processing AccountsController#index (for 127.0.0.1 at 2010-04-04 15:25:22) [GET]
+  Parameters: {"action"=>"index", "controller"=>"accounts"}
+Redirected to http://127.0.0.1:3000/user_sessions/new
+Filter chain halted as [:require_user] rendered_or_redirected.
+Completed in 20ms (DB: 0) | 302 Found [http://127.0.0.1/accounts]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-04-04 15:25:22) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 16ms (View: 4, DB: 0) | 200 OK [http://127.0.0.1/user_sessions/new]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-04-04 15:25:26) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (11.2ms)
+Completed in 50ms (View: 14, DB: 0) | 200 OK [http://127.0.0.1/users/new]
+
+
+Processing AccountsController#index (for 127.0.0.1 at 2010-04-04 15:25:29) [GET]
+  Parameters: {"action"=>"index", "controller"=>"accounts"}
+Redirected to http://127.0.0.1:3000/user_sessions/new
+Filter chain halted as [:require_user] rendered_or_redirected.
+Completed in 41ms (DB: 0) | 302 Found [http://127.0.0.1/accounts]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-04-04 15:25:29) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 35ms (View: 4, DB: 0) | 200 OK [http://127.0.0.1/user_sessions/new]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-04-04 15:26:58) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 118ms (View: 4, DB: 0) | 200 OK [http://127.0.0.1/user_sessions/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-04 15:27:03) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 19ms (View: 17, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-04-04 15:27:05) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (16.2ms)
+Completed in 67ms (View: 30, DB: 0) | 200 OK [http://127.0.0.1/users/new]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-04-04 15:28:13) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (7.6ms)
+Completed in 56ms (View: 20, DB: 0) | 200 OK [http://127.0.0.1/users/new]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-04-04 15:28:16) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 15ms (View: 4, DB: 0) | 200 OK [http://127.0.0.1/login]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-04-04 15:28:52) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 142ms (View: 106, DB: 0) | 200 OK [http://127.0.0.1/login]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-04-04 15:29:19) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 51ms (View: 13, DB: 0) | 200 OK [http://127.0.0.1/login]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-04-04 15:29:22) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (15.9ms)
+
+ActionView::TemplateError (undefined local variable or method `application_path' for #<ActionView::Base:0xb61783b8>) on line #6 of app/views/users/new.html.erb:
+3: <h1>Registring</h1>
+4: <%= render :partial => 'form' %>
+5: 
+6: <%= link_to 'Back', application_path %>
+
+    app/views/users/new.html.erb:6
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (35.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-04-04 15:29:54) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (15.9ms)
+Completed in 65ms (View: 29, DB: 0) | 200 OK [http://127.0.0.1/users/new]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-04-04 15:30:43) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (8.8ms)
+Completed in 70ms (View: 22, DB: 0) | 200 OK [http://127.0.0.1/users/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-04 15:30:44) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 13ms (View: 10, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-04-04 15:30:46) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (4.8ms)
+Completed in 41ms (View: 6, DB: 0) | 200 OK [http://127.0.0.1/users/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-04 15:30:47) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 40ms (View: 33, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-04-04 15:30:48) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 15ms (View: 4, DB: 0) | 200 OK [http://127.0.0.1/login]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-04-04 15:31:05) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 100ms (View: 13, DB: 0) | 200 OK [http://127.0.0.1/login]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-04 15:31:07) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 25ms (View: 18, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-04-04 15:31:08) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (4.8ms)
+Completed in 17ms (View: 6, DB: 0) | 200 OK [http://127.0.0.1/users/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-04 15:31:10) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 40ms (View: 34, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-04-04 15:31:11) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 50ms (View: 13, DB: 0) | 200 OK [http://127.0.0.1/login]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-04-04 15:31:17) [POST]
+  Parameters: {"commit"=>"Submit", "user_session"=>{"username"=>"test", "password"=>"[FILTERED]"}, "action"=>"create", "authenticity_token"=>"XKnCDEGnBcadr03Knf3iI8glPGAEi9p+UoiVnFkpqN4=", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" WHERE (LOWER("users".username) = 'test') LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/accounts
+Completed in 48ms (DB: 1) | 302 Found [http://127.0.0.1/user_sessions]
+
+
+Processing AccountsController#index (for 127.0.0.1 at 2010-04-04 15:31:18) [GET]
+  Parameters: {"action"=>"index", "controller"=>"accounts"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mAccount Load (0.3ms)[0m   [0;1mSELECT * FROM "accounts" [0m
+Rendering template within layouts/application
+Rendering accounts/index
+Completed in 114ms (View: 10, DB: 1) | 200 OK [http://127.0.0.1/accounts]
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2010-04-04 15:31:20) [GET]
+  Parameters: {"action"=>"edit", "id"=>"current", "controller"=>"users"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/edit
+Rendered users/_form (4.2ms)
+Completed in 24ms (View: 9, DB: 0) | 200 OK [http://127.0.0.1/users/current/edit]
+
+
+Processing AccountsController#index (for 127.0.0.1 at 2010-04-04 15:31:22) [GET]
+  Parameters: {"action"=>"index", "controller"=>"accounts"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mAccount Load (0.3ms)[0m   [0mSELECT * FROM "accounts" [0m
+Rendering template within layouts/application
+Rendering accounts/index
+Completed in 25ms (View: 9, DB: 1) | 200 OK [http://127.0.0.1/accounts]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-04 15:31:25) [GET]
+
+ActionController::RoutingError (No route matches "/sign_out" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-04 15:31:35) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 17ms (View: 14, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing UserSessionsController#destroy (for 127.0.0.1 at 2010-04-04 15:31:37) [GET]
+  Parameters: {"action"=>"destroy", "controller"=>"user_sessions"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/
+Completed in 15ms (DB: 0) | 302 Found [http://127.0.0.1/logout]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-04 15:31:37) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 15ms (View: 12, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-04-04 15:31:49) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 16ms (View: 4, DB: 0) | 200 OK [http://127.0.0.1/login]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-04-04 15:31:54) [POST]
+  Parameters: {"commit"=>"Submit", "user_session"=>{"username"=>"test", "password"=>"[FILTERED]"}, "action"=>"create", "authenticity_token"=>"XKnCDEGnBcadr03Knf3iI8glPGAEi9p+UoiVnFkpqN4=", "controller"=>"user_sessions"}
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM "users" WHERE (LOWER("users".username) = 'test') LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/
+Completed in 48ms (DB: 1) | 302 Found [http://127.0.0.1/user_sessions]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-04 15:31:54) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 50ms (View: 42, DB: 1) | 200 OK [http://127.0.0.1/]
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (4.6ms)[0m   [0;1mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "url" varchar(255), "login" varchar(255), "password" varchar(255), "comment" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255), "email" varchar(255), "crypted_password" varchar(255), "password_salt" varchar(255), "persistence_token" varchar(255), "secretkey" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (13.5ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (3.4ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (2.4ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100327080857')[0m
+  [4;35;1mSQL (2.9ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100313080135')[0m
+
+
+Processing AccountsController#index (for 127.0.0.1 at 2010-04-04 15:38:12) [GET]
+  Parameters: {"action"=>"index", "controller"=>"accounts"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mAccount Load (0.4ms)[0m   [0;1mSELECT * FROM "accounts" [0m
+Rendering template within layouts/application
+Rendering accounts/index
+Completed in 47ms (View: 13, DB: 1) | 200 OK [http://127.0.0.1/accounts]
+
+
+Processing UserSessionsController#destroy (for 127.0.0.1 at 2010-04-04 15:38:14) [GET]
+  Parameters: {"action"=>"destroy", "controller"=>"user_sessions"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/
+Completed in 71ms (DB: 0) | 302 Found [http://127.0.0.1/logout]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-04 15:38:14) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 15ms (View: 13, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-04-04 15:42:00) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 51ms (View: 13, DB: 0) | 200 OK [http://127.0.0.1/login]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-04-04 15:42:05) [POST]
+  Parameters: {"commit"=>"Submit", "user_session"=>{"username"=>"test", "password"=>"[FILTERED]"}, "action"=>"create", "authenticity_token"=>"XKnCDEGnBcadr03Knf3iI8glPGAEi9p+UoiVnFkpqN4=", "controller"=>"user_sessions"}
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM "users" WHERE (LOWER("users".username) = 'test') LIMIT 1[0m
+
+ActionController::RoutingError (account_url failed to generate from {:controller=>"accounts", :action=>"show"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["accounts", :id] - are they all satisfied?):
+  (eval):16:in `account_url'
+  app/controllers/user_sessions_controller.rb:13:in `create'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-04 15:43:37) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 17ms (View: 14, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing UserSessionsController#destroy (for 127.0.0.1 at 2010-04-04 15:43:38) [GET]
+  Parameters: {"action"=>"destroy", "controller"=>"user_sessions"}
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/
+Completed in 50ms (DB: 1) | 302 Found [http://127.0.0.1/logout]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-04 15:43:38) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 72ms (View: 70, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-04-04 15:43:40) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 51ms (View: 13, DB: 0) | 200 OK [http://127.0.0.1/login]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-04-04 15:43:46) [POST]
+  Parameters: {"commit"=>"Submit", "user_session"=>{"username"=>"test", "password"=>"[FILTERED]"}, "action"=>"create", "authenticity_token"=>"XKnCDEGnBcadr03Knf3iI8glPGAEi9p+UoiVnFkpqN4=", "controller"=>"user_sessions"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE (LOWER("users".username) = 'test') LIMIT 1[0m
+
+NameError (undefined local variable or method `index_account_url' for #<UserSessionsController:0xb618bcd8>):
+  app/controllers/user_sessions_controller.rb:13:in `create'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (27.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-04 15:49:06) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 51ms (View: 44, DB: 1) | 200 OK [http://127.0.0.1/]
+
+
+Processing UserSessionsController#destroy (for 127.0.0.1 at 2010-04-04 15:49:07) [GET]
+  Parameters: {"action"=>"destroy", "controller"=>"user_sessions"}
+  [4;35;1mUser Load (1.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/
+Completed in 54ms (DB: 1) | 302 Found [http://127.0.0.1/logout]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-04 15:49:08) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 15ms (View: 13, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-04-04 15:49:09) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 50ms (View: 13, DB: 0) | 200 OK [http://127.0.0.1/login]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-04-04 15:49:15) [POST]
+  Parameters: {"commit"=>"Submit", "user_session"=>{"username"=>"test", "password"=>"[FILTERED]"}, "action"=>"create", "authenticity_token"=>"XKnCDEGnBcadr03Knf3iI8glPGAEi9p+UoiVnFkpqN4=", "controller"=>"user_sessions"}
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM "users" WHERE (LOWER("users".username) = 'test') LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/account
+Completed in 49ms (DB: 1) | 302 Found [http://127.0.0.1/user_sessions]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-04 15:49:15) [GET]
+
+ActionController::RoutingError (No route matches "/account" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing AccountsController#index (for 127.0.0.1 at 2010-04-04 15:49:20) [GET]
+  Parameters: {"action"=>"index", "controller"=>"accounts"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mAccount Load (0.3ms)[0m   [0mSELECT * FROM "accounts" [0m
+Rendering template within layouts/application
+Rendering accounts/index
+Completed in 35ms (View: 10, DB: 1) | 200 OK [http://127.0.0.1/accounts]
+
+
+Processing UserSessionsController#destroy (for 127.0.0.1 at 2010-04-04 15:49:29) [GET]
+  Parameters: {"action"=>"destroy", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/
+Completed in 56ms (DB: 1) | 302 Found [http://127.0.0.1/logout]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-04 15:49:29) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 15ms (View: 12, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-04-04 15:49:31) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 60ms (View: 11, DB: 0) | 200 OK [http://127.0.0.1/login]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-04-04 15:49:39) [POST]
+  Parameters: {"commit"=>"Submit", "user_session"=>{"username"=>"test", "password"=>"[FILTERED]"}, "action"=>"create", "authenticity_token"=>"XKnCDEGnBcadr03Knf3iI8glPGAEi9p+UoiVnFkpqN4=", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" WHERE (LOWER("users".username) = 'test') LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/accounts
+Completed in 49ms (DB: 1) | 302 Found [http://127.0.0.1/user_sessions]
+
+
+Processing AccountsController#index (for 127.0.0.1 at 2010-04-04 15:49:39) [GET]
+  Parameters: {"action"=>"index", "controller"=>"accounts"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mAccount Load (0.3ms)[0m   [0;1mSELECT * FROM "accounts" [0m
+Rendering template within layouts/application
+Rendering accounts/index
+Completed in 26ms (View: 10, DB: 1) | 200 OK [http://127.0.0.1/accounts]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-04 15:53:54) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 40ms (View: 33, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-04 15:56:28) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 138ms (View: 131, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2010-04-04 15:56:33) [GET]
+  Parameters: {"action"=>"edit", "id"=>"current", "controller"=>"users"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/edit
+Rendered users/_form (4.3ms)
+Completed in 27ms (View: 6, DB: 0) | 200 OK [http://127.0.0.1/users/current/edit]
+
+
+Processing AccountsController#index (for 127.0.0.1 at 2010-04-04 15:56:35) [GET]
+  Parameters: {"action"=>"index", "controller"=>"accounts"}
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mAccount Load (1.0ms)[0m   [0mSELECT * FROM "accounts" [0m
+Rendering template within layouts/application
+Rendering accounts/index
+Completed in 82ms (View: 29, DB: 2) | 200 OK [http://127.0.0.1/accounts]
+
+
+Processing AccountsController#index (for 127.0.0.1 at 2010-04-04 15:56:37) [GET]
+  Parameters: {"action"=>"index", "controller"=>"accounts"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mAccount Load (0.4ms)[0m   [0mSELECT * FROM "accounts" [0m
+Rendering template within layouts/application
+Rendering accounts/index
+Completed in 28ms (View: 10, DB: 1) | 200 OK [http://127.0.0.1/accounts]
+
+
+Processing AccountsController#index (for 127.0.0.1 at 2010-04-04 15:57:16) [GET]
+  Parameters: {"action"=>"index", "controller"=>"accounts"}
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mAccount Load (1.0ms)[0m   [0mSELECT * FROM "accounts" [0m
+Rendering template within layouts/application
+Rendering accounts/index
+Completed in 73ms (View: 20, DB: 2) | 200 OK [http://127.0.0.1/accounts]
+
+
+Processing UserSessionsController#destroy (for 127.0.0.1 at 2010-04-04 15:57:27) [GET]
+  Parameters: {"action"=>"destroy", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/
+Completed in 109ms (DB: 0) | 302 Found [http://127.0.0.1/logout]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-04 15:57:27) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 15ms (View: 13, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-04 15:58:23) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 51ms (View: 44, DB: 0) | 200 OK [http://127.0.0.1/]

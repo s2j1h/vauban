@@ -1,15 +1,8 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
-one:
-  name: MyString
-  url: MyString
-  login: MyString
-  password: MyString
-  comment: MyText
-
-two:
-  name: MyString
-  url: MyString
-  login: MyString
-  password: MyString
-  comment: MyText
+testOneSimpleIdentity:
+  name: testName
+  url: testUrl
+  login: testLogin
+  password: testPassword
+  comment: testComment

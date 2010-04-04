@@ -8,6 +8,15 @@ class ApplicationController < ActionController::Base
   # Scrub sensitive parameters from your log
   filter_parameter_logging :password, :password_confirmation
 
+  # GET /accounts
+  def index
+    respond_to do |format|
+      format.html # index.html.erb
+    end
+  end
+
+
+
   helper_method :current_user
 
   private

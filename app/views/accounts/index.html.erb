@@ -1,11 +1,11 @@
-<% content_for :title do %>Liste des comptes<% end %>
+<% content_for :title do %>Your identities<% end %>
 
-<h1>Liste des comptes</h1>
+  <h1>welcome <%=h current_user.username %>, here are your known identities:</h1>
 
 
 <table>
   <tr>
-    <th>Nom</th>
+    <th>Identity</th>
     <th>Url</th>
   </tr>
 
@@ -13,14 +13,13 @@
   <tr>
     <td><%=h account.name %></td>
     <td><%=h account.url %></td>
-    <td><%= link_to 'Voir', account %></td>
-    <td><%= link_to 'Editer', edit_account_path(account) %></td>
-    <td><%= link_to 'Effacer', account, :confirm => 'Etes vous sûr?', :method => :delete %></td>
+    <td><%= link_to 'View', account %></td>
+    <td><%= link_to 'Edit', edit_account_path(account) %></td>
+    <td><%= link_to 'Delete', account, :confirm => 'Are you sûr?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'Créer un nouveau compte', new_account_path %>
-<%= link_to "Se déconnecter", "/sign_out" %>
+<%= link_to 'New identity', new_account_path %>
