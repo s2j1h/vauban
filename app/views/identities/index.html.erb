@@ -1,0 +1,25 @@
+<% content_for :title do %>Your identities<% end %>
+
+  <h1>welcome <%=h current_user.username %>, here are your known identities:</h1>
+
+
+<table>
+  <tr>
+    <th>Identity</th>
+    <th>Url</th>
+  </tr>
+
+<% @identities.each do |identity| %>
+  <tr>
+    <td><%=h identity.name %></td>
+    <td><%=h identity.url %></td>
+    <td><%= link_to 'View', identity %></td>
+    <td><%= link_to 'Edit', edit_identity_path(identity) %></td>
+    <td><%= link_to 'Delete', identity, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New identity', new_identity_path %>

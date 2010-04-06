@@ -1,0 +1,27 @@
+<% content_for :title do %>Show identity <%=h @identity.name %> <% end %>
+
+<h1><%=h @identity.name %></h1>
+
+<p>
+  <b>Url:</b>
+  <%=h @identity.url %>
+</p>
+
+<p>
+  <b>Login:</b>
+  <%=h @identity.login %>
+</p>
+
+<p>
+  <b>Password:</b>
+  <%=h @identity.password %>
+</p>
+
+<p>
+  <b>Comment:</b>
+  <%=h @identity.comment %>
+</p>
+
+
+<%= link_to 'Edit', edit_identity_path(@identity) %> |
+<%= link_to 'Back', identities_path %>

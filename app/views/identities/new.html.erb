@@ -1,11 +1,9 @@
-<% content_for :title do %>Edit identity <%=h @account.name %> <% end %>
+<% content_for :title do %>Create new identity<% end %>
 
 
+<h1>New identity</h1>
 
-<h1>Editing identity</h1>
-
-
-<% form_for(@account) do |f| %>
+<% form_for(@identity) do |f| %>
   <%= f.error_messages %>
 
   <p>
@@ -29,9 +27,8 @@
     <%= f.text_area :comment %>
   </p>
   <p>
-    <%= f.submit 'Update' %>
+    <%= f.submit 'Create' %>
   </p>
 <% end %>
 
-<%= link_to 'Show', @account %> |
-<%= link_to 'Back', accounts_path %>
+<%= link_to 'Back', identities_path %>

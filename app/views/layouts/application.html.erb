@@ -10,7 +10,7 @@
 <body>
   <div id="user_nav">
     <% if current_user %>
-      <%= link_to "My identities", :controller => "accounts", :action => "index" %> |
+      <%= link_to "My identities", :controller => "identities", :action => "index" %> |
       <%= link_to "My Profile", edit_user_path(:current) %> |
       <%= link_to "Logout", logout_path %>
     <% else %>
@@ -26,6 +26,10 @@
 </div>
 
 <%= yield %>
+
+<center>
+  (C)Copyright J.Raigneau 2010 - Vauban is proudly forged by <%= link_to "Zeneffy::Labs", "http://labs.zeneffy.fr"%>
+</center>
 
 </body>
 </html>
