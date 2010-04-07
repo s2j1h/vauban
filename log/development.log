@@ -5052,3 +5052,80 @@ ActiveRecord::RecordNotFound (Couldn't find Identity with ID=1 AND ("identities"
 Rendered rescues/_trace (96.1ms)
 Rendered rescues/_request_and_response (0.3ms)
 Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-07 23:02:46) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 826ms (View: 818, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-07 23:03:00) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering application/index
+Completed in 9ms (View: 2, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-07 23:03:18) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 55ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-07 23:04:06) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering application/index
+Completed in 9ms (View: 2, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-07 23:04:08) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 125ms (View: 118, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-07 23:04:33) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 58ms (View: 51, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-07 23:04:54) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 58ms (View: 51, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-07 23:05:30) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 43ms (View: 36, DB: 0) | 200 OK [http://127.0.0.1/]
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateAccounts (20100313080135)
+Migrating to CreateUsers (20100327080857)
+Migrating to CreateIdentities (20100406202620)
+Migrating to DropAccount (20100407210845)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (10.3ms)[0m   [0mDROP TABLE "accounts"[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100407210845')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("identities")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("users")[0m

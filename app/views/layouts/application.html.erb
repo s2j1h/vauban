@@ -4,11 +4,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-  <title>Vauban - <%= h(yield(:title) || "sans titre")%></title>
+  <title>Vauban - <%= h(yield(:title) || "Untitled")%></title>
   <%= stylesheet_link_tag 'scaffold' %>
 </head>
 <body>
   <div id="user_nav">
+    [BETA VERSION]
     <% if current_user %>
       <%= link_to "My identities", :controller => "identities", :action => "index" %> |
       <%= link_to "My Profile", edit_user_path(:current) %> |
@@ -28,7 +29,9 @@
 <%= yield %>
 
 <center>
-  (C)Copyright J.Raigneau 2010 - Vauban is proudly forged by <%= link_to "Zeneffy::Labs", "http://labs.zeneffy.fr"%>
+  <BR/>
+  Vauban is proudly forged by <%= link_to "Zeneffy::Labs", "http://labs.zeneffy.fr"%><BR/>
+  Copyright &copy;2010 J.Raigneau. All rights reserved.
 </center>
 
 </body>

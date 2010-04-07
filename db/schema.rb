@@ -9,17 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100406202620) do
-
-  create_table "accounts", :force => true do |t|
-    t.string   "name"
-    t.string   "url"
-    t.string   "login"
-    t.string   "password"
-    t.text     "comment"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
+ActiveRecord::Schema.define(:version => 20100407210845) do
 
   create_table "identities", :force => true do |t|
     t.string   "name"
