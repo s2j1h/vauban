@@ -5129,3 +5129,177 @@ Migrating to DropAccount (20100407210845)
 [0m
   [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("identities")[0m
   [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("users")[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-07 23:19:32) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 58ms (View: 51, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-07 23:19:34) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 57ms (View: 54, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-04-07 23:19:36) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 90ms (View: 49, DB: 0) | 200 OK [http://127.0.0.1/login]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-04-07 23:19:41) [POST]
+  Parameters: {"commit"=>"Submit", "user_session"=>{"username"=>"test", "password"=>"[FILTERED]"}, "action"=>"create", "authenticity_token"=>"Gi5x0sfFuqU3T0PIqZq+RdNXb3UmsE7Z0GrXObuznRg=", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE (LOWER("users".username) = 'test') LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/identities
+Completed in 197ms (DB: 0) | 302 Found [http://127.0.0.1/user_sessions]
+
+
+Processing IdentitiesController#index (for 127.0.0.1 at 2010-04-07 23:19:42) [GET]
+  Parameters: {"action"=>"index", "controller"=>"identities"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mIdentity Load (0.3ms)[0m   [0;1mSELECT * FROM "identities" WHERE ("identities".user_id = 1) [0m
+Rendering template within layouts/application
+Rendering identities/index
+Completed in 94ms (View: 39, DB: 1) | 200 OK [http://127.0.0.1/identities]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-07 23:19:49) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 61ms (View: 53, DB: 1) | 200 OK [http://127.0.0.1/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-07 23:22:02) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 71ms (View: 63, DB: 1) | 200 OK [http://127.0.0.1/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-07 23:22:46) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 125ms (View: 117, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing IdentitiesController#index (for 127.0.0.1 at 2010-04-07 23:22:50) [GET]
+  Parameters: {"action"=>"index", "controller"=>"identities"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mIdentity Load (0.3ms)[0m   [0mSELECT * FROM "identities" WHERE ("identities".user_id = 1) [0m
+Rendering template within layouts/application
+Rendering identities/index
+Completed in 32ms (View: 7, DB: 1) | 200 OK [http://127.0.0.1/identities]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-07 23:22:51) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 63ms (View: 55, DB: 1) | 200 OK [http://127.0.0.1/]
+
+
+Processing IdentitiesController#index (for 127.0.0.1 at 2010-04-07 23:22:53) [GET]
+  Parameters: {"action"=>"index", "controller"=>"identities"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mIdentity Load (0.3ms)[0m   [0;1mSELECT * FROM "identities" WHERE ("identities".user_id = 1) [0m
+Rendering template within layouts/application
+Rendering identities/index
+Completed in 25ms (View: 7, DB: 1) | 200 OK [http://127.0.0.1/identities]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-07 23:22:54) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+  [4;35;1mUser Load (2.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 23ms (View: 18, DB: 2) | 200 OK [http://127.0.0.1/]
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2010-04-07 23:22:55) [GET]
+  Parameters: {"action"=>"edit", "id"=>"current", "controller"=>"users"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/edit
+Rendered users/_form (12.6ms)
+Completed in 200ms (View: 45, DB: 0) | 200 OK [http://127.0.0.1/users/current/edit]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-07 23:22:56) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 19ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2010-04-07 23:23:05) [GET]
+  Parameters: {"action"=>"edit", "id"=>"current", "controller"=>"users"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/edit
+Rendered users/_form (4.0ms)
+Completed in 21ms (View: 6, DB: 0) | 200 OK [http://127.0.0.1/users/current/edit]
+
+
+Processing IdentitiesController#index (for 127.0.0.1 at 2010-04-07 23:23:07) [GET]
+  Parameters: {"action"=>"index", "controller"=>"identities"}
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mIdentity Load (0.4ms)[0m   [0;1mSELECT * FROM "identities" WHERE ("identities".user_id = 1) [0m
+Rendering template within layouts/application
+Rendering identities/index
+Completed in 50ms (View: 9, DB: 1) | 200 OK [http://127.0.0.1/identities]
+
+
+Processing IdentitiesController#edit (for 127.0.0.1 at 2010-04-07 23:23:51) [GET]
+  Parameters: {"action"=>"edit", "id"=>"5", "controller"=>"identities"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mIdentity Load (0.3ms)[0m   [0;1mSELECT * FROM "identities" WHERE ("identities"."id" = 5 AND ("identities".user_id = 1)) [0m
+Rendering template within layouts/application
+Rendering identities/edit
+Completed in 46ms (View: 23, DB: 1) | 200 OK [http://127.0.0.1/identities/5/edit]
+
+
+Processing IdentitiesController#index (for 127.0.0.1 at 2010-04-07 23:24:00) [GET]
+  Parameters: {"action"=>"index", "controller"=>"identities"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mIdentity Load (0.3ms)[0m   [0;1mSELECT * FROM "identities" WHERE ("identities".user_id = 1) [0m
+Rendering template within layouts/application
+Rendering identities/index
+Completed in 29ms (View: 8, DB: 1) | 200 OK [http://127.0.0.1/identities]
+
+
+Processing IdentitiesController#show (for 127.0.0.1 at 2010-04-07 23:24:01) [GET]
+  Parameters: {"action"=>"show", "id"=>"5", "controller"=>"identities"}
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mIdentity Load (0.9ms)[0m   [0;1mSELECT * FROM "identities" WHERE ("identities"."id" = 5 AND ("identities".user_id = 1)) [0m
+Rendering template within layouts/application
+Rendering identities/show
+Completed in 96ms (View: 28, DB: 2) | 200 OK [http://127.0.0.1/identities/5]
+
+
+Processing IdentitiesController#index (for 127.0.0.1 at 2010-04-07 23:24:04) [GET]
+  Parameters: {"action"=>"index", "controller"=>"identities"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mIdentity Load (0.3ms)[0m   [0;1mSELECT * FROM "identities" WHERE ("identities".user_id = 1) [0m
+Rendering template within layouts/application
+Rendering identities/index
+Completed in 45ms (View: 7, DB: 1) | 200 OK [http://127.0.0.1/identities]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-12 07:41:50) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+DECRYPTmagixbox
+Rendering template within layouts/application
+Rendering application/index
+Completed in 362ms (View: 355, DB: 0) | 200 OK [http://127.0.0.1/]

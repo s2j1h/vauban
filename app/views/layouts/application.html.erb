@@ -9,7 +9,10 @@
 </head>
 <body>
   <div id="user_nav">
-    [BETA VERSION]
+    [BETA VERSION] 
+    <% if controller.controller_name != "application" %>
+      <%= link_to "About Vauban", :controller => "application", :action => "index" %> |
+    <% end %>
     <% if current_user %>
       <%= link_to "My identities", :controller => "identities", :action => "index" %> |
       <%= link_to "My Profile", edit_user_path(:current) %> |

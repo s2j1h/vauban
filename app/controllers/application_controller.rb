@@ -1,5 +1,6 @@
 # Filters added to this controller apply to all controllers in the application.
 # Likewise, all the methods added will be available for all controllers.
+require 'AESCrypt'
 
 class ApplicationController < ActionController::Base
   helper :all # include all helpers, all the time
@@ -8,8 +9,10 @@ class ApplicationController < ActionController::Base
   # Scrub sensitive parameters from your log
   filter_parameter_logging :password, :password_confirmation
 
-  # GET /accounts
+  # GET /
   def index
+    encData = AESCrypt.encrypt("magixbox","azertyuiopqsdfghjklmwxcvbn1234567890", nil, "AES-256-ECB")
+    logger.info "DECRYPT" << AESCrypt.decrypt(encData,"azertyuiopqsdfghjklmwxcvbn123456",nil,"AES-256-ECB")
     respond_to do |format|
       format.html # index.html.erb
     end
