@@ -2,6 +2,10 @@ class UserSessionsController < ApplicationController
   before_filter :require_no_user, :only => [:new, :create]
   before_filter :require_user, :only => :destroy
 
+  def index
+    redirect_back_or_default :controller => "application",:action => "index"
+  end
+
   def new
     @user_session = UserSession.new
   end

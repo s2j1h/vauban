@@ -1,6 +1,39 @@
 <% content_for :title do %>Register your account<% end %>
 
 <h1>Registring</h1>
-<%= render :partial => 'form' %>
+<% form_for @user do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :username %><br />
+    <%= f.text_field :username %>
+  </p>
+  <p>
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </p>
+  <p>
+    <%= f.label :password %><br />
+    <%= f.password_field :password %>
+  </p>
+ <p>
+    <%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation %>
+  </p>
 
-<%= link_to 'Back', '/' %>
+  <p>
+    <%= f.label :secretkey %><br />
+    <%= f.text_field :secretkey %>
+  </p>
+ 
+  <p>
+    <%= f.label :secretkey_confirmation %><br />
+    <%= f.text_field :secretkey_confirmation %>
+  </p>
+  
+  <p>
+  <%= f.label :test_sentence %><br />
+    <%= f.text_field :test_sentence %>
+  </p>
+
+  <p><%= f.submit "Submit" %> or <%= link_to 'Cancel', '/' %></p>
+<% end %>
