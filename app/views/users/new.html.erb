@@ -22,18 +22,13 @@
 
   <p>
     <%= f.label :secretkey %><br />
-    <%= f.text_field :secretkey %>
+    <%= f.password_field :secretkey %>
   </p>
  
   <p>
     <%= f.label :secretkey_confirmation %><br />
-    <%= f.text_field :secretkey_confirmation %>
+    <%= f.password_field :secretkey_confirmation %>
   </p>
   
-  <p>
-  <%= f.label :test_sentence %><br />
-    <%= f.text_field :test_sentence %>
-  </p>
-
   <p><%= f.submit "Submit" %> or <%= link_to 'Cancel', '/' %></p>
 <% end %>

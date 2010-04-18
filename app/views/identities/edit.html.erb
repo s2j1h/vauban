@@ -22,16 +22,15 @@
   </p>
   <p>
     <%= f.label :password %><br />
-    <%= f.text_field :password %>
+    <%= f.password_field :password %>
   </p>
   <p>
     <%= f.label :comment %><br />
     <%= f.text_area :comment %>
   </p>
   <p>
-    <%= f.submit 'Update' %>
+    <%= f.submit 'Update' %> or <%= link_to 'Delete', @identity, :confirm => 'Are you sure?', :method => :delete %>
   </p>
 <% end %>
 
-<%= link_to 'Show', @identity %> |
-<%= link_to 'Back', identities_path %>
+<%= link_to 'Cancel', identities_path %>

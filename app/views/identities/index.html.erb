@@ -13,9 +13,8 @@
   <tr>
     <td><%=h identity.name %></td>
     <td><%=h identity.url %></td>
-    <td><%= link_to 'View', identity %></td>
+    <td><%= link_to 'Login', identity %></td>
     <td><%= link_to 'Edit', edit_identity_path(identity) %></td>
-    <td><%= link_to 'Delete', identity, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>

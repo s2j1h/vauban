@@ -49,8 +49,8 @@ class IdentitiesController < ApplicationController
     respond_to do |format|
       if @identity.save
         flash[:notice] = 'Identity was successfully created.'
-        format.html { redirect_to(@identity) }
-        format.xml  { render :xml => @identity, :status => :created, :location => @identity }
+        format.html { redirect_to :controller => "identities",:action => "index"}
+        #format.xml  { render :xml => @identity, :status => :created, :location => @identity }
       else
         format.html { render :action => "new" }
         format.xml  { render :xml => @identity.errors, :status => :unprocessable_entity }

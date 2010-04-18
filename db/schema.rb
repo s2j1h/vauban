@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100412212238) do
+ActiveRecord::Schema.define(:version => 20100418125744) do
 
   create_table "identities", :force => true do |t|
     t.string   "name"
@@ -31,7 +31,6 @@ ActiveRecord::Schema.define(:version => 20100412212238) do
     t.string   "secretkey"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "test_sentence"
   end
 
 end
