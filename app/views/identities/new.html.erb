@@ -20,12 +20,17 @@
   </p>
   <p>
     <%= f.label :password %><br />
-    <%= f.text_field :password %>
+    <%= f.password_field :password %>
   </p>
   <p>
     <%= f.label :comment %><br />
     <%= f.text_area :comment %>
   </p>
+  <p>
+    <%= label_tag :secretkey %><br />
+    <%= password_field_tag :secretkey %>
+  </p>
+
   <p>
     <%= f.submit 'Create' %>
   </p>

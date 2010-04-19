@@ -2,6 +2,46 @@
 
   <h1>welcome <%=h current_user.username %>, here are your known identities:</h1>
 
+<%= javascript_tag "var AUTH_TOKEN = #{form_authenticity_token.inspect};" if protect_against_forgery? -%> 
+<script type="text/javascript">
+    var url;
+    $(document).ready(function(){
+        $("a.login").click(function(e){
+            event.preventDefault()
+            url = this.href;
+            $("#dialog").dialog("destroy");
+            var secretkey = $("#secretkey");
+            $("#dialog-form").dialog('open');
+        });
+        $("#dialog-form").dialog({
+           autoOpen: false,
+            modal: true,
+            closeOnEscape: false,
+            resizable: false,
+            buttons: {
+                'Get credentials': function() {
+                  $(this).dialog('close');
+                },
+                'Cancel': function() {                
+                  $(this).dialog('close');
+                }
+            },
+            Cancel: function() {
+                  $(this).dialog('close');
+            }
+        });         
+    });
+</script>
+
+<div id="dialog-form" title="Display identity">
+  <p>Please enter your secret key to access to your credentials</p>
+  <form>
+  <fieldset>
+    <%= label_tag :secretkey %><br />
+    <%= password_field_tag :secretkey, nil, :class => 'text ui-widget-content ui-corner-all'  %>
+  </fieldset>
+  </form>
+</div>
 
 <table>
   <tr>
@@ -13,7 +53,7 @@
   <tr>
     <td><%=h identity.name %></td>
     <td><%=h identity.url %></td>
-    <td><%= link_to 'Login', identity %></td>
+    <td><%= link_to 'Login', identity, :class => 'login' %></td>
     <td><%= link_to 'Edit', edit_identity_path(identity) %></td>
   </tr>
 <% end %>

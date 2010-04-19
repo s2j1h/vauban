@@ -1,3 +1,5 @@
+require "encryptor"
+
 class IdentitiesController < ApplicationController
 
   before_filter :require_user
@@ -49,7 +51,7 @@ class IdentitiesController < ApplicationController
     respond_to do |format|
       if @identity.save
         flash[:notice] = 'Identity was successfully created.'
-        format.html { redirect_to :controller => "identities",:action => "index"}
+        format.html { redirect_to(identities_url) }
         #format.xml  { render :xml => @identity, :status => :created, :location => @identity }
       else
         format.html { render :action => "new" }
@@ -66,7 +68,7 @@ class IdentitiesController < ApplicationController
     respond_to do |format|
       if @identity.update_attributes(params[:identity])
         flash[:notice] = 'Identity was successfully updated.'
-        format.html { redirect_to(@identity) }
+        format.html { redirect_to(identities_url) }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }

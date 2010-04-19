@@ -1,8 +1,41 @@
 <% content_for :title do %>Edit identity <%=h @identity.name %> <% end %>
-
-
-
+  
 <h1>Editing identity</h1>
+
+<%= javascript_tag "var AUTH_TOKEN = #{form_authenticity_token.inspect};" if protect_against_forgery? -%>
+<script type="text/javascript">
+    var url;
+    $(document).ready(function(){
+        $("a.delete").click(function(e){
+            event.preventDefault()
+            url = this.href;
+            $("#confirmation").dialog('open');
+        });
+        $("#confirmation").dialog({
+            autoOpen: false,
+            modal: true,
+            closeOnEscape: false,
+            resizable: false,
+            buttons : {
+                "Yes" : function() {              
+                    $(this).dialog("close");
+                    $('<form method="post" action="' + url.replace('/delete', '') + '" />')
+                        .append('<input type="hidden" name="_method" value="delete" />')
+                        .append('<input type="hidden" name="authenticity_token" value="' + AUTH_TOKEN + '" />')
+                        .appendTo('body')
+                        .submit();
+                     return false;
+                },
+                "No" : function() {
+                $(this).dialog("close");
+                }
+           }
+        });         
+    });
+</script>
+
+<div id="confirmation" title="Delete confirmation"><center>Are you sure ?</center></div>
+
 
 
 <% form_for(@identity) do |f| %>
@@ -28,8 +61,15 @@
     <%= f.label :comment %><br />
     <%= f.text_area :comment %>
   </p>
+
   <p>
-    <%= f.submit 'Update' %> or <%= link_to 'Delete', @identity, :confirm => 'Are you sure?', :method => :delete %>
+    <%= label_tag :secretkey %><br />
+    <%= password_field_tag :secretkey %>
+  </p>
+
+
+  <p>
+    <%= f.submit 'Update' %> or <%= link_to 'Delete' , @identity, :class => 'delete' %>
   </p>
 <% end %>
 
