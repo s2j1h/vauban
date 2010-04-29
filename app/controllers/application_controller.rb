@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery # See ActionController::RequestForgeryProtection for details
 
   # Scrub sensitive parameters from your log
-  #filter_parameter_logging :username,:login,:password, :password_confirmation , :secretkey, :secretkey_confirmation
+  filter_parameter_logging :username,:login,:password, :password_confirmation , :secretkey, :secretkey_confirmation
 
   # GET /
   def index
