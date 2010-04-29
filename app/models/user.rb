@@ -8,13 +8,12 @@ class User < ActiveRecord::Base
   validates_length_of :secretkey,:minimum => 6
   validates_presence_of:secretkey
 
-  before_create :hash_secretkey #one and only one time
+  before_create :hash_secretkey #on create before one and only one time
 
   private
     def hash_secretkey
       self.secretkey = Digest::SHA256.hexdigest(self.secretkey)
     end
-
 
 
 end

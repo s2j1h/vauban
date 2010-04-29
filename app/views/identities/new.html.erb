@@ -7,28 +7,22 @@
   <%= f.error_messages %>
 
   <p>
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
+    <%= f.label :name %>: <%= f.text_field :name %>
   </p>
   <p>
-    <%= f.label :url %><br />
-    <%= f.text_field :url %>
+    <%= f.label :url %>: <%= f.text_field :url %>
   </p>
   <p>
-    <%= f.label :login %><br />
-    <%= f.text_field :login %>
+    <%= f.label :login %>: <%= f.text_field :login %>
   </p>
   <p>
-    <%= f.label :password %><br />
-    <%= f.password_field :password %>
+    <%= f.label :password %>: <%= f.password_field :password %>
   </p>
   <p>
-    <%= f.label :comment %><br />
-    <%= f.text_area :comment %>
+    <%= f.label :comment %>: <%= f.text_area :comment, :rows => "3", :cols => '30' %>
   </p>
   <p>
-    <%= label_tag :secretkey %><br />
-    <%= password_field_tag :secretkey %>
+    <%= label_tag :secretkey %>: <%= password_field_tag :secretkey %>
   </p>
 
   <p>

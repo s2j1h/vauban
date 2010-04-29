@@ -1,16 +1,29 @@
-<% content_for :title do %>Edit identity <%=h @identity.name %> <% end %>
+<% content_for :title do %>View identity <%=h @identity.name %> <% end %>
   
-<h1>Editing identity</h1>
+  <span style="font-size: 200%" id="title-identity">View identity</span> <span class="hideme"> <%= link_to 'Edit' , @identity, :id => 'edit' %></span><span class="editme" style="display:none"><%= link_to 'Cancel' , @identity, :id => 'cancel' %></span> or  <%= link_to 'Delete' , @identity, :id => 'delete' %>
+
 
 <%= javascript_tag "var AUTH_TOKEN = #{form_authenticity_token.inspect};" if protect_against_forgery? -%>
 <script type="text/javascript">
     var url;
     $(document).ready(function(){
-        $("a.delete").click(function(e){
-            event.preventDefault()
+        $("#delete").click(function(e){
+            event.preventDefault();
             url = this.href;
             $("#confirmation").dialog('open');
-        });
+            });
+        $("#edit").click(function(e){
+            event.preventDefault();
+            $(".editme").toggle();
+            $(".hideme").toggle();
+            $('<span style="font-size: 200%" id="title-identity">Edit identity</span>').replaceAll('#title-identity');
+          });
+        $("#cancel").click(function(e){
+            event.preventDefault();
+            $("span.editme").toggle();
+            $("span.hideme").toggle();
+            $('<span style="font-size: 200%" id="title-identity">View identity</span>').replaceAll('#title-identity');
+           });
         $("#confirmation").dialog({
             autoOpen: false,
             modal: true,
@@ -41,36 +54,31 @@
 <% form_for(@identity) do |f| %>
   <%= f.error_messages %>
 
-  <p>
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </p>
-  <p>
-    <%= f.label :url %><br />
-    <%= f.text_field :url %>
-  </p>
-  <p>
-    <%= f.label :login %><br />
-    <%= f.text_field :login %>
-  </p>
-  <p>
-    <%= f.label :password %><br />
-    <%= f.password_field :password %>
-  </p>
-  <p>
-    <%= f.label :comment %><br />
-    <%= f.text_area :comment %>
-  </p>
+<p>
+<%= f.label :name %>: <span class="hideme"><%= @identity.name%></span> <span class="editme" style="display:none"><%= f.text_field :name %></span>
+</p>
+<p>
+  <%= f.label :url %>: <span class="hideme"><%= @identity.url%></span> <span class="editme" style="display:none"><%= f.text_field :url %></span>
+</p>
+<p>
+<%= f.label :login %>: <span class="hideme"><%= @identity.login%></span> <span class="editme" style="display:none"><%= f.text_field :login %></span>
+</p>
+<p>
+  <%= f.label :password %>: <span class="hideme"><%= @identity.password%></span> <span class="editme" style="display:none"><%= f.text_field :password %></span>
+</p>
+<p>
+  <%= f.label :comment %>:<br />
+  <span class="hideme"><%= @identity.comment%></span> <span class="editme" style="display:none"><%= f.text_area :comment , :rows => '3', :cols => '30'%></span>
+</p>
 
-  <p>
-    <%= label_tag :secretkey %><br />
-    <%= password_field_tag :secretkey %>
+  <p class="editme" style="display:none">
+    <%= label_tag :secretkey %>: <%= password_field_tag :secretkey %>
   </p>
 
 
-  <p>
-    <%= f.submit 'Update' %> or <%= link_to 'Delete' , @identity, :class => 'delete' %>
+  <p class="editme" style="display:none">
+    <%= f.submit 'Update' %>
   </p>
 <% end %>
 
-<%= link_to 'Cancel', identities_path %>
+<%= link_to 'Back', identities_path %>

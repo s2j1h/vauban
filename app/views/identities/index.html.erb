@@ -6,12 +6,18 @@
 <script type="text/javascript">
     var url;
     $(document).ready(function(){
-        $("a.login").click(function(e){
+        $("a.view").click(function(e){
             event.preventDefault()
             url = this.href;
             $("#dialog").dialog("destroy");
-            var secretkey = $("#secretkey");
             $("#dialog-form").dialog('open');
+            $("#secretkey:last").focus();
+        });
+        $('#dialog-form').find('input').keypress(function(e) {
+                if ((e.which && e.which == 13) || (e.keyCode && e.keyCode == 13)) {
+                        $(this).parent().parent().parent().parent().find('.ui-dialog-buttonpane').find('button:first').click(); /* Assuming the first one is the action button */
+                        return false;
+                }
         });
         $("#dialog-form").dialog({
            autoOpen: false,
@@ -20,7 +26,19 @@
             resizable: false,
             buttons: {
                 'Get credentials': function() {
-                  $(this).dialog('close');
+                $(this).dialog('close');
+                id = url.slice(url.lastIndexOf("/")+1,url.lenght);
+                url = url.slice(0,url.lastIndexOf("/")+1) + "edit";
+                var secretkey = $("#secretkey").val();
+                $('<form method="post" action="' + url + '" />')
+                        .append('<input type="hidden" name="id" value="'+id+'" />')
+                        .append('<input type="hidden" name="secretkey" value="'+secretkey+'" />')
+                        .append('<input type="hidden" name="action" value="edit" />')
+                        .append('<input type="hidden" name="_method" value="edit" />')
+                        .append('<input type="hidden" name="authenticity_token" value="' + AUTH_TOKEN + '" />')
+                        .appendTo('body')
+                        .submit();
+                return false;
                 },
                 'Cancel': function() {                
                   $(this).dialog('close');
@@ -38,7 +56,7 @@
   <form>
   <fieldset>
     <%= label_tag :secretkey %><br />
-    <%= password_field_tag :secretkey, nil, :class => 'text ui-widget-content ui-corner-all'  %>
+    <%= password_field_tag :secretkey, nil, :class => 'text ui-widget-content'  %>
   </fieldset>
   </form>
 </div>
@@ -53,8 +71,7 @@
   <tr>
     <td><%=h identity.name %></td>
     <td><%=h identity.url %></td>
-    <td><%= link_to 'Login', identity, :class => 'login' %></td>
-    <td><%= link_to 'Edit', edit_identity_path(identity) %></td>
+    <td><%= link_to 'View', identity, :class => 'view' %></td>
   </tr>
 <% end %>
 </table>
