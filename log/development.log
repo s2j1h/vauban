@@ -14184,3 +14184,139 @@ ActionController::RoutingError (No route matches "/javascripts/jquery.jeditable.
   /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
 
 Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-01 10:39:24) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 565ms (View: 528, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-05-01 10:39:27) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 150ms (View: 103, DB: 0) | 200 OK [http://127.0.0.1/login]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-05-01 10:39:33) [POST]
+  Parameters: {"commit"=>"Submit", "user_session"=>{"username"=>"[FILTERED]", "password"=>"[FILTERED]"}, "action"=>"create", "authenticity_token"=>"jy2eUXbZUKIPzx5ojoYa/k+ULVlcb6O/KI4770KsN10=", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE (LOWER("users".username) = 'test') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 310ms (View: 6, DB: 0) | 200 OK [http://127.0.0.1/user_sessions]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-05-01 10:39:36) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 50ms (View: 6, DB: 0) | 200 OK [http://127.0.0.1/login]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-05-01 10:39:39) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+Completed in 119ms (View: 73, DB: 0) | 200 OK [http://127.0.0.1/users/new]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-05-01 10:40:11) [POST]
+  Parameters: {"commit"=>"Submit", "action"=>"create", "authenticity_token"=>"jy2eUXbZUKIPzx5ojoYa/k+ULVlcb6O/KI4770KsN10=", "controller"=>"users", "user"=>{"password_confirmation"=>"[FILTERED]", "username"=>"[FILTERED]", "secretkey_confirmation"=>"[FILTERED]", "secretkey"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>"test@test.fr"}}
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'test@test.fr') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'test') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '9e2e3511cdbdf4afcaef9f0b1f6ad6595990f2e331bfc79680d01ce83ca117d4457597e1bb742c200cfd245012240063e4f4c31004eba03b944506db7aa406c5') LIMIT 1[0m
+  [4;36;1mUser Create (27.1ms)[0m   [0;1mINSERT INTO "users" ("created_at", "crypted_password", "updated_at", "username", "password_salt", "persistence_token", "secretkey", "email") VALUES('2010-05-01 08:40:11', 'fe8be5cc8eeeb470fe59b92d971d036cdc10f1272ef5d7c17ddf4ce89d4051de245bd82c6ddf477420d695fd11ac4bc3810480da78ec949df56d4194400b7229', '2010-05-01 08:40:11', 'test', 'ALQpcGjoLyxzXG0YKl63', '9e2e3511cdbdf4afcaef9f0b1f6ad6595990f2e331bfc79680d01ce83ca117d4457597e1bb742c200cfd245012240063e4f4c31004eba03b944506db7aa406c5', 'f2d81a260dea8a100dd517984e53c56a7523d96942a834b9cdc249bd4e8c7aa9', 'test@test.fr')[0m
+Redirected to http://127.0.0.1:3000/identities
+Completed in 103ms (DB: 28) | 302 Found [http://127.0.0.1/users]
+
+
+Processing IdentitiesController#index (for 127.0.0.1 at 2010-05-01 10:40:11) [GET]
+  Parameters: {"action"=>"index", "controller"=>"identities"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."persistence_token" = '9e2e3511cdbdf4afcaef9f0b1f6ad6595990f2e331bfc79680d01ce83ca117d4457597e1bb742c200cfd245012240063e4f4c31004eba03b944506db7aa406c5') LIMIT 1[0m
+  [4;36;1mIdentity Load (0.2ms)[0m   [0;1mSELECT * FROM "identities" WHERE ("identities".user_id = 1) [0m
+Rendering template within layouts/application
+Rendering identities/index
+Completed in 104ms (View: 42, DB: 0) | 200 OK [http://127.0.0.1/identities]
+
+
+Processing IdentitiesController#new (for 127.0.0.1 at 2010-05-01 10:40:14) [GET]
+  Parameters: {"action"=>"new", "controller"=>"identities"}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."persistence_token" = '9e2e3511cdbdf4afcaef9f0b1f6ad6595990f2e331bfc79680d01ce83ca117d4457597e1bb742c200cfd245012240063e4f4c31004eba03b944506db7aa406c5') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering identities/new
+Completed in 131ms (View: 59, DB: 1) | 200 OK [http://127.0.0.1/identities/new]
+
+
+Processing IdentitiesController#create (for 127.0.0.1 at 2010-05-01 10:40:26) [POST]
+  Parameters: {"identity"=>{"comment"=>"", "name"=>"GMail1", "url"=>"www.gmail.com", "password"=>"[FILTERED]", "login"=>"[FILTERED]"}, "commit"=>"Create", "action"=>"create", "authenticity_token"=>"jy2eUXbZUKIPzx5ojoYa/k+ULVlcb6O/KI4770KsN10=", "controller"=>"identities", "secretkey"=>"[FILTERED]"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = '9e2e3511cdbdf4afcaef9f0b1f6ad6595990f2e331bfc79680d01ce83ca117d4457597e1bb742c200cfd245012240063e4f4c31004eba03b944506db7aa406c5') LIMIT 1[0m
+  [4;35;1mIdentity Create (0.2ms)[0m   [0mINSERT INTO "identities" ("name", "comment", "created_at", "updated_at", "url", "user_id", "login", "password") VALUES('GMail1', '', '2010-05-01 08:40:26', '2010-05-01 08:40:26', 'www.gmail.com', 1, '/oN9lu1YMG7hnwHvSwTBZA==
+', 'ZpKZvRZfAydExeOSYnE4Ng==
+')[0m
+Redirected to http://127.0.0.1:3000/identities
+Completed in 46ms (DB: 0) | 302 Found [http://127.0.0.1/identities]
+
+
+Processing IdentitiesController#index (for 127.0.0.1 at 2010-05-01 10:40:26) [GET]
+  Parameters: {"action"=>"index", "controller"=>"identities"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = '9e2e3511cdbdf4afcaef9f0b1f6ad6595990f2e331bfc79680d01ce83ca117d4457597e1bb742c200cfd245012240063e4f4c31004eba03b944506db7aa406c5') LIMIT 1[0m
+  [4;35;1mIdentity Load (0.3ms)[0m   [0mSELECT * FROM "identities" WHERE ("identities".user_id = 1) [0m
+Rendering template within layouts/application
+Rendering identities/index
+Completed in 26ms (View: 6, DB: 1) | 200 OK [http://127.0.0.1/identities]
+
+
+Processing IdentitiesController#edit (for 127.0.0.1 at 2010-05-01 10:40:46) [POST]
+  Parameters: {"action"=>"edit", "_method"=>"edit", "authenticity_token"=>"jy2eUXbZUKIPzx5ojoYa/k+ULVlcb6O/KI4770KsN10=", "id"=>"1", "controller"=>"identities", "secretkey"=>"[FILTERED]"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = '9e2e3511cdbdf4afcaef9f0b1f6ad6595990f2e331bfc79680d01ce83ca117d4457597e1bb742c200cfd245012240063e4f4c31004eba03b944506db7aa406c5') LIMIT 1[0m
+  [4;35;1mIdentity Load (0.3ms)[0m   [0mSELECT * FROM "identities" WHERE ("identities"."id" = 1 AND ("identities".user_id = 1)) [0m
+
+OpenSSL::Cipher::CipherError (wrong final block length):
+  encryptor (1.1.1) lib/encryptor.rb:54:in `final'
+  encryptor (1.1.1) lib/encryptor.rb:54:in `crypt'
+  encryptor (1.1.1) lib/encryptor.rb:38:in `decrypt'
+  app/controllers/identities_controller.rb:125:in `decrypt_identity'
+  app/controllers/identities_controller.rb:39:in `edit'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (57.3ms)
+Rendered rescues/_request_and_response (2.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing IdentitiesController#index (for 127.0.0.1 at 2010-05-01 10:42:08) [GET]
+  Parameters: {"action"=>"index", "controller"=>"identities"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = '9e2e3511cdbdf4afcaef9f0b1f6ad6595990f2e331bfc79680d01ce83ca117d4457597e1bb742c200cfd245012240063e4f4c31004eba03b944506db7aa406c5') LIMIT 1[0m
+  [4;35;1mIdentity Load (0.3ms)[0m   [0mSELECT * FROM "identities" WHERE ("identities".user_id = 1) [0m
+Rendering template within layouts/application
+Rendering identities/index
+Completed in 27ms (View: 6, DB: 1) | 200 OK [http://127.0.0.1/identities]
+
+
+Processing IdentitiesController#edit (for 127.0.0.1 at 2010-05-01 10:42:11) [POST]
+  Parameters: {"action"=>"edit", "_method"=>"edit", "authenticity_token"=>"jy2eUXbZUKIPzx5ojoYa/k+ULVlcb6O/KI4770KsN10=", "id"=>"1", "controller"=>"identities", "secretkey"=>"[FILTERED]"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = '9e2e3511cdbdf4afcaef9f0b1f6ad6595990f2e331bfc79680d01ce83ca117d4457597e1bb742c200cfd245012240063e4f4c31004eba03b944506db7aa406c5') LIMIT 1[0m
+  [4;35;1mIdentity Load (0.3ms)[0m   [0mSELECT * FROM "identities" WHERE ("identities"."id" = 1 AND ("identities".user_id = 1)) [0m
+Rendering template within layouts/application
+Rendering identities/edit
+Completed in 112ms (View: 26, DB: 1) | 200 OK [http://127.0.0.1/identities/edit]
+
+
+Processing IdentitiesController#index (for 127.0.0.1 at 2010-05-01 10:42:18) [GET]
+  Parameters: {"action"=>"index", "controller"=>"identities"}
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = '9e2e3511cdbdf4afcaef9f0b1f6ad6595990f2e331bfc79680d01ce83ca117d4457597e1bb742c200cfd245012240063e4f4c31004eba03b944506db7aa406c5') LIMIT 1[0m
+  [4;35;1mIdentity Load (0.9ms)[0m   [0mSELECT * FROM "identities" WHERE ("identities".user_id = 1) [0m
+Rendering template within layouts/application
+Rendering identities/index
+Completed in 78ms (View: 11, DB: 2) | 200 OK [http://127.0.0.1/identities]
