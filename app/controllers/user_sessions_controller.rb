@@ -1,6 +1,9 @@
 class UserSessionsController < ApplicationController
   before_filter :require_no_user, :only => [:new, :create]
   before_filter :require_user, :only => :destroy
+  
+  ssl_required :new, :create, :destroy if Rails.env.production?
+  ssl_allowed :index if Rails.env.production?
 
   def index
     redirect_back_or_default :controller => "application",:action => "index"

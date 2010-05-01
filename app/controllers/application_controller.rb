@@ -5,22 +5,14 @@ require 'encryptor'
 class ApplicationController < ActionController::Base
   helper :all # include all helpers, all the time
   protect_from_forgery # See ActionController::RequestForgeryProtection for details
+  include SslRequirement
+
 
   # Scrub sensitive parameters from your log
   filter_parameter_logging :username,:login,:password, :password_confirmation , :secretkey, :secretkey_confirmation
 
   # GET /
   def index
-    
-    secret_key = Digest::SHA256.hexdigest('a secret key')
-    encrypted_value = Encryptor.encrypt(:value => 'some string to encrypt', :key => secret_key)
-    secret_key = Digest::SHA256.hexdigest('a secret key123')
-    begin
-      puts 'decrypt ' << decrypted_value = Encryptor.decrypt(:value => encrypted_value, :key => secret_key) # 'some string to encrypt'
-    rescue
-      puts 'wrong password!'
-    end
-
     respond_to do |format|
       format.html # index.html.erb
     end
@@ -67,4 +59,5 @@ class ApplicationController < ActionController::Base
       redirect_to(session[:return_to] || default)
       session[:return_to] = nil
     end
+
 end

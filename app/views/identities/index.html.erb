@@ -6,8 +6,8 @@
 <script type="text/javascript">
     var url;
     $(document).ready(function(){
-        $("a.view").click(function(e){
-            event.preventDefault()
+        $("a.view").click(function(event){
+            event.preventDefault();
             url = this.href;
             $("#dialog").dialog("destroy");
             $("#dialog-form").dialog('open');
@@ -27,7 +27,7 @@
             buttons: {
                 'Get credentials': function() {
                 $(this).dialog('close');
-                id = url.slice(url.lastIndexOf("/")+1,url.lenght);
+                id = url.slice(url.lastIndexOf("/")+1,url.length);
                 url = url.slice(0,url.lastIndexOf("/")+1) + "edit";
                 var secretkey = $("#secretkey").val();
                 $('<form method="post" action="' + url + '" />')
@@ -51,13 +51,10 @@
     });
 </script>
 
-<div id="dialog-form" title="Display identity">
+<div id="dialog-form" title="Display identity" style="disply:none">
   <p>Please enter your secret key to access to your credentials</p>
   <form>
-  <fieldset>
-    <%= label_tag :secretkey %><br />
-    <%= password_field_tag :secretkey, nil, :class => 'text ui-widget-content'  %>
-  </fieldset>
+    <%= label_tag :secretkey %>: <%= password_field_tag :secretkey, nil, :class => 'text ui-widget-content'  %>
   </form>
 </div>
 

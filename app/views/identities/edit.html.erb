@@ -7,21 +7,22 @@
 <script type="text/javascript">
     var url;
     $(document).ready(function(){
-        $("#delete").click(function(e){
+        // Button
+        $("#delete").click(function(event){
             event.preventDefault();
             url = this.href;
             $("#confirmation").dialog('open');
             });
-        $("#edit").click(function(e){
+        $("#edit").click(function(event){
             event.preventDefault();
             $(".editme").toggle();
             $(".hideme").toggle();
             $('<span style="font-size: 200%" id="title-identity">Edit identity</span>').replaceAll('#title-identity');
           });
-        $("#cancel").click(function(e){
+        $("#cancel").click(function(event){
             event.preventDefault();
-            $("span.editme").toggle();
-            $("span.hideme").toggle();
+            $(".editme").toggle();
+            $(".hideme").toggle();
             $('<span style="font-size: 200%" id="title-identity">View identity</span>').replaceAll('#title-identity');
            });
         $("#confirmation").dialog({

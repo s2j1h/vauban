@@ -3,7 +3,7 @@ require "encryptor"
 class IdentitiesController < ApplicationController
 
   before_filter :require_user
-
+  ssl_required :index, :new, :edit, :create, :update, :destroy if Rails.env.production?
 
   # GET /identities
   # GET /identities.xml
