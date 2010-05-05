@@ -2,14 +2,12 @@
 
   <h1>welcome <%=h current_user.username %>, here are your known identities:</h1>
 
-<%= javascript_tag "var AUTH_TOKEN = #{form_authenticity_token.inspect};" if protect_against_forgery? -%> 
 <script type="text/javascript">
     var url;
     $(document).ready(function(){
         $("a.view").click(function(event){
             event.preventDefault();
             url = this.href;
-            $("#dialog").dialog("destroy");
             $("#dialog-form").dialog('open');
             $("#secretkey:last").focus();
         });
@@ -51,7 +49,7 @@
     });
 </script>
 
-<div id="dialog-form" title="Display identity" style="disply:none">
+<div id="dialog-form" title="Display identity" style="display:none">
   <p>Please enter your secret key to access to your credentials</p>
   <form>
     <%= label_tag :secretkey %>: <%= password_field_tag :secretkey, nil, :class => 'text ui-widget-content'  %>

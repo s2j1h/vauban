@@ -52,7 +52,7 @@
 .ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button { font-family: Helvetica, Arial, sans-serif; font-size: 1em; }
 .ui-widget-content { border: 1px solid #dddddd; color: #333333; }
 .ui-widget-content a { color: #333333; }
-.ui-widget-header { border: 1px solid #8ab0c6; background: #83b0ca url(images/large_blue_gradient.png) 50% 50% repeat-x; color: #ffffff; font-weight: bold; }
+.ui-widget-header { border: 1px solid #8ab0c6; background: #83b0ca url(images/the_gradient.gif) 50% 50% repeat-x; color: #ffffff; font-weight: bold; }
 .ui-widget-header a { color: #ffffff; }
 
 /* Interaction states
@@ -67,9 +67,9 @@
 
 /* Interaction Cues
 ----------------------------------*/
-.ui-state-highlight, .ui-widget-content .ui-state-highlight {border: 1px solid #d2dbf4; background: #f4f8fd; color: #0d2054; -moz-border-radius: 0px !important; -webkit-border-radius: 0px !important; border-radius: 0px !important; font-size: 11px; }
+.ui-state-highlight, .ui-widget-content .ui-state-highlight {border: 1px solid #d2dbf4; background: #f4f8fd; color: #0d2054; -moz-border-radius: 0px !important; -webkit-border-radius: 0px !important; border-radius: 0px !important; }
 .ui-state-highlight a, .ui-widget-content .ui-state-highlight a { color: #0d2054; }
-.ui-state-error, .ui-widget-content .ui-state-error {border: 1px solid #e2d0d0; background: #fcf0f0; color: #280b0b; -moz-border-radius: 0px !important; -webkit-border-radius: 0px !important; border-radius: 0px !important; font-size: 11px; }
+.ui-state-error, .ui-widget-content .ui-state-error {border: 1px solid #e2d0d0; background: #fcf0f0; color: #280b0b; -moz-border-radius: 0px !important; -webkit-border-radius: 0px !important; border-radius: 0px !important; }
 .ui-state-error a, .ui-widget-content .ui-state-error a { color: #280b0b; }
 .ui-state-error-text, .ui-widget-content .ui-state-error-text { color: #280b0b; }
 .ui-priority-primary, .ui-widget-content .ui-priority-primary { font-weight: bold; }
