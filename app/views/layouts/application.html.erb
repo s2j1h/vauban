@@ -4,8 +4,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-  <title>Vauban - <%= h(yield(:title) || "Untitled")%></title>
-  <%= stylesheet_link_tag 'scaffold','jquery-ui' %>
+  <title>Vauban - Managing your web identities</title>
+  <%= stylesheet_link_tag 'main','jquery-ui', 'feedback' %>
   <%= javascript_include_tag "jquery", "jquery-ui", "application" %>
   
   <%= javascript_tag "var AUTH_TOKEN = #{form_authenticity_token.inspect};" if protect_against_forgery? -%>
@@ -13,40 +13,65 @@
     .validateTips { border: 1px solid transparent; }  
   </style>  
 </head>
-
-<body>
-
-
-  <div id="user_nav">
-    [BETA VERSION] 
-    <%= link_to 'Feedback', '/feedbacks', :class => 'feedback' %> |
-    <% if controller.controller_name != "application" %>
-      <%= link_to "About Vauban", :controller => "application", :action => "index" %> |
-    <% end %>
+  <body>
+    <div id='page'>
+      <div id='header'>
+        <div id='site-title'><a href="/">Vauban</a></div>
+        <div id='site-subtitle'>Storing and securing your web identities</div>
     <% if current_user %>
-      <%= link_to "My identities", :controller => "identities", :action => "index" %> |
-      <%= link_to "My Profile", edit_user_path(:current) %> |
-      <%= link_to "Logout", logout_path %>
-    <% else %>
-      <%= link_to "Register", new_user_path %> |
-      <%= link_to "Login", login_path %>
+      <div id='navigation'>
+        <% if controller.controller_name == "identities" %>
+            <strong><%= link_to "My identities", :controller => "identities", :action => "index" %></strong> <span class="separator"> | </span>
+            <%= link_to "My Profile", edit_user_path(:current) %>
+          <% else %>
+            <%= link_to "My identities", :controller => "identities", :action => "index" %> <span class="separator"> | </span><strong>
+              <%= link_to "My Profile", edit_user_path(:current) %></strong>
+          <% end %>
+        </div> 
     <% end %>
+      <p id='site-links'>
+        <% if controller.controller_name != "application" %>
+            <%= link_to "About Vauban", :controller => "application", :action => "index" %><span class='separator'> |</span> 
+         <% end %>
+          <%= link_to 'Feedback', '/feedbacks', :class => 'feedback' %>
+          <span class='separator'> |</span>  
+        <% if current_user %>
+            <%= link_to "Logout", logout_path %>
+        <% else %>
+            <%= link_to "Register", new_user_path %>
+            <span class='separator'> |</span> 
+            <%= link_to "Login", login_path %>
+        <% end %>
+        </p>
+
+    </div>
+      <hr class='hidden' />
+      <div id='main'>
+        <div id='content'>
+            <% if yield(:title) %>
+                <h1><%= h(yield(:title))%></h1>
+           <%end%>
+        
+          <div id="flash">
+            <% flash.each do |key, value| -%>
+                <div id="flash_<%= key %>"><%=h value %></div>
+            <% end -%>
+          </div>
+
+
+          <%= yield %>
+
+        </div>
+      </div>
+      <hr class='hidden' />
+      <div id='footer'>
+        <p>
+        	Vauban is proudly forged by Zeneffy Labs. Copyright &copy;2010 J.Raigneau. All rights reserved.
+        </p>
+      </div>
   </div>
 
-<div id="flash">
-      <% flash.each do |key, value| -%>
-        <div id="flash_<%= key %>"><%=h value %></div>
-      <% end -%>
-</div>
+      <%= feedback_form %>
 
-<%= yield %>
-
-<%= feedback_form %>
-
-<center>
-  <BR/>
-  Vauban is proudly forged by <%= link_to "Zeneffy::Labs", "http://labs.zeneffy.fr"%><BR/>
-  Copyright &copy;2010 J.Raigneau. All rights reserved.
-</center>
-</body>
+  </body>
 </html>

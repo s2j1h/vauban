@@ -1,7 +1,5 @@
 <% content_for :title do %>Your identities<% end %>
 
-  <h1>welcome <%=h current_user.username %>, here are your known identities:</h1>
-
 <script type="text/javascript">
     var url;
     $(document).ready(function(){
@@ -56,20 +54,24 @@
   </form>
 </div>
 
-<table>
-  <tr>
-    <th>Identity</th>
-    <th>Url</th>
-  </tr>
-
-<% @identities.each do |identity| %>
-  <tr>
-    <td><%=h identity.name %></td>
-    <td><%=h identity.url %></td>
-    <td><%= link_to 'View', identity, :class => 'view' %></td>
-  </tr>
-<% end %>
-</table>
+        <table class='index' id='site-map' summary='Page hierarchy of the current site'>
+            <thead>
+              <tr>
+          <th class='page'>Identity</th>
+          <th class='url'>Url</th>
+          <th class='modify'></th>
+              </tr>
+            </thead>
+            <tbody>
+            <% @identities.each do |identity| %>
+            <tr>
+                <td class='page' style='padding-left: 4px'><span class="title"><%=h identity.name %></span></td>
+                <td class='url'><%=h identity.url %></td>
+                <td class='view_td'><%= link_to 'View', identity, :class => 'view' %></td>
+            </tr>
+            <% end %>
+            </tbody>
+          </table>
 
 <br />
 
