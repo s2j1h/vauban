@@ -10,10 +10,14 @@ class User < ActiveRecord::Base
 
   before_create :hash_secretkey #on create before one and only one time
 
+  def deliver_password_reset_instructions!
+      reset_perishable_token!
+      Notifier.deliver_password_reset_instructions(self)
+  end
+
   private
     def hash_secretkey
       self.secretkey = Digest::SHA256.hexdigest(self.secretkey)
     end
-
 
 end

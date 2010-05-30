@@ -5,10 +5,12 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :user_sessions
   map.resources :users
+  map.resources :password_resets, :only => [ :new, :create, :edit, :update ]
   
   map.login "login", :controller => "user_sessions", :action => "new"
   map.logout "logout", :controller => "user_sessions", :action => "destroy"
   map.register "register", :controller => "users", :action => "new"
+  map.lostpassword "lostpassword", :controller => "password_resets" , :action => "new"
 
   # The priority is based upon order of creation: first created -> highest priority.
 

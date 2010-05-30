@@ -1,0 +1,17 @@
+<% content_for :title do %>Update your password<% end %>
+
+<p>Please enter the new password below and then press "Update Password".</p>
+
+
+<% form_for @user, :url => password_reset_path, :method => :put do |f| %>
+  <%= f.error_messages %>
+  <%= f.label :password %><br />
+  <%= f.password_field :password %><br />
+  <br />
+  <%= f.label :password_confirmation %><br />
+  <%= f.password_field :password_confirmation %><br />
+  <br />
+  <%= f.submit "Update my password and log me in" %>
+<% end %>
+
+
