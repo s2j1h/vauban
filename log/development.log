@@ -23083,3 +23083,148 @@ Processing ApplicationController#index (for 127.0.0.1 at 2010-05-30 10:30:27) [G
 Rendering template within layouts/application
 Rendering application/index
 Completed in 25ms (View: 22, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (3.1ms)[0m   [0;1mCREATE TABLE "identities" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "url" varchar(255), "login" varchar(255), "password" varchar(255), "comment" text, "user_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255), "email" varchar(255), "crypted_password" varchar(255), "password_salt" varchar(255), "persistence_token" varchar(255), "secretkey" varchar(255), "created_at" datetime, "updated_at" datetime, "perishable_token" varchar(255) DEFAULT '' NOT NULL) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("users")[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mCREATE INDEX "index_users_on_perishable_token" ON "users" ("perishable_token")[0m
+  [4;35;1mSQL (4.9ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("schema_migrations")[0m
+  [4;36;1mSQL (2.1ms)[0m   [0;1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM "schema_migrations"[0m
+  [4;35;1mSQL (1.6ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100530065851')[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100412212238')[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100407210845')[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100406202620')[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100327080857')[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100313080135')[0m
+  [4;35;1mSQL (1.6ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100418125744')[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-30 12:50:22) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 91ms (View: 88, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing FeedbacksController#create (for 127.0.0.1 at 2010-05-30 12:50:33) [POST]
+  Parameters: {"action"=>"create", "authenticity_token"=>"zZAhJ42HcPDxl0kEOo5SjPMXQWm1brs313G65++LcCM=", "feedback"=>{"comment"=>"testtesttest", "subject"=>"Problem", "email"=>"test@open.fr"}, "controller"=>"feedbacks"}
+
+ActionView::MissingTemplate (Missing template notifier/feedback.erb in view path app/views):
+  app/controllers/feedbacks_controller.rb:7:in `create'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-30 12:51:26) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 82ms (View: 80, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing FeedbacksController#create (for 127.0.0.1 at 2010-05-30 12:51:34) [POST]
+  Parameters: {"action"=>"create", "authenticity_token"=>"zZAhJ42HcPDxl0kEOo5SjPMXQWm1brs313G65++LcCM=", "feedback"=>{"comment"=>"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "subject"=>"Problem", "email"=>"test@fr.fr"}, "controller"=>"feedbacks"}
+Sent mail to vauban@zeneffy.fr
+
+Date: Sun, 30 May 2010 12:51:34 +0200
+From: vauban@zeneffy.fr
+To: vauban@zeneffy.fr
+Subject: [Feedback for Vauban.zeneffy.fr] Problem
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Dear site administrator,
+
+You're lucky today, you've got feedback from your users:
+
+Subject: Problem
+User's email: test@fr.fr
+Sent at: Sun May 30 12:51:34 +0200 2010
+
+Comment: 
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+Completed in 21ms (View: 1, DB: 0) | 201 Created [http://127.0.0.1/feedbacks]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-05-30 12:51:42) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 88ms (View: 13, DB: 0) | 200 OK [http://127.0.0.1/login]
+
+
+Processing PasswordResetsController#new (for 127.0.0.1 at 2010-05-30 12:51:43) [GET]
+  Parameters: {"action"=>"new", "controller"=>"password_resets"}
+Rendering template within layouts/application
+Rendering password_resets/new
+Completed in 21ms (View: 7, DB: 0) | 200 OK [http://127.0.0.1/lostpassword]
+
+
+Processing PasswordResetsController#create (for 127.0.0.1 at 2010-05-30 12:51:48) [POST]
+  Parameters: {"commit"=>"Reset Password", "action"=>"create", "authenticity_token"=>"zZAhJ42HcPDxl0kEOo5SjPMXQWm1brs313G65++LcCM=", "controller"=>"password_resets", "email"=>"test@test.fr"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" = 'test@test.fr') LIMIT 1[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-05-30 10:51:49', "perishable_token" = '_GtKGmdcDjGllWTipTqW' WHERE "id" = 1[0m
+Sent mail to test@test.fr
+
+Date: Sun, 30 May 2010 12:51:49 +0200
+From: vauban@zeneffy.fr
+To: test@test.fr
+Subject: Password Reset Instructions
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+<h1>Password Reset Instructions</h1>
+
+<p>
+  A request to reset your password has been made. If you did not make
+  this request, simply ignore this email. If you did make this
+  request, please follow the link below.
+</p>
+
+<a href="http://authlogic_example.binarylogic.com/password_resets/_GtKGmdcDjGllWTipTqW/edit">Reset Password!</a>
+
+<p>
+If the above URL does not work try copying and pasting it into your browser. If you continue to have problem please feel free to contact us.
+</p>
+Redirected to http://127.0.0.1:3000/
+Completed in 31ms (DB: 1) | 302 Found [http://127.0.0.1/password_resets]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-30 12:51:49) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 18ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/]
