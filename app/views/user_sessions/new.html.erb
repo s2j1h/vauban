@@ -1,6 +1,13 @@
 <% content_for :title do %>Login to access your account<% end %>
 <% content_for :tab do %>login<% end %>
 
+<script>
+$(document).ready(function() {
+       // focus on the first text input field in the first field on the page
+        $("input[type='text']:first", document.forms[0]).focus();
+    });
+</script>
+
 <% form_for @user_session do |f| %>
   <%= f.error_messages %>
   <p>

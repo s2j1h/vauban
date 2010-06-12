@@ -4,7 +4,7 @@ body {
 	padding: 0;
 	background: #FFFFFF;
 	font-family: Arial, Helvetica, sans-serif;
-	font-size: 12px;
+	font-size: 14px;
 	color: #A19D9A;
 }
 
@@ -43,6 +43,12 @@ a {
 a:hover {
 }
 
+sup { 
+  color: #fff;
+  font-size:0.4em;
+ }
+
+
 #wrapper {
 	margin: 0 auto;
 	padding: 0;
@@ -70,7 +76,7 @@ a:hover {
 	margin: 0;
 	padding: 0;
 	color: #000000;
-	background: url(images_theme/img02.jpg) no-repeat left 15px;
+	background: url(/images/logo.jpg) no-repeat left 15px;
 }
 
 #logo h1, #logo p {
@@ -81,14 +87,14 @@ a:hover {
 	padding: 40p 0px 0px 80px;
 	letter-spacing: -1px;
 	text-transform: lowercase;
-	font-size: 3.8em;
+	font-size: 3.6em;
 	background: redc;
 }
 
 #logo p {
 	margin: 0;
 	padding: 0px 0 0 62px;
-	font: normal 14px Georgia, "Times New Roman", Times, serif;
+	font: normal 12px Georgia, "Times New Roman", Times, serif;
 	font-style: italic;
 	color: #FFFFFF;
 } 
@@ -290,3 +296,57 @@ table {
   font-size: 12px;
 }
 
+/* messages */
+
+#flash_notice, #flash_error {
+  background-color: inherit;
+  color: white;
+  margin-bottom: 25px;
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-top: 0px;
+  padding: .75em;
+  padding-top: 0;
+  padding-bottom: 0;
+  font-size: 1.2em;
+}
+#flash_notice {
+  background-color: #0c3;
+  border: 3px solid #7FE699;
+}
+#flash_error {
+  background-color: #c00;
+  border: 3px solid #e67f00;
+}
+
+.sbar {
+  width: 200px;
+}
+
+.sbar-btn {
+  display: block;
+  background: url(/images/button-right.png) top right no-repeat;
+}
+
+.sbar-btn a {
+  display: block;
+  background: url(/images/button-left.png) no-repeat;
+  line-height: 270%;
+  margin: 0 5px 9px 0;
+  text-align: center;
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.sbar-btn a img {
+  vertical-align: middle;
+}
+
+.sbar-btn .plus-sign {
+   margin-top: -5px;
+}
+
+.sbar-btn a:hover {
+  color: #006699;
+}

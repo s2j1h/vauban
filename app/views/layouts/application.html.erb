@@ -18,7 +18,7 @@
 	<div id="header-wrapper">
 		<div id="header">
 			<div id="logo">
-				<h1> <%= link_to "Vauban", :controller => "application", :action => "index" %></h1>
+              <h1> <%= link_to "Vauban", :controller => "application", :action => "index" %><sup>beta</sup></h1>
 				<p>Storing and securing your web identities</p>
 			</div>
 			<div id="menu">
@@ -49,11 +49,11 @@
             					    		<div id="flash_<%= key %>"><%=h value %></div>
           						  <% end -%>
          					 </div>
-						    <script>
+						    <!-- <script>
 						      $(document).ready(function(){
-						        $("#flash").fadeOut(3000);
+						        $("#flash").fadeOut(5000);
 						      });
-						    </script>
+						    </script>-->
 
                             <%= yield %>
                             </div><!--end entry -->
