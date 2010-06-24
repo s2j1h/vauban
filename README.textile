@@ -10,7 +10,7 @@ A demo is available on "Vauban beta website":http://vauban.heroku.com
 
 h2. License
 
-Copyright 2010 "Zeneffy Labs":http://labs.zeneffy.fr - J.Raigneau (julien@raigneau.net)
+Copyright 2010 "Zeneffy Labs":http://labs.zeneffy.fr - J.Raigneau (julien@zeneffy.fr)
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.

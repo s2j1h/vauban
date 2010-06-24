@@ -5,7 +5,7 @@
 <meta name="description" content="" />
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <title>Vauban - Managing your web identities</title>
-  <%= stylesheet_link_tag 'reset' , 'typography', 'main','jquery-ui', 'feedback' %>
+  <%= stylesheet_link_tag 'reset' , 'typography', 'main','jquery-ui' %>
   <%= javascript_include_tag "jquery", "jquery-ui", "application" %>
   
   <%= javascript_tag "var AUTH_TOKEN = #{form_authenticity_token.inspect};" if protect_against_forgery? -%>
@@ -49,11 +49,11 @@
             					    		<div id="flash_<%= key %>"><%=h value %></div>
           						  <% end -%>
          					 </div>
-						    <!-- <script>
+						    <script>
 						      $(document).ready(function(){
 						        $("#flash").fadeOut(5000);
 						      });
-						    </script>-->
+						    </script>
 
                             <%= yield %>
                             </div><!--end entry -->

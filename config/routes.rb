@@ -1,8 +1,11 @@
 ActionController::Routing::Routes.draw do |map|
-  map.feedback 'feedbacks', :controller => 'feedbacks', :action => 'create'
-  map.new_feedback 'feedbacks/new', :controller => 'feedbacks', :action => 'new'
-  map.resources :identities
+  map.connect 'feedbacks', :conditions => { :method => :get },
+                           :controller => "application", :action => "index"
+  map.connect 'feedbacks', :conditions => { :method => :post },
+                                    :controller => "feedbacks", :action => "create"
 
+
+  map.resources :identities
   map.resources :user_sessions
   map.resources :users
   map.resources :password_resets, :only => [ :new, :create, :edit, :update ]
