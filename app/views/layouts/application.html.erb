@@ -41,22 +41,24 @@
 				<div id="content">
  						<% if yield(:title) %>
                 					<h2 class="title"><%= h(yield(:title))%></h2>
-           					<%end%>
-						<div style="clear: both;">&nbsp;</div>
-                        <div class="entry">
-                          	<div id="flash">
-            						<% flash.each do |key, value| -%>
-            					    		<div id="flash_<%= key %>"><%=h value %></div>
-          						  <% end -%>
-         					 </div>
-						    <script>
-						      $(document).ready(function(){
-						        $("#flash").fadeOut(5000);
-						      });
-						    </script>
+                                    <div style="clear: both;">&nbsp;</div>
+                                    <div class="entry">
+                                    	<div id="flash">
+            			              		<% flash.each do |key, value| -%>
+            			              	    		<div id="flash_<%= key %>"><%=h value %></div>
+          				              	  <% end -%>
+         				               </div>
+						              <script>
+						                $(document).ready(function(){
+						                  $("#flash").fadeOut(5000);
+						                });
+						              </script>
 
+                                      <%= yield %>
+                                      </div><!--end entry -->
+                          <%else%>
                             <%= yield %>
-                            </div><!--end entry -->
+                          <%end%>
                 </div><!-- end content -->
                 <div style="clear: both;">&nbsp;</div>
 	</div><!-- end #page -->

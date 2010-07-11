@@ -108,6 +108,7 @@ class IdentitiesController < ApplicationController
     @identity.destroy
 
     respond_to do |format|
+      flash[:notice] = 'Identity was successfully deleted.'
       format.html { redirect_to(identities_url) }
       format.xml  { head :ok }
     end

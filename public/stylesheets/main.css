@@ -168,6 +168,14 @@ sup {
 #content .title {
 	height: 41px;
 	padding: 7px 0px 0px 30px;
+    color: red;
+}
+
+#content .titleH2 {
+	font-size: 2.8em;
+    height: 41px;
+	padding: 7px 0px 0px 30px;
+    color: #000;
 }
 
 #content .entry {
@@ -233,7 +241,7 @@ table {
   color: #9eb3bf;
 }
 .entry table.ids .view_td {
-  width: 100px;
+  width: 150px;
   padding-left: 0;
 }
 .entry table.ids .page .title {
@@ -350,3 +358,17 @@ table {
 .sbar-btn a:hover {
   color: #006699;
 }
+
+
+/** forms **/
+form fieldset {border-top: 1px solid #eee}
+form fieldset legend {font-size: 0.75em; padding: 1em; color: #333}
+form p.submit {margin: 0; font-size: 0.75em; line-height: 1.667em; margin-bottom: 1.667em; margin: 4.167em 0 0}
+form input[type="text"], form input[type="password"], form input[type="email"], form textarea, form select {border: 1px solid #c0c0c0; background: white url(/images/input-bg.png) 0 0 repeat-x; padding: 5px}
+form input[type="text"]:hover, form input[type="text"]:focus, form textarea:focus, form textarea:hover, form input[type="password"]:hover, form input[type="password"]:focus, form input[type="email"]:hover, form input[type="email"]:focus, form select:hover, form select:focus {background-color: #fff5d3; border: 1px solid #999}
+form input[type="text"].blur, form input[type="password"].blur, form input[type="email"].blur, form textarea.blur,form select.blur {color: #ccc; font-style: italic}
+form input[type="submit"], form input[type="button"] {border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; -khtml-border-radius: 5px; behavior: url(stylesheets/border-radius.htc); box-shadow: 0 1px 2px #444444; -moz-box-shadow: 0 1px 2px #444444; -webkit-box-shadow: 0 1px 2px #444444; -khtml-box-shadow: 0 1px 2px #444444; border: 1px solid #999; color: #333; font-weight: bold; padding: 0.625em; text-shadow: 1px 0 0 #ccc}
+form input[type="submit"]:active, form input[type="button"]:active {color: #ccc; border: 1px solid #999; background-color: #999; text-shadow: 0 0 0 #999}
+
+a.add-new {font-size: 0.667em; border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; -khtml-border-radius: 3px; behavior: url(stylesheets/border-radius.htc); border: 1px solid #ccc; line-height: 1.667em; padding: 5px 7px; margin: 8px 0 0 5px; background: #d4d4d4 url(/images/gray-gradient-pagination-bg.png) 0 0 repeat-x; color: #4B4F5D}
+a.add-new:hover {box-shadow: 0 1px 3px #666666; -moz-box-shadow: 0 1px 3px #666666; -webkit-box-shadow: 0 1px 3px #666666; -khtml-box-shadow: 0 1px 3px #666666; border-color: #ccc; background-image: none; background-color: #fff}

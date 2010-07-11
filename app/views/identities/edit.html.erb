@@ -1,7 +1,19 @@
 <% content_for :tab do %>identity<% end %>
 
-  <span style="font-size: 2em;font-weight:bold;margin: 0,67em 0px;" id="title-identity">View identity</span> <span class="hideme"> <%= link_to 'Edit' , @identity, :id => 'edit' %></span><span class="editme" style="display:none"><%= link_to 'Cancel' , @identity, :id => 'cancel' %></span> or  <%= link_to 'Delete' , @identity, :id => 'delete' %>
+  <span class="titleH2" id="title-identity">View identity</span><span class="hideme"> <%= link_to 'Edit', @identity, :id => 'edit', :class => 'add-new' %></span><span class="editme" style="display:none"><%= link_to 'Cancel' , @identity, :id => 'cancel', :class => 'add-new' %></span> or  <%= link_to 'Delete' , @identity, :id => 'delete', :class => 'add-new' %>
 
+<div style="clear: both;">&nbsp;</div>
+<div class="entry">
+  <div id="flash">
+    <% flash.each do |key, value| -%>
+     		<div id="flash_<%= key %>"><%=h value %></div>
+    <% end -%>
+   </div>
+   <script>
+      $(document).ready(function(){
+	        $("#flash").fadeOut(5000);
+      });
+   </script>
 
 <%= javascript_tag "var AUTH_TOKEN = #{form_authenticity_token.inspect};" if protect_against_forgery? -%>
 <script type="text/javascript">
@@ -17,13 +29,13 @@
             event.preventDefault();
             $(".editme").toggle();
             $(".hideme").toggle();
-            $('<span style="font-size: 2em;font-weight:bold;margin: 0,67em 0px;" id="title-identity">Edit identity</span>').replaceAll('#title-identity');
+            $('<span class="titleH2" id="title-identity">Edit identity</span>').replaceAll('#title-identity');
           });
         $("#cancel").click(function(event){
             event.preventDefault();
             $(".editme").toggle();
             $(".hideme").toggle();
-            $('<span style="font-size: 2em;font-weight:bold;margin: 0,67em 0px;" id="title-identity">View identity</span>').replaceAll('#title-identity');
+            $('<span class="titleH2" id="title-identity">View identity</span>').replaceAll('#title-identity');
            });
         $("#confirmation").dialog({
             autoOpen: false,
@@ -83,3 +95,4 @@
 <% end %>
 
 <%= link_to 'Back', identities_path %>
+</div>

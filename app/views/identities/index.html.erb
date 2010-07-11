@@ -1,5 +1,18 @@
-<% content_for :title do %>Your identities<% end %>
 <% content_for :tab do %>identity<% end %>
+
+  <span class="titleH2">Your identities</span><%= link_to "Add a new identity", new_identity_path, :class => "add-new" %>
+<div style="clear: both;">&nbsp;</div>
+<div class="entry">
+  <div id="flash">
+    <% flash.each do |key, value| -%>
+     		<div id="flash_<%= key %>"><%=h value %></div>
+    <% end -%>
+   </div>
+   <script>
+      $(document).ready(function(){
+	        $("#flash").fadeOut(5000);
+      });
+   </script>
 
 
 <script type="text/javascript">
@@ -55,7 +68,6 @@
     <%= label_tag :secretkey %>: <%= password_field_tag :secretkey, nil, :class => 'text ui-widget-content'  %>
   </form>
 </div>
-
         <table class='ids'>
             <thead>
               <tr>
@@ -74,6 +86,4 @@
             <% end %>
             </tbody>
           </table>
-<div class="sbar">
-<span class="sbar-btn"> <% link_to new_identity_path, :style => "margin-top:3px;margin-bottom:2px" do %><img alt="New-project" class="plus-sign" src="/images/new-identity.png" />New Identity<%end%></span>
 </div>
