@@ -31,7 +31,6 @@
                           <li <% if h(yield(:tab))=="register" %>class="current_page_item"<%end%>><%= link_to "Register", new_user_path %></li>
                           <li <% if h(yield(:tab))=="login" %>class="current_page_item"<%end%>><%= link_to "Login", login_path %></li>
         				<% end %>
-					<li><%= link_to 'Feedback', '/feedbacks', :class => 'feedback' %></li>
 				</ul>
 			</div>
 		</div>
@@ -63,6 +62,8 @@
                 <div style="clear: both;">&nbsp;</div>
 	</div><!-- end #page -->
 </div><!-- end wrapper -->
+
+<%= link_to 'Feedback', '/feedbacks', :class => 'feedback', :id => "feedback_tab" %>
 
 <div id="footer">
 	<p>Vauban is proudly forged by <A HREF="http://labs.zeneffy.fr">Zeneffy Labs</A>. Copyright &copy;2010 J.Raigneau. All rights reserved.</p>
