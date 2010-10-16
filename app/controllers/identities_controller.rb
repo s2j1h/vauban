@@ -45,12 +45,23 @@ class IdentitiesController < ApplicationController
   # POST /identities
   # POST /identities.xml
   def create
-    @identity = current_user.identities.new(params[:identity])
+    @identity = current_user.identities.new(params[:identity])  
+    puts "toto:" + @identity.login + ":"    
+    if @identity.login.empty?
+      puts "login vide"
+    else 
+      puts "login plein"
+    end
     #1 check secretkey
     digested_key = hash_secretkey(params[:secretkey])
     if current_user.secretkey != digested_key
       respond_to do |format|
         flash[:error] = 'Sorry but your secret key doesn\'t match!'
+        format.html { render :action => "new" }
+      end
+    elsif @identity.login.empty? || @identity.password.empty?
+      respond_to do |format|
+        flash[:error] = 'Sorry but you need to type a login and a password'
         format.html { render :action => "new" }
       end
     else
@@ -83,7 +94,15 @@ class IdentitiesController < ApplicationController
             flash[:error] = 'Sorry but your secret key doesn\'t match!'
             format.html { render :action => "edit" }
         end
-    else
+     elsif params[:identity][:login].blank? or params[:identity][:password].blank?
+        @identity.login = params[:identity][:login]
+        @identity.password = params[:identity][:password]
+        respond_to do |format|
+            flash[:error] = 'Sorry but you need to type a login and a password'
+            format.html { render :action => "edit" }
+        end
+        
+     else
       #2 encrypt login/pwd
       params[:identity][:login] = encrypt_identity(digested_key,params[:identity][:login])
       params[:identity][:password] = encrypt_identity(digested_key,params[:identity][:password])
