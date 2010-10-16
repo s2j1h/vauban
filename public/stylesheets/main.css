@@ -330,34 +330,6 @@ table {
   width: 200px;
 }
 
-.sbar-btn {
-  display: block;
-  background: url(/images/button-right.png) top right no-repeat;
-}
-
-.sbar-btn a {
-  display: block;
-  background: url(/images/button-left.png) no-repeat;
-  line-height: 270%;
-  margin: 0 5px 9px 0;
-  text-align: center;
-  color: #000;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.sbar-btn a img {
-  vertical-align: middle;
-}
-
-.sbar-btn .plus-sign {
-   margin-top: -5px;
-}
-
-.sbar-btn a:hover {
-  color: #006699;
-}
-
 
 /** forms **/
 form fieldset {border-top: 1px solid #eee}

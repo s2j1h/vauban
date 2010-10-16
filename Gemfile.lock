@@ -1,39 +1,33 @@
---- 
-dependencies: 
-  rails: 
-    group: 
-    - :default
-    version: ">= 0"
-  authlogic: 
-    group: 
-    - :default
-    version: ">= 0"
-  encryptor: 
-    group: 
-    - :default
-    version: ">= 0"
-specs: 
-- rake: 
-    version: 0.8.7
-- activesupport: 
-    version: 2.3.8
-- rack: 
-    version: 1.1.0
-- actionpack: 
-    version: 2.3.8
-- actionmailer: 
-    version: 2.3.8
-- activerecord: 
-    version: 2.3.8
-- activeresource: 
-    version: 2.3.8
-- authlogic: 
-    version: 2.1.5
-- encryptor: 
-    version: 1.1.1
-- rails: 
-    version: 2.3.8
-hash: d4db589930d5b97fe9d747c5877fd8af5ffca8c8
-sources: 
-- Rubygems: 
-    uri: http://rubygems.org
+GEM
+  remote: http://rubygems.org/
+  specs:
+    actionmailer (2.3.8)
+      actionpack (= 2.3.8)
+    actionpack (2.3.8)
+      activesupport (= 2.3.8)
+      rack (~> 1.1.0)
+    activerecord (2.3.8)
+      activesupport (= 2.3.8)
+    activeresource (2.3.8)
+      activesupport (= 2.3.8)
+    activesupport (2.3.8)
+    authlogic (2.1.6)
+      activesupport
+    encryptor (1.1.1)
+    rack (1.1.0)
+    rails (2.3.8)
+      actionmailer (= 2.3.8)
+      actionpack (= 2.3.8)
+      activerecord (= 2.3.8)
+      activeresource (= 2.3.8)
+      activesupport (= 2.3.8)
+      rake (>= 0.8.3)
+    rake (0.8.7)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  authlogic (= 2.1.6)
+  encryptor (= 1.1.1)
+  rails (= 2.3.8)

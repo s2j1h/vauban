@@ -1,4 +1,4 @@
-1280059752
+1280928058
 AUTOREQUIRES	/home/julien/Code/INCUBATEUR/vauban/.bundle/environment.rb	  AUTOREQUIRES =
 AddPerishableTokenToUsers	/home/julien/Code/INCUBATEUR/vauban/db/migrate/20100530065851_add_perishable_token_to_users.rb	class AddPerishableTokenToUsers 
 AddTestSentenceToUsers	/home/julien/Code/INCUBATEUR/vauban/db/migrate/20100412212238_add_test_sentence_to_users.rb	class AddTestSentenceToUsers 
