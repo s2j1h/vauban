@@ -4,19 +4,19 @@
 <% form_for @user do |f| %>
   <%= f.error_messages %>
   <p>
-  <h2><%= @user.username %></h2>
+  <h2>Hello, <%= @user.username %></h2>
   </p>
   <p>
-    <%= f.label :email %>:<%= f.text_field :email %>
+    <%= f.label :email %><span class="require">*</span>:<br/><%= f.text_field :email %>
   </p>
   <p>
-    <%= f.label :password %>: <%= f.password_field :password %>
+  <%= f.label :password %><span class="require">*</span>:<br/><%= f.password_field :password %>
     <i>Leave blank to keep the same password</i>
   </p>
  <p>
-    <%= f.label :password_confirmation %>: <%= f.password_field :password_confirmation %>
+<%= f.label :password_confirmation %><span class="require">*</span>:<br/><%= f.password_field :password_confirmation %>
   </p>
-  <p><%= f.submit "Submit" %> or <%= link_to 'Cancel', identities_path %> </p>
+  <p id="submit-button"><%= f.submit "Submit" %> or <%= link_to 'Cancel', identities_path %> </p>
 
 <% end %>
 

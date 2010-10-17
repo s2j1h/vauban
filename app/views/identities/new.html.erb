@@ -6,25 +6,25 @@
   <%= f.error_messages %>
 
   <p>
-    <%= f.label :name %>: <%= f.text_field :name %>
+    <%= f.label :name %><span class="require">*</span> : <br /><%= f.text_field :name %>
   </p>
   <p>
-    <%= f.label :url %>: <%= f.text_field :url %>
+    <%= f.label :url %>: <br /><%= f.text_field :url %>
   </p>
   <p>
-    <%= f.label :login %>: <%= f.text_field :login %>
+    <%= f.label :login %><span class="require">*</span>: <br /><%= f.text_field :login %>
   </p>
   <p>
-    <%= f.label :password %>: <%= f.password_field :password %>
+    <%= f.label :password %><span class="require">*</span>: <br /><%= f.password_field :password %>
   </p>
   <p>
-    <%= f.label :comment %>: <%= f.text_area :comment, :rows => "3", :cols => '30' %>
+    <%= f.label :comment %>: <br /><%= f.text_area :comment, :rows => "3", :cols => '30' %>
   </p>
   <p>
-    <%= label_tag :secretkey %>: <%= password_field_tag :secretkey %>
+    <%= label_tag :secretkey %><span class="require">*</span>: <br /><%= password_field_tag :secretkey %>
   </p>
 
-  <p>
+  <p id="submit-button">
     <%= f.submit 'Create' %>
   </p>
 <% end %>

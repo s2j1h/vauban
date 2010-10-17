@@ -330,12 +330,17 @@ table {
   width: 200px;
 }
 
+#submit-button {margin-left: 0em;}
+
+.hideme {color: #000;}
+.require {color: red;}
+
 
 /** forms **/
 form fieldset {border-top: 1px solid #eee}
 form fieldset legend {font-size: 0.75em; padding: 1em; color: #333}
-form p.submit {margin: 0; font-size: 0.75em; line-height: 1.667em; margin-bottom: 1.667em; margin: 4.167em 0 0}
-form input[type="text"], form input[type="password"], form input[type="email"], form textarea, form select {border: 1px solid #c0c0c0; background: white url(/images/input-bg.png) 0 0 repeat-x; padding: 5px}
+form p.submit {margin: 0; font-size: 0.75em; line-height: 1.667em; margin-bottom: 1.667em; margin: 4.167em 0 0;}
+form input[type="text"], form input[type="password"], form input[type="email"], form textarea, form select {border: 1px solid #c0c0c0; background: white url(/images/input-bg.png) 0 0 repeat-x; padding: 5px; font-size: 1.2em;}
 form input[type="text"]:hover, form input[type="text"]:focus, form textarea:focus, form textarea:hover, form input[type="password"]:hover, form input[type="password"]:focus, form input[type="email"]:hover, form input[type="email"]:focus, form select:hover, form select:focus {background-color: #fff5d3; border: 1px solid #999}
 form input[type="text"].blur, form input[type="password"].blur, form input[type="email"].blur, form textarea.blur,form select.blur {color: #ccc; font-style: italic}
 form input[type="submit"], form input[type="button"] {border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; -khtml-border-radius: 5px; behavior: url(stylesheets/border-radius.htc); box-shadow: 0 1px 2px #444444; -moz-box-shadow: 0 1px 2px #444444; -webkit-box-shadow: 0 1px 2px #444444; -khtml-box-shadow: 0 1px 2px #444444; border: 1px solid #999; color: #333; font-weight: bold; padding: 0.625em; text-shadow: 1px 0 0 #ccc}

@@ -68,16 +68,16 @@
   <%= f.error_messages %>
 
 <p>
-<%= f.label :name %>: <span class="hideme"><%= @identity.name%></span> <span class="editme" style="display:none"><%= f.text_field :name %></span>
+<%= f.label :name %><span class="require">*</span>:  <span class="hideme"><%= @identity.name%></span> <span class="editme" style="display:none"><br /><%= f.text_field :name %></span>
 </p>
 <p>
-  <%= f.label :url %>: <span class="hideme"><%= @identity.url%></span> <span class="editme" style="display:none"><%= f.text_field :url %></span>
+<%= f.label :url %>:  <span class="hideme"><%= @identity.url%></span> <span class="editme" style="display:none"><br /><%= f.text_field :url %></span>
 </p>
 <p>
-<%= f.label :login %>: <span class="hideme"><%= @identity.login%></span> <span class="editme" style="display:none"><%= f.text_field :login %></span>
+  <%= f.label :login %><span class="require">*</span>:  <span class="hideme"><%= @identity.login%></span> <span class="editme" style="display:none"><br /><%= f.text_field :login %></span>
 </p>
 <p>
-  <%= f.label :password %>: <span class="hideme"><%= @identity.password%></span> <span class="editme" style="display:none"><%= f.text_field :password %></span>
+  <%= f.label :password %><span class="require">*</span>:  <span class="hideme"><%= @identity.password%></span> <span class="editme" style="display:none"><br /><%= f.text_field :password %></span>
 </p>
 <p>
   <%= f.label :comment %>:<br />
@@ -85,11 +85,11 @@
 </p>
 
   <p class="editme" style="display:none">
-    <%= label_tag :secretkey %>: <%= password_field_tag :secretkey %>
+    <%= label_tag :secretkey %><span class="require">*</span>: <br /><%= password_field_tag :secretkey %>
   </p>
 
 
-  <p class="editme" style="display:none">
+  <p class="editme" style="display:none" id="submit-button">
     <%= f.submit 'Update' %>
   </p>
 <% end %>

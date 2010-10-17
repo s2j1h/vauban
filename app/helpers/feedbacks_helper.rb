@@ -27,11 +27,11 @@ module FeedbacksHelper
    html = ""
    html << "<div id='dialog-feedback-form' title='Give feedback' style='display:none'><p>Please leave us feedback, it's really appreciated.</p><p class='validateTips'>All form fields are required.</p><form id='feedback-form'><p>"
    html <<  label_tag('subject')
-   html << ":" 
+   html << ":<br/>" 
    html <<  select_tag('subject_feedback', '<option selected="selected">Problem</option><option>Question</option><option>Suggestion</option><option>Other</option>' , :class => 'text ui-widget-content')
    html <<  "</p> <p>"
    html <<  label_tag('email')
-   html <<  ":"
+   html <<  ":<br/>"
    if current_user
     html << text_field_tag('email_feedback', current_user.email,:class => 'text ui-widget-content')
    else
@@ -40,7 +40,7 @@ module FeedbacksHelper
    html <<  "</p><p>"
    html <<  label_tag('comment')
    html << ":<br />"
-   html <<  text_area_tag('comment_feedback', nil, :cols => 35, :rows => 10,  :class => 'text ui-widget-content')
+   html <<  text_area_tag('comment_feedback', nil, :cols => 35, :rows => 7,  :class => 'text ui-widget-content')
    html <<  "</p>  </form> </div>"
    
    html << "<div id='dialog-feedback-ajax' title='Give feedback' style='display:none'><span id='dialog-feedback-ajax-span'></span></div>"
