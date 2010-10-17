@@ -5112,3 +5112,293 @@ Rendering template within layouts/application
 Rendering application/index
   [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
 Completed in 19ms (View: 17, DB: 0) | 200 OK [http://127.0.0.1/feedbacks]
+
+
+Processing UserSessionsController#destroy (for 127.0.0.1 at 2010-10-17 20:08:31) [GET]
+  Parameters: {"action"=>"destroy", "controller"=>"user_sessions"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/
+Completed in 20ms (DB: 0) | 302 Found [http://127.0.0.1/logout]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-17 20:08:31) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 19ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-10-17 20:08:33) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+Completed in 22ms (View: 8, DB: 0) | 200 OK [http://127.0.0.1/users/new]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-10-17 20:09:02) [POST]
+  Parameters: {"commit"=>"Submit", "action"=>"create", "authenticity_token"=>"GwlGSB9PSBqHzF7hpeTBg3XXf9IgkeO0BGKUlIMIJHw=", "controller"=>"users", "user"=>{"password_confirmation"=>"[FILTERED]", "username"=>"[FILTERED]", "secretkey_confirmation"=>"[FILTERED]", "secretkey"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>"uip@fr.fr"}}
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'uip@fr.fr') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'test3') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '1b5637c6f30580bd24c1e5380fc9020cee251ea4ed0e09e037abbf6bb838648bd03ac694448018d92ea0e84e52c98ee6c4c6e7c8b6934844db323bf74e72e743') LIMIT 1[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO "users" ("created_at", "crypted_password", "updated_at", "perishable_token", "username", "password_salt", "persistence_token", "secretkey", "email") VALUES('2010-10-17 18:09:02', '87cd4993426e59b5f3e87aaed49f21273ffbf33550d23d287497523740670912bbdc3ec1aeaf02df82e034188b6a3f9ee2dd1f961a681c53b8bf8a6cb8b809d0', '2010-10-17 18:09:02', '38K601b016HZIUvnNNfy', 'test3', '0TGtkTFQ7ePdB4MCIWe9', '1b5637c6f30580bd24c1e5380fc9020cee251ea4ed0e09e037abbf6bb838648bd03ac694448018d92ea0e84e52c98ee6c4c6e7c8b6934844db323bf74e72e743', 'f2d81a260dea8a100dd517984e53c56a7523d96942a834b9cdc249bd4e8c7aa9', 'uip@fr.fr')[0m
+
+SyntaxError (/home/julien/Code/INCUBATEUR/vauban/app/models/notifier.rb:28: syntax error, unexpected $end, expecting kEND):
+  app/controllers/users_controller.rb:20:in `create'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (31.8ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-10-17 20:09:21) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+Redirected to http://127.0.0.1:3000/feedbacks
+Completed in 2ms (DB: 0) | 302 Found [http://127.0.0.1/users]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-17 20:09:21) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."persistence_token" = '1b5637c6f30580bd24c1e5380fc9020cee251ea4ed0e09e037abbf6bb838648bd03ac694448018d92ea0e84e52c98ee6c4c6e7c8b6934844db323bf74e72e743') LIMIT 1[0m
+Completed in 102ms (View: 100, DB: 0) | 200 OK [http://127.0.0.1/feedbacks]
+
+
+Processing IdentitiesController#index (for 127.0.0.1 at 2010-10-17 20:09:26) [GET]
+  Parameters: {"action"=>"index", "controller"=>"identities"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = '1b5637c6f30580bd24c1e5380fc9020cee251ea4ed0e09e037abbf6bb838648bd03ac694448018d92ea0e84e52c98ee6c4c6e7c8b6934844db323bf74e72e743') LIMIT 1[0m
+  [4;35;1mIdentity Load (0.1ms)[0m   [0mSELECT * FROM "identities" WHERE ("identities".user_id = 2) ORDER BY name,created_at[0m
+Rendering template within layouts/application
+Rendering identities/index
+Completed in 25ms (View: 4, DB: 0) | 200 OK [http://127.0.0.1/identities]
+
+
+Processing UserSessionsController#destroy (for 127.0.0.1 at 2010-10-17 20:09:29) [GET]
+  Parameters: {"action"=>"destroy", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = '1b5637c6f30580bd24c1e5380fc9020cee251ea4ed0e09e037abbf6bb838648bd03ac694448018d92ea0e84e52c98ee6c4c6e7c8b6934844db323bf74e72e743') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."persistence_token" = '1b5637c6f30580bd24c1e5380fc9020cee251ea4ed0e09e037abbf6bb838648bd03ac694448018d92ea0e84e52c98ee6c4c6e7c8b6934844db323bf74e72e743') LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/
+Completed in 18ms (DB: 0) | 302 Found [http://127.0.0.1/logout]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-17 20:09:29) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 98ms (View: 96, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-10-17 20:09:39) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+Completed in 24ms (View: 10, DB: 0) | 200 OK [http://127.0.0.1/users/new]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-10-17 20:09:58) [POST]
+  Parameters: {"commit"=>"Submit", "action"=>"create", "authenticity_token"=>"GwlGSB9PSBqHzF7hpeTBg3XXf9IgkeO0BGKUlIMIJHw=", "controller"=>"users", "user"=>{"password_confirmation"=>"[FILTERED]", "username"=>"[FILTERED]", "secretkey_confirmation"=>"[FILTERED]", "secretkey"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>"test5@fr.fr"}}
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'test5@fr.fr') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'test5') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '35bfcc6402566b5d71636747bd95fe473e7684e0e3d796bf75e37d9d45f94d2ce40ec9b891e41e873d242dcfa3ce4bba4b3752eb0de86740f6563ffdedbf3b8e') LIMIT 1[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO "users" ("created_at", "crypted_password", "updated_at", "perishable_token", "username", "password_salt", "persistence_token", "secretkey", "email") VALUES('2010-10-17 18:09:58', 'b812e5f2c84c3da11557d9f95eb9644ea80c0fe8a7ee9276f1ea9c9b0ca96eb119d63a58bf982e62e49da3a0f36cbe92b772f73a164705324408ca7cb2b26a8c', '2010-10-17 18:09:58', '3YjAzuOmPLIDBv63pav', 'test5', '0cy2GYZMBzijjkfndJ6', '35bfcc6402566b5d71636747bd95fe473e7684e0e3d796bf75e37d9d45f94d2ce40ec9b891e41e873d242dcfa3ce4bba4b3752eb0de86740f6563ffdedbf3b8e', 'f2d81a260dea8a100dd517984e53c56a7523d96942a834b9cdc249bd4e8c7aa9', 'test5@fr.fr')[0m
+
+NoMethodError (undefined method `name' for #<User:0x7ff4179338d0>):
+  app/models/notifier.rb:26:in `new_user'
+  app/controllers/users_controller.rb:20:in `create'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (111.8ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-17 20:11:25) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = '35bfcc6402566b5d71636747bd95fe473e7684e0e3d796bf75e37d9d45f94d2ce40ec9b891e41e873d242dcfa3ce4bba4b3752eb0de86740f6563ffdedbf3b8e') LIMIT 1[0m
+Completed in 23ms (View: 19, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing UserSessionsController#destroy (for 127.0.0.1 at 2010-10-17 20:11:30) [GET]
+  Parameters: {"action"=>"destroy", "controller"=>"user_sessions"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."persistence_token" = '35bfcc6402566b5d71636747bd95fe473e7684e0e3d796bf75e37d9d45f94d2ce40ec9b891e41e873d242dcfa3ce4bba4b3752eb0de86740f6563ffdedbf3b8e') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = '35bfcc6402566b5d71636747bd95fe473e7684e0e3d796bf75e37d9d45f94d2ce40ec9b891e41e873d242dcfa3ce4bba4b3752eb0de86740f6563ffdedbf3b8e') LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/
+Completed in 18ms (DB: 0) | 302 Found [http://127.0.0.1/logout]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-17 20:11:30) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 99ms (View: 97, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-10-17 20:11:32) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+Completed in 26ms (View: 9, DB: 0) | 200 OK [http://127.0.0.1/users/new]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-10-17 20:11:52) [POST]
+  Parameters: {"commit"=>"Submit", "action"=>"create", "authenticity_token"=>"GwlGSB9PSBqHzF7hpeTBg3XXf9IgkeO0BGKUlIMIJHw=", "controller"=>"users", "user"=>{"password_confirmation"=>"[FILTERED]", "username"=>"[FILTERED]", "secretkey_confirmation"=>"[FILTERED]", "secretkey"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>"test6@fr.fr"}}
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'test6@fr.fr') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'test6') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'f49ca0b66e5deee223a5fe1561528214acf49c1cbcb7e11505d8df1215274264ead658d13f48949eeebf89930635d9b10ea175e9200d89a4d93127b5140bf00e') LIMIT 1[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO "users" ("created_at", "crypted_password", "updated_at", "perishable_token", "username", "password_salt", "persistence_token", "secretkey", "email") VALUES('2010-10-17 18:11:52', '561b5d465453fbff8147461d5bed47cecc25b43a25c8cea900c9b79211e7ec9f2e902f6f63becd3ef79712afa263ebbe356e7931d230a10e116b435865f5a531', '2010-10-17 18:11:52', 'JjtIadwMIsOW80RLeXbR', 'test6', 'qzbzOMNnh36dPohKXoG', 'f49ca0b66e5deee223a5fe1561528214acf49c1cbcb7e11505d8df1215274264ead658d13f48949eeebf89930635d9b10ea175e9200d89a4d93127b5140bf00e', 'f2d81a260dea8a100dd517984e53c56a7523d96942a834b9cdc249bd4e8c7aa9', 'test6@fr.fr')[0m
+
+NoMethodError (undefined method `+@' for " from ":String):
+  app/models/notifier.rb:26:in `new_user'
+  app/controllers/users_controller.rb:20:in `create'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (111.3ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-17 20:13:39) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."persistence_token" = 'f49ca0b66e5deee223a5fe1561528214acf49c1cbcb7e11505d8df1215274264ead658d13f48949eeebf89930635d9b10ea175e9200d89a4d93127b5140bf00e') LIMIT 1[0m
+Completed in 22ms (View: 19, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing UserSessionsController#destroy (for 127.0.0.1 at 2010-10-17 20:13:42) [GET]
+  Parameters: {"action"=>"destroy", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = 'f49ca0b66e5deee223a5fe1561528214acf49c1cbcb7e11505d8df1215274264ead658d13f48949eeebf89930635d9b10ea175e9200d89a4d93127b5140bf00e') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."persistence_token" = 'f49ca0b66e5deee223a5fe1561528214acf49c1cbcb7e11505d8df1215274264ead658d13f48949eeebf89930635d9b10ea175e9200d89a4d93127b5140bf00e') LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/
+Completed in 18ms (DB: 0) | 302 Found [http://127.0.0.1/logout]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-17 20:13:42) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 102ms (View: 100, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-10-17 20:13:44) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 24ms (View: 8, DB: 0) | 200 OK [http://127.0.0.1/login]
+
+
+Processing PasswordResetsController#new (for 127.0.0.1 at 2010-10-17 20:13:45) [GET]
+  Parameters: {"action"=>"new", "controller"=>"password_resets"}
+Rendering template within layouts/application
+Rendering password_resets/new
+Completed in 18ms (View: 4, DB: 0) | 200 OK [http://127.0.0.1/lostpassword]
+
+
+Processing PasswordResetsController#create (for 127.0.0.1 at 2010-10-17 20:13:50) [POST]
+  Parameters: {"commit"=>"Reset Password", "action"=>"create", "authenticity_token"=>"GwlGSB9PSBqHzF7hpeTBg3XXf9IgkeO0BGKUlIMIJHw=", "controller"=>"password_resets", "email"=>"test6@fr.fr"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" = 'test6@fr.fr') LIMIT 1[0m
+  [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-10-17 18:13:50', "perishable_token" = 'JzMKJGhXjKLRhVRg9fG' WHERE "id" = 4[0m
+Sent mail to test6@fr.fr
+
+Date: Sun, 17 Oct 2010 20:13:50 +0200
+From: vauban@zeneffy.fr
+To: test6@fr.fr
+Subject: Password Reset Instructions
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+<h1>Password Reset Instructions</h1>
+
+<p>
+  A request to reset your password has been made. If you did not make
+  this request, simply ignore this email. If you did make this
+  request, please follow the link below.
+</p>
+
+<a href="http://vauban.heroku.com/password_resets/JzMKJGhXjKLRhVRg9fG/edit">Reset Password!</a>
+
+<p>
+If the above URL does not work try copying and pasting it into your browser. If you continue to have problem please feel free to contact us at vauban@zeneffy.fr.
+</p>
+Redirected to http://127.0.0.1:3000/
+Completed in 116ms (DB: 0) | 302 Found [http://127.0.0.1/password_resets]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-17 20:13:51) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 19ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-10-17 20:18:13) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+Completed in 97ms (View: 10, DB: 0) | 200 OK [http://127.0.0.1/users/new]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-10-17 20:18:30) [POST]
+  Parameters: {"commit"=>"Submit", "action"=>"create", "authenticity_token"=>"GwlGSB9PSBqHzF7hpeTBg3XXf9IgkeO0BGKUlIMIJHw=", "controller"=>"users", "user"=>{"password_confirmation"=>"[FILTERED]", "username"=>"[FILTERED]", "secretkey_confirmation"=>"[FILTERED]", "secretkey"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>"test7@fr.fr"}}
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'test7@fr.fr') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'test7') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '7487f4565f3f05689184d37081d81666d908e5599108caaa0b5f32afe467351239fbf38abbe0b2b65c8542ebeb63a48db5963cd40a7e60bd48a94130c4651575') LIMIT 1[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO "users" ("created_at", "crypted_password", "updated_at", "perishable_token", "username", "password_salt", "persistence_token", "secretkey", "email") VALUES('2010-10-17 18:18:30', 'ff651adbaa4d9163e040e2f7fcbcfd4b4b316a6f88ee76b1e22d8734e5bd7f93fe9789737655f75b457ec37ec62ee0dabeda8783d2cb7dc1d0bd15a418742831', '2010-10-17 18:18:30', 'sWp5AN1edNSKteLGS6q', 'test7', 'wSh5CAvXy911H5fXNR2g', '7487f4565f3f05689184d37081d81666d908e5599108caaa0b5f32afe467351239fbf38abbe0b2b65c8542ebeb63a48db5963cd40a7e60bd48a94130c4651575', 'f2d81a260dea8a100dd517984e53c56a7523d96942a834b9cdc249bd4e8c7aa9', 'test7@fr.fr')[0m
+Sent mail to vauban@zeneffy.fr
+
+Date: Sun, 17 Oct 2010 20:18:30 +0200
+From: vauban@zeneffy.fr
+To: vauban@zeneffy.fr
+Subject: [Vauban.zeneffy.fr] New user!
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Dear site administrator,
+
+You're lucky today, you've got a new user!
+
+User: test7
+User's email: test7@fr.fr
+Registered at: Sun Oct 17 20:18:30 +0200 2010
+Redirected to http://127.0.0.1:3000/identities
+Completed in 34ms (DB: 0) | 302 Found [http://127.0.0.1/users]
+
+
+Processing IdentitiesController#index (for 127.0.0.1 at 2010-10-17 20:18:30) [GET]
+  Parameters: {"action"=>"index", "controller"=>"identities"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = '7487f4565f3f05689184d37081d81666d908e5599108caaa0b5f32afe467351239fbf38abbe0b2b65c8542ebeb63a48db5963cd40a7e60bd48a94130c4651575') LIMIT 1[0m
+  [4;35;1mIdentity Load (0.2ms)[0m   [0mSELECT * FROM "identities" WHERE ("identities".user_id = 5) ORDER BY name,created_at[0m
+Rendering template within layouts/application
+Rendering identities/index
+Completed in 25ms (View: 4, DB: 0) | 200 OK [http://127.0.0.1/identities]

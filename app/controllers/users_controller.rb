@@ -17,6 +17,7 @@ class UsersController < ApplicationController
     @user = User.new(params[:user])
     if @user.save
       flash[:notice] = "Registration successful."
+      Notifier.deliver_new_user(@user)
       redirect_to :controller => "identities", :action => "index"
     else
       render :action => 'new'
