@@ -8,7 +8,7 @@ class IdentitiesController < ApplicationController
   # GET /identities
   # GET /identities.xml
   def index
-    @identities = current_user.identities.all
+    @identities = current_user.identities.find(:all,:order => "name,created_at")
 
     respond_to do |format|
       format.html # index.html.erb

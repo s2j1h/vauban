@@ -3932,3 +3932,149 @@ Processing IdentitiesController#index (for 127.0.0.1 at 2010-10-16 16:20:03) [GE
 Rendering template within layouts/application
 Rendering identities/index
 Completed in 28ms (View: 7, DB: 1) | 200 OK [http://127.0.0.1/identities]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-17 11:16:34) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 63ms (View: 60, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-10-17 11:16:37) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 170ms (View: 19, DB: 0) | 200 OK [http://127.0.0.1/login]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-10-17 11:16:48) [POST]
+  Parameters: {"commit"=>"Submit", "user_session"=>{"username"=>"[FILTERED]", "password"=>"[FILTERED]"}, "action"=>"create", "authenticity_token"=>"KzDWsRWLTqKcA588YMll7i8WqVZXA1RQ0QrO7UVeCEk=", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE (LOWER("users".username) = 'test') LIMIT 1[0m
+  [4;35;1mUser Update (0.4ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-10-17 09:16:49', "perishable_token" = '9vOyv7vrXNyvgHu31t8x' WHERE "id" = 1[0m
+Redirected to http://127.0.0.1:3000/identities
+Completed in 150ms (DB: 1) | 302 Found [http://127.0.0.1/user_sessions]
+
+
+Processing IdentitiesController#index (for 127.0.0.1 at 2010-10-17 11:16:49) [GET]
+  Parameters: {"action"=>"index", "controller"=>"identities"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mIdentity Load (0.3ms)[0m   [0mSELECT * FROM "identities" WHERE ("identities".user_id = 1) [0m
+Rendering template within layouts/application
+Rendering identities/index
+Completed in 36ms (View: 12, DB: 1) | 200 OK [http://127.0.0.1/identities]
+
+
+Processing IdentitiesController#new (for 127.0.0.1 at 2010-10-17 11:16:54) [GET]
+  Parameters: {"action"=>"new", "controller"=>"identities"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering identities/new
+Completed in 32ms (View: 12, DB: 0) | 200 OK [http://127.0.0.1/identities/new]
+
+
+Processing IdentitiesController#create (for 127.0.0.1 at 2010-10-17 11:17:01) [POST]
+  Parameters: {"identity"=>{"comment"=>"", "name"=>"123", "url"=>"", "password"=>"[FILTERED]", "login"=>"[FILTERED]"}, "commit"=>"Create", "action"=>"create", "authenticity_token"=>"KzDWsRWLTqKcA588YMll7i8WqVZXA1RQ0QrO7UVeCEk=", "controller"=>"identities", "secretkey"=>"[FILTERED]"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mIdentity Create (0.2ms)[0m   [0;1mINSERT INTO "identities" ("name", "comment", "created_at", "updated_at", "url", "user_id", "login", "password") VALUES('123', '', '2010-10-17 09:17:01', '2010-10-17 09:17:01', '', 1, 'sHSybyRHCFru56F4qJhUrQ==
+', 'sHSybyRHCFru56F4qJhUrQ==
+')[0m
+Redirected to http://127.0.0.1:3000/identities
+Completed in 98ms (DB: 0) | 302 Found [http://127.0.0.1/identities]
+
+
+Processing IdentitiesController#index (for 127.0.0.1 at 2010-10-17 11:17:01) [GET]
+  Parameters: {"action"=>"index", "controller"=>"identities"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mIdentity Load (0.3ms)[0m   [0;1mSELECT * FROM "identities" WHERE ("identities".user_id = 1) [0m
+Rendering template within layouts/application
+Rendering identities/index
+Completed in 28ms (View: 7, DB: 1) | 200 OK [http://127.0.0.1/identities]
+
+
+Processing IdentitiesController#index (for 127.0.0.1 at 2010-10-17 11:23:21) [GET]
+  Parameters: {"action"=>"index", "controller"=>"identities"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mIdentity Load (0.4ms)[0m   [0;1mSELECT * FROM "identities" WHERE ("identities".user_id = 1) ORDER BY name,created_at[0m
+Rendering template within layouts/application
+Rendering identities/index
+Completed in 30ms (View: 8, DB: 1) | 200 OK [http://127.0.0.1/identities]
+
+
+Processing IdentitiesController#new (for 127.0.0.1 at 2010-10-17 11:23:26) [GET]
+  Parameters: {"action"=>"new", "controller"=>"identities"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering identities/new
+Completed in 27ms (View: 8, DB: 0) | 200 OK [http://127.0.0.1/identities/new]
+
+
+Processing IdentitiesController#create (for 127.0.0.1 at 2010-10-17 11:23:36) [POST]
+  Parameters: {"identity"=>{"comment"=>"", "name"=>"z1", "url"=>"", "password"=>"[FILTERED]", "login"=>"[FILTERED]"}, "commit"=>"Create", "action"=>"create", "authenticity_token"=>"KzDWsRWLTqKcA588YMll7i8WqVZXA1RQ0QrO7UVeCEk=", "controller"=>"identities", "secretkey"=>"[FILTERED]"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mIdentity Create (0.2ms)[0m   [0mINSERT INTO "identities" ("name", "comment", "created_at", "updated_at", "url", "user_id", "login", "password") VALUES('z1', '', '2010-10-17 09:23:36', '2010-10-17 09:23:36', '', 1, 'BOlQrT5VfmPFMEtLWCe24Q==
+', 'BOlQrT5VfmPFMEtLWCe24Q==
+')[0m
+Redirected to http://127.0.0.1:3000/identities
+Completed in 30ms (DB: 0) | 302 Found [http://127.0.0.1/identities]
+
+
+Processing IdentitiesController#index (for 127.0.0.1 at 2010-10-17 11:23:36) [GET]
+  Parameters: {"action"=>"index", "controller"=>"identities"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mIdentity Load (0.4ms)[0m   [0mSELECT * FROM "identities" WHERE ("identities".user_id = 1) ORDER BY name,created_at[0m
+Rendering template within layouts/application
+Rendering identities/index
+Completed in 27ms (View: 8, DB: 1) | 200 OK [http://127.0.0.1/identities]
+
+
+Processing IdentitiesController#new (for 127.0.0.1 at 2010-10-17 11:23:39) [GET]
+  Parameters: {"action"=>"new", "controller"=>"identities"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering identities/new
+Completed in 30ms (View: 9, DB: 0) | 200 OK [http://127.0.0.1/identities/new]
+
+
+Processing IdentitiesController#create (for 127.0.0.1 at 2010-10-17 11:23:47) [POST]
+  Parameters: {"identity"=>{"comment"=>"", "name"=>"1z", "url"=>"", "password"=>"[FILTERED]", "login"=>"[FILTERED]"}, "commit"=>"Create", "action"=>"create", "authenticity_token"=>"KzDWsRWLTqKcA588YMll7i8WqVZXA1RQ0QrO7UVeCEk=", "controller"=>"identities", "secretkey"=>"[FILTERED]"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mIdentity Create (0.2ms)[0m   [0;1mINSERT INTO "identities" ("name", "comment", "created_at", "updated_at", "url", "user_id", "login", "password") VALUES('1z', '', '2010-10-17 09:23:47', '2010-10-17 09:23:47', '', 1, 'XJII681uBdLQeorUP6h4KQ==
+', 'XJII681uBdLQeorUP6h4KQ==
+')[0m
+Redirected to http://127.0.0.1:3000/identities
+Completed in 25ms (DB: 0) | 302 Found [http://127.0.0.1/identities]
+
+
+Processing IdentitiesController#index (for 127.0.0.1 at 2010-10-17 11:23:47) [GET]
+  Parameters: {"action"=>"index", "controller"=>"identities"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mIdentity Load (0.5ms)[0m   [0;1mSELECT * FROM "identities" WHERE ("identities".user_id = 1) ORDER BY name,created_at[0m
+Rendering template within layouts/application
+Rendering identities/index
+Completed in 105ms (View: 9, DB: 1) | 200 OK [http://127.0.0.1/identities]
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2010-10-17 11:23:59) [GET]
+  Parameters: {"action"=>"edit", "id"=>"current", "controller"=>"users"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/edit
+Completed in 26ms (View: 10, DB: 0) | 200 OK [http://127.0.0.1/users/current/edit]
+
+
+Processing IdentitiesController#index (for 127.0.0.1 at 2010-10-17 11:24:05) [GET]
+  Parameters: {"action"=>"index", "controller"=>"identities"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mIdentity Load (0.5ms)[0m   [0mSELECT * FROM "identities" WHERE ("identities".user_id = 1) ORDER BY name,created_at[0m
+Rendering template within layouts/application
+Rendering identities/index
+Completed in 31ms (View: 8, DB: 1) | 200 OK [http://127.0.0.1/identities]
+
+
+Processing IdentitiesController#new (for 127.0.0.1 at 2010-10-17 11:24:27) [GET]
+  Parameters: {"action"=>"new", "controller"=>"identities"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering identities/new
+Completed in 27ms (View: 8, DB: 0) | 200 OK [http://127.0.0.1/identities/new]
