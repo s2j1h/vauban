@@ -5402,3 +5402,518 @@ Processing IdentitiesController#index (for 127.0.0.1 at 2010-10-17 20:18:30) [GE
 Rendering template within layouts/application
 Rendering identities/index
 Completed in 25ms (View: 4, DB: 0) | 200 OK [http://127.0.0.1/identities]
+
+
+Processing FeedbacksController#create (for 127.0.0.1 at 2010-10-17 20:35:59) [POST]
+  Parameters: {"action"=>"create", "authenticity_token"=>"GwlGSB9PSBqHzF7hpeTBg3XXf9IgkeO0BGKUlIMIJHw=", "feedback"=>{"comment"=>"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "subject"=>"Problem", "email"=>"test7@fr.fr"}, "controller"=>"feedbacks"}
+
+SyntaxError (/home/julien/Code/INCUBATEUR/vauban/app/models/notifier.rb:31: syntax error, unexpected tIDENTIFIER, expecting kEND
+    @from        = 'vauban@zeneffy.fr'
+                          ^
+/home/julien/Code/INCUBATEUR/vauban/app/models/notifier.rb:31: unterminated string meets end of file
+/home/julien/Code/INCUBATEUR/vauban/app/models/notifier.rb:31: syntax error, unexpected $end, expecting kEND):
+  app/controllers/feedbacks_controller.rb:7:in `create'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (29.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UserSessionsController#destroy (for 127.0.0.1 at 2010-10-17 20:36:41) [GET]
+  Parameters: {"action"=>"destroy", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = '7487f4565f3f05689184d37081d81666d908e5599108caaa0b5f32afe467351239fbf38abbe0b2b65c8542ebeb63a48db5963cd40a7e60bd48a94130c4651575') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."persistence_token" = '7487f4565f3f05689184d37081d81666d908e5599108caaa0b5f32afe467351239fbf38abbe0b2b65c8542ebeb63a48db5963cd40a7e60bd48a94130c4651575') LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/
+Completed in 93ms (DB: 0) | 302 Found [http://127.0.0.1/logout]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-17 20:36:41) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 19ms (View: 17, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-10-17 20:36:44) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 20ms (View: 6, DB: 0) | 200 OK [http://127.0.0.1/login]
+
+
+Processing PasswordResetsController#new (for 127.0.0.1 at 2010-10-17 20:36:46) [GET]
+  Parameters: {"action"=>"new", "controller"=>"password_resets"}
+Rendering template within layouts/application
+Rendering password_resets/new
+Completed in 96ms (View: 83, DB: 0) | 200 OK [http://127.0.0.1/lostpassword]
+
+
+Processing PasswordResetsController#create (for 127.0.0.1 at 2010-10-17 20:36:51) [POST]
+  Parameters: {"commit"=>"Reset Password", "action"=>"create", "authenticity_token"=>"GwlGSB9PSBqHzF7hpeTBg3XXf9IgkeO0BGKUlIMIJHw=", "controller"=>"password_resets", "email"=>"test6@fr.fr"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" = 'test6@fr.fr') LIMIT 1[0m
+  [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-10-17 18:36:51', "perishable_token" = 'lNkAV71S0J5vlA6OI' WHERE "id" = 4[0m
+
+SyntaxError (/home/julien/Code/INCUBATEUR/vauban/app/models/notifier.rb:31: syntax error, unexpected tIDENTIFIER, expecting kEND
+    @from        = 'vauban@zeneffy.fr'
+                          ^
+/home/julien/Code/INCUBATEUR/vauban/app/models/notifier.rb:31: unterminated string meets end of file
+/home/julien/Code/INCUBATEUR/vauban/app/models/notifier.rb:31: syntax error, unexpected $end, expecting kEND):
+  app/models/user.rb:15:in `deliver_password_reset_instructions!'
+  app/controllers/password_resets_controller.rb:13:in `create'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (31.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PasswordResetsController#index (for 127.0.0.1 at 2010-10-17 20:37:06) [GET]
+  Parameters: {"action"=>"index", "controller"=>"password_resets"}
+
+ActionView::MissingTemplate (Missing template password_resets/index.erb in view path app/views):
+  app/controllers/application_controller.rb:16:in `index'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-17 20:37:09) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 19ms (View: 17, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing FeedbacksController#create (for 127.0.0.1 at 2010-10-17 20:37:20) [POST]
+  Parameters: {"action"=>"create", "authenticity_token"=>"GwlGSB9PSBqHzF7hpeTBg3XXf9IgkeO0BGKUlIMIJHw=", "feedback"=>{"comment"=>"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "subject"=>"Problem", "email"=>"open@fr.fr"}, "controller"=>"feedbacks"}
+Sent mail to vauban@zeneffy.fr
+
+Date: Sun, 17 Oct 2010 20:37:20 +0200
+From: vauban@zeneffy.fr
+To: vauban@zeneffy.fr
+Subject: [Feedback for Vauban.zeneffy.fr] Problem
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+<h1>Feedback from users</h1>
+
+<p>Dear site administrator,</p>
+<p>
+You're lucky today, you've got feedback from your users:
+</p>
+<p>
+<b>Subject</b>: Problem
+<b>User's email</b>: open@fr.fr
+<b>Sent at</b>: Sun Oct 17 20:37:20 +0200 2010
+</br>
+<b>Comment:</b></br> 
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+</p>
+Completed in 15ms (View: 0, DB: 0) | 201 Created [http://127.0.0.1/feedbacks]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-10-17 20:37:39) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 18ms (View: 6, DB: 0) | 200 OK [http://127.0.0.1/login]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-10-17 20:37:44) [POST]
+  Parameters: {"commit"=>"Submit", "user_session"=>{"username"=>"[FILTERED]", "password"=>"[FILTERED]"}, "action"=>"create", "authenticity_token"=>"GwlGSB9PSBqHzF7hpeTBg3XXf9IgkeO0BGKUlIMIJHw=", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE (LOWER("users".username) = 'test') LIMIT 1[0m
+  [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-10-17 18:37:44', "perishable_token" = 'J9WnMUSCuCWoEMPpoeO' WHERE "id" = 1[0m
+Redirected to http://127.0.0.1:3000/identities
+Completed in 23ms (DB: 0) | 302 Found [http://127.0.0.1/user_sessions]
+
+
+Processing IdentitiesController#index (for 127.0.0.1 at 2010-10-17 20:37:44) [GET]
+  Parameters: {"action"=>"index", "controller"=>"identities"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mIdentity Load (0.4ms)[0m   [0mSELECT * FROM "identities" WHERE ("identities".user_id = 1) ORDER BY name,created_at[0m
+Rendering template within layouts/application
+Rendering identities/index
+Completed in 30ms (View: 9, DB: 1) | 200 OK [http://127.0.0.1/identities]
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2010-10-17 20:37:49) [GET]
+  Parameters: {"action"=>"edit", "id"=>"current", "controller"=>"users"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/edit
+Completed in 26ms (View: 8, DB: 0) | 200 OK [http://127.0.0.1/users/current/edit]
+
+
+Processing IdentitiesController#index (for 127.0.0.1 at 2010-10-17 20:37:50) [GET]
+  Parameters: {"action"=>"index", "controller"=>"identities"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mIdentity Load (0.4ms)[0m   [0;1mSELECT * FROM "identities" WHERE ("identities".user_id = 1) ORDER BY name,created_at[0m
+Rendering template within layouts/application
+Rendering identities/index
+Completed in 29ms (View: 9, DB: 1) | 200 OK [http://127.0.0.1/identities]
+
+
+Processing UserSessionsController#destroy (for 127.0.0.1 at 2010-10-17 20:43:34) [GET]
+  Parameters: {"action"=>"destroy", "controller"=>"user_sessions"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/
+Completed in 17ms (DB: 0) | 302 Found [http://127.0.0.1/logout]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-17 20:43:34) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 21ms (View: 18, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-10-17 20:43:35) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 21ms (View: 6, DB: 0) | 200 OK [http://127.0.0.1/login]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-10-17 20:43:39) [POST]
+  Parameters: {"commit"=>"Submit", "user_session"=>{"username"=>"[FILTERED]", "password"=>"[FILTERED]"}, "action"=>"create", "authenticity_token"=>"GwlGSB9PSBqHzF7hpeTBg3XXf9IgkeO0BGKUlIMIJHw=", "controller"=>"user_sessions"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE (LOWER("users".username) = 'test') LIMIT 1[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-10-17 18:43:39', "perishable_token" = 'wIOrdi3r1fEmWS2mcESZ' WHERE "id" = 1[0m
+
+NoMethodError (undefined method `email' for nil:NilClass):
+  app/models/notifier.rb:30:in `connection'
+  app/controllers/user_sessions_controller.rb:20:in `create'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (115.6ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-17 20:47:49) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 27ms (View: 24, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing UserSessionsController#destroy (for 127.0.0.1 at 2010-10-17 20:47:51) [GET]
+  Parameters: {"action"=>"destroy", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/
+Completed in 18ms (DB: 0) | 302 Found [http://127.0.0.1/logout]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-17 20:47:51) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 21ms (View: 18, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-10-17 20:47:54) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 20ms (View: 7, DB: 0) | 200 OK [http://127.0.0.1/login]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-10-17 20:47:57) [POST]
+  Parameters: {"commit"=>"Submit", "user_session"=>{"username"=>"[FILTERED]", "password"=>"[FILTERED]"}, "action"=>"create", "authenticity_token"=>"GwlGSB9PSBqHzF7hpeTBg3XXf9IgkeO0BGKUlIMIJHw=", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE (LOWER("users".username) = 'test') LIMIT 1[0m
+  [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-10-17 18:47:57', "perishable_token" = 'kWlTWIzpEEzpH199jSR' WHERE "id" = 1[0m
+
+NoMethodError (undefined method `email' for nil:NilClass):
+  app/models/notifier.rb:30:in `connection'
+  app/controllers/user_sessions_controller.rb:20:in `create'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (110.2ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-17 20:48:55) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 22ms (View: 19, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing UserSessionsController#destroy (for 127.0.0.1 at 2010-10-17 20:48:56) [GET]
+  Parameters: {"action"=>"destroy", "controller"=>"user_sessions"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/
+Completed in 17ms (DB: 0) | 302 Found [http://127.0.0.1/logout]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-17 20:48:56) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 108ms (View: 105, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-10-17 20:48:58) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 25ms (View: 7, DB: 0) | 200 OK [http://127.0.0.1/login]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-10-17 20:49:01) [POST]
+  Parameters: {"commit"=>"Submit", "user_session"=>{"username"=>"[FILTERED]", "password"=>"[FILTERED]"}, "action"=>"create", "authenticity_token"=>"GwlGSB9PSBqHzF7hpeTBg3XXf9IgkeO0BGKUlIMIJHw=", "controller"=>"user_sessions"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE (LOWER("users".username) = 'test') LIMIT 1[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-10-17 18:49:01', "perishable_token" = 'ZegZWOHHAEi9rI8LXu' WHERE "id" = 1[0m
+
+NoMethodError (undefined method `email' for nil:NilClass):
+  app/models/notifier.rb:30:in `connection'
+  app/controllers/user_sessions_controller.rb:20:in `create'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (114.2ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UserSessionsController#index (for 127.0.0.1 at 2010-10-17 20:49:21) [GET]
+  Parameters: {"action"=>"index", "controller"=>"user_sessions"}
+Redirected to http://127.0.0.1:3000/feedbacks
+Completed in 3ms (DB: 0) | 302 Found [http://127.0.0.1/user_sessions]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-17 20:49:21) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 22ms (View: 19, DB: 0) | 200 OK [http://127.0.0.1/feedbacks]
+
+
+Processing UserSessionsController#destroy (for 127.0.0.1 at 2010-10-17 20:49:22) [GET]
+  Parameters: {"action"=>"destroy", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/
+Completed in 18ms (DB: 0) | 302 Found [http://127.0.0.1/logout]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-17 20:49:22) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 21ms (View: 19, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-10-17 20:49:23) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 21ms (View: 7, DB: 0) | 200 OK [http://127.0.0.1/login]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-10-17 20:49:26) [POST]
+  Parameters: {"commit"=>"Submit", "user_session"=>{"username"=>"[FILTERED]", "password"=>"[FILTERED]"}, "action"=>"create", "authenticity_token"=>"GwlGSB9PSBqHzF7hpeTBg3XXf9IgkeO0BGKUlIMIJHw=", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE (LOWER("users".username) = 'test') LIMIT 1[0m
+  [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-10-17 18:49:26', "perishable_token" = 'e8fjC7WczUBhiAjOOn2d' WHERE "id" = 1[0m
+
+NoMethodError (undefined method `email' for #<UserSession: {:username=>"test", :password=>"<protected>"}>):
+  app/models/notifier.rb:30:in `connection'
+  app/controllers/user_sessions_controller.rb:20:in `create'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (109.3ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-17 20:51:24) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 22ms (View: 19, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing UserSessionsController#destroy (for 127.0.0.1 at 2010-10-17 20:51:25) [GET]
+  Parameters: {"action"=>"destroy", "controller"=>"user_sessions"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/
+Completed in 18ms (DB: 0) | 302 Found [http://127.0.0.1/logout]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-17 20:51:25) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 38ms (View: 19, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-10-17 20:51:28) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 22ms (View: 7, DB: 0) | 200 OK [http://127.0.0.1/login]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-10-17 20:51:32) [POST]
+  Parameters: {"commit"=>"Submit", "user_session"=>{"username"=>"[FILTERED]", "password"=>"[FILTERED]"}, "action"=>"create", "authenticity_token"=>"GwlGSB9PSBqHzF7hpeTBg3XXf9IgkeO0BGKUlIMIJHw=", "controller"=>"user_sessions"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE (LOWER("users".username) = 'test') LIMIT 1[0m
+  [4;36;1mUser Update (0.6ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-10-17 18:51:32', "perishable_token" = 'r8UZAFPiPQJDu6UAgl' WHERE "id" = 1[0m
+
+NoMethodError (undefined method `email' for nil:NilClass):
+  app/models/notifier.rb:30:in `connection'
+  app/controllers/user_sessions_controller.rb:20:in `create'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (116.0ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 19:15:57) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 46ms (View: 44, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-10-18 19:15:59) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 82ms (View: 11, DB: 0) | 200 OK [http://127.0.0.1/login]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-10-18 19:16:04) [POST]
+  Parameters: {"commit"=>"Submit", "user_session"=>{"username"=>"[FILTERED]", "password"=>"[FILTERED]"}, "action"=>"create", "authenticity_token"=>"VKcPMTtMx6+Y+dwU1Wsj/3Rot/f4QGZkVXg0Z36OOiE=", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE (LOWER("users".username) = 'test') LIMIT 1[0m
+  [4;35;1mUser Update (0.8ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-10-18 17:16:04', "perishable_token" = '9WhOV3ytzUf6SGTOlwG9' WHERE "id" = 1[0m
+Redirected to http://127.0.0.1:3000/identities
+Completed in 160ms (DB: 1) | 302 Found [http://127.0.0.1/user_sessions]
+
+
+Processing IdentitiesController#index (for 127.0.0.1 at 2010-10-18 19:16:04) [GET]
+  Parameters: {"action"=>"index", "controller"=>"identities"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mIdentity Load (0.5ms)[0m   [0mSELECT * FROM "identities" WHERE ("identities".user_id = 1) ORDER BY name,created_at[0m
+Rendering template within layouts/application
+Rendering identities/index
+Completed in 39ms (View: 14, DB: 1) | 200 OK [http://127.0.0.1/identities]
+
+
+Processing UserSessionsController#destroy (for 127.0.0.1 at 2010-10-18 19:46:47) [GET]
+  Parameters: {"action"=>"destroy", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/
+Completed in 18ms (DB: 0) | 302 Found [http://127.0.0.1/logout]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 19:46:47) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 18ms (View: 15, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-10-18 19:46:49) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 23ms (View: 7, DB: 0) | 200 OK [http://127.0.0.1/login]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-10-18 19:46:53) [POST]
+  Parameters: {"commit"=>"Submit", "user_session"=>{"username"=>"[FILTERED]", "password"=>"[FILTERED]"}, "action"=>"create", "authenticity_token"=>"VKcPMTtMx6+Y+dwU1Wsj/3Rot/f4QGZkVXg0Z36OOiE=", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE (LOWER("users".username) = 'test') LIMIT 1[0m
+  [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-10-18 17:46:53', "perishable_token" = '89zVtHiKAOKVr6Y2ya' WHERE "id" = 1[0m
+Redirected to http://127.0.0.1:3000/identities
+Completed in 21ms (DB: 0) | 302 Found [http://127.0.0.1/user_sessions]
+
+
+Processing IdentitiesController#index (for 127.0.0.1 at 2010-10-18 19:46:53) [GET]
+  Parameters: {"action"=>"index", "controller"=>"identities"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mIdentity Load (0.5ms)[0m   [0mSELECT * FROM "identities" WHERE ("identities".user_id = 1) ORDER BY name,created_at[0m
+Rendering template within layouts/application
+Rendering identities/index
+Completed in 30ms (View: 8, DB: 1) | 200 OK [http://127.0.0.1/identities]

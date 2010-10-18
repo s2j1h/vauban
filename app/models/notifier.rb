@@ -25,4 +25,14 @@ class Notifier < ActionMailer::Base
     @sent_on     = Time.now
     @body[:user] = user
   end
+  
+  def connection(user)
+    @recipients  = user.email
+    @from        = 'vauban@zeneffy.fr'
+    @subject     = "Connection to your Vauban account"
+    @sent_on     = Time.now
+    @body[:user] = user
+  end
+  
+  
 end

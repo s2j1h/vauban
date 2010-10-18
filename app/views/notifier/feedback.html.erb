@@ -1,10 +1,14 @@
-Dear site administrator,
+<h1>Feedback from users</h1>
 
+<p>Dear site administrator,</p>
+<p>
 You're lucky today, you've got feedback from your users:
-
-Subject: <%=h @feedback.subject %>
-User's email: <%=h @feedback.email %>
-Sent at: <%= Time.now %>
-
-Comment: 
+</p>
+<p>
+<b>Subject</b>: <%=h @feedback.subject %>
+<b>User's email</b>: <%=h @feedback.email %>
+<b>Sent at</b>: <%= Time.now %>
+</br>
+<b>Comment:</b></br> 
 <%=h @feedback.comment %>
+</p>

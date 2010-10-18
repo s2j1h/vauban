@@ -16,7 +16,7 @@ class UserSessionsController < ApplicationController
   def create
     @user_session = UserSession.new(params[:user_session])
     if @user_session.save
-      flash[:notice] = "Successfully logged in."
+      flash[:notice] = "Successfully logged in."      
       redirect_back_or_default :controller => "identities",:action => "index"
     else
       render :action => 'new'
