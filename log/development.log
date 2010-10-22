@@ -9063,3 +9063,189 @@ Processing IdentitiesController#index (for 127.0.0.1 at 2010-10-22 19:53:38) [GE
 Rendering template within layouts/application
 Rendering identities/index
 Completed in 31ms (View: 9, DB: 1) | 200 OK [http://127.0.0.1/identities]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-22 20:01:50) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 23ms (View: 20, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing IdentitiesController#index (for 127.0.0.1 at 2010-10-22 20:06:58) [GET]
+  Parameters: {"action"=>"index", "controller"=>"identities"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mIdentity Load (0.4ms)[0m   [0mSELECT * FROM "identities" WHERE ("identities".user_id = 1) ORDER BY name,created_at[0m
+Rendering template within layouts/application
+Rendering identities/index
+Completed in 28ms (View: 8, DB: 1) | 200 OK [http://127.0.0.1/identities]
+
+
+Processing UserSessionsController#destroy (for 127.0.0.1 at 2010-10-22 20:07:00) [GET]
+  Parameters: {"action"=>"destroy", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/
+Completed in 100ms (DB: 0) | 302 Found [http://127.0.0.1/logout]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-22 20:07:00) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 22ms (View: 19, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-10-22 20:07:07) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 20ms (View: 6, DB: 0) | 200 OK [http://127.0.0.1/login]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-10-22 20:07:13) [POST]
+  Parameters: {"commit"=>"Submit", "user_session"=>{"username"=>"[FILTERED]", "password"=>"[FILTERED]"}, "action"=>"create", "authenticity_token"=>"CcX5zcJ6ClVt++Vi7CBpcyWZIDSHRvsZOqTA3mDlQpw=", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE (LOWER("users".username) = 'test7') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 25ms (View: 11, DB: 0) | 200 OK [http://127.0.0.1/user_sessions]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-10-22 20:07:15) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+Completed in 27ms (View: 11, DB: 0) | 200 OK [http://127.0.0.1/users/new]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-10-22 20:07:35) [POST]
+  Parameters: {"commit"=>"Submit", "action"=>"create", "authenticity_token"=>"CcX5zcJ6ClVt++Vi7CBpcyWZIDSHRvsZOqTA3mDlQpw=", "controller"=>"users", "user"=>{"password_confirmation"=>"[FILTERED]", "username"=>"[FILTERED]", "secretkey_confirmation"=>"[FILTERED]", "secretkey"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>"test1@fr.fr"}}
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'test1@fr.fr') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'test1') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'a99324b475b385a9be30500cc770d1d5ecf39ff1e1339141023ce01ff492075c7bd0622c27da85f8d9a7626b954b54648c5c00099b91de581de485a1268b972c') LIMIT 1[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO "users" ("created_at", "crypted_password", "updated_at", "perishable_token", "username", "password_salt", "persistence_token", "secretkey", "email") VALUES('2010-10-22 18:07:35', '8ae752216db3ce85e80b7bd2d5222ea135da3185d9275f4ec164b6a68ff0ee7e3d19e411b10744cf31d13a220756b5b47ca9c50bb1f0455330591ce905468d38', '2010-10-22 18:07:35', 'Zop2ZiQKVncGSU7j0SEZ', 'test1', 'Gkhf9KC7YNyHzlgMIVM', 'a99324b475b385a9be30500cc770d1d5ecf39ff1e1339141023ce01ff492075c7bd0622c27da85f8d9a7626b954b54648c5c00099b91de581de485a1268b972c', 'f2d81a260dea8a100dd517984e53c56a7523d96942a834b9cdc249bd4e8c7aa9', 'test1@fr.fr')[0m
+Sent mail to vauban@zeneffy.fr
+
+Date: Fri, 22 Oct 2010 20:07:35 +0200
+From: vauban@zeneffy.fr
+To: vauban@zeneffy.fr
+Subject: [Vauban.zeneffy.fr] New user!
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <h1>New user</h1>
+
+<p>Dear site administrator,</p>
+<p>
+You're lucky today, you've got a new user!
+</p>
+<p>
+<b>User</b>: test1<br/>
+<b>User's email</b>: test1@fr.fr<br/>
+<b>Registered at</b>: Fri Oct 22 20:07:35 +0200 2010
+</p>
+
+</body>
+</html>
+Redirected to http://127.0.0.1:3000/identities
+Completed in 35ms (DB: 0) | 302 Found [http://127.0.0.1/users]
+
+
+Processing IdentitiesController#index (for 127.0.0.1 at 2010-10-22 20:07:35) [GET]
+  Parameters: {"action"=>"index", "controller"=>"identities"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."persistence_token" = 'a99324b475b385a9be30500cc770d1d5ecf39ff1e1339141023ce01ff492075c7bd0622c27da85f8d9a7626b954b54648c5c00099b91de581de485a1268b972c') LIMIT 1[0m
+  [4;36;1mIdentity Load (0.2ms)[0m   [0;1mSELECT * FROM "identities" WHERE ("identities".user_id = 7) ORDER BY name,created_at[0m
+Rendering template within layouts/application
+Rendering identities/index
+Completed in 112ms (View: 5, DB: 0) | 200 OK [http://127.0.0.1/identities]
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2010-10-22 20:07:38) [GET]
+  Parameters: {"action"=>"edit", "id"=>"current", "controller"=>"users"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."persistence_token" = 'a99324b475b385a9be30500cc770d1d5ecf39ff1e1339141023ce01ff492075c7bd0622c27da85f8d9a7626b954b54648c5c00099b91de581de485a1268b972c') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/edit
+Completed in 26ms (View: 9, DB: 0) | 200 OK [http://127.0.0.1/users/current/edit]
+
+
+Processing UsersController#delete (for 127.0.0.1 at 2010-10-22 20:07:43) [DELETE]
+  Parameters: {"action"=>"delete", "_method"=>"delete", "authenticity_token"=>"CcX5zcJ6ClVt++Vi7CBpcyWZIDSHRvsZOqTA3mDlQpw=", "controller"=>"users", "secretkey"=>"[FILTERED]"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = 'a99324b475b385a9be30500cc770d1d5ecf39ff1e1339141023ce01ff492075c7bd0622c27da85f8d9a7626b954b54648c5c00099b91de581de485a1268b972c') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."persistence_token" = 'a99324b475b385a9be30500cc770d1d5ecf39ff1e1339141023ce01ff492075c7bd0622c27da85f8d9a7626b954b54648c5c00099b91de581de485a1268b972c') LIMIT 1[0m
+  [4;36;1mIdentity Load (0.1ms)[0m   [0;1mSELECT * FROM "identities" WHERE ("identities".user_id = 7) [0m
+  [4;35;1mUser Destroy (0.1ms)[0m   [0mDELETE FROM "users" WHERE "id" = 7[0m
+Sent mail to test1@fr.fr
+
+Date: Fri, 22 Oct 2010 20:07:43 +0200
+From: vauban@zeneffy.fr
+To: test1@fr.fr
+Subject: Your vauban account has been successfully closed
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <h1>Your account has been deleted</h1>
+
+<p>
+  A request to delete your account has been made today - We confirm you that none of your identities has been kept and this is the last mail you will received from us.
+</p>
+<p>
+  Feel free to contact us at vauban@zeneffy.fr if you have any comment or feedbacks after using Vauban
+</p>
+
+<p>
+  The Vauban team
+</p>
+
+</body>
+</html>
+Sent mail to vauban@zeneffy.fr
+
+Date: Fri, 22 Oct 2010 20:07:43 +0200
+From: vauban@zeneffy.fr
+To: vauban@zeneffy.fr
+Subject: [Vauban.zeneffy.fr] You have lost an user :(
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <h1>Lost user</h1>
+
+<p>Dear site administrator,</p>
+<p>
+Sorry but an user deleted its account from Vauban today.
+</p>
+<p>
+<b>User</b>: test1<br/>
+<b>User's email</b>: test1@fr.fr<br/>
+<b>deleted at</b>: Fri Oct 22 20:07:43 +0200 2010
+</p>
+
+</body>
+</html>
+Redirected to http://127.0.0.1:3000/
+Completed in 121ms (DB: 1) | 302 Found [http://127.0.0.1/signout]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-22 20:07:43) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 19ms (View: 17, DB: 0) | 200 OK [http://127.0.0.1/]

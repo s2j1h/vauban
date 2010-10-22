@@ -45,13 +45,7 @@ class IdentitiesController < ApplicationController
   # POST /identities
   # POST /identities.xml
   def create
-    @identity = current_user.identities.new(params[:identity])  
-    puts "toto:" + @identity.login + ":"    
-    if @identity.login.empty?
-      puts "login vide"
-    else 
-      puts "login plein"
-    end
+    @identity = current_user.identities.new(params[:identity])      
     #1 check secretkey
     digested_key = hash_secretkey(params[:secretkey])
     if current_user.secretkey != digested_key
