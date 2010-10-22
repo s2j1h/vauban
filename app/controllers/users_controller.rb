@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   before_filter :require_no_user, :only => [:new, :create]
   before_filter :require_user, :only => [:show, :edit, :update, :delete]
   
-  ssl_required :new, :create, :edit, :update if Rails.env.production?
+  ssl_required :new, :create, :edit, :update, :destroy if Rails.env.production?
   ssl_allowed :index if Rails.env.production?
 
   def index
