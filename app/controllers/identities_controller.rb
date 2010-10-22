@@ -134,15 +134,6 @@ class IdentitiesController < ApplicationController
   end
 
 
- private
-    def hash_secretkey(secret_key)
-      Digest::SHA256.hexdigest(secret_key)
-    end 
-    def encrypt_identity(digested_key,value)
-      [Encryptor.encrypt(:value => value, :key => digested_key)].pack('m*')
-    end
-    def decrypt_identity(digested_key,encrypted_value)
-      Encryptor.decrypt(:value => encrypted_value.unpack('m*').to_s, :key => digested_key)
-    end
+  
 
 end

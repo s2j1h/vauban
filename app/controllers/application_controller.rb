@@ -21,7 +21,10 @@ class ApplicationController < ActionController::Base
 
 
   helper_method :current_user
-
+        
+  
+  
+  
   private
     def current_user_session
       return @current_user_session if defined?(@current_user_session)
@@ -58,6 +61,18 @@ class ApplicationController < ActionController::Base
     def redirect_back_or_default(default)
       redirect_to(session[:return_to] || default)
       session[:return_to] = nil
+    end
+
+    def hash_secretkey(secret_key)
+      Digest::SHA256.hexdigest(secret_key)
+    end
+    
+    def encrypt_identity(digested_key,value)
+      [Encryptor.encrypt(:value => value, :key => digested_key)].pack('m*')
+    end
+    
+    def decrypt_identity(digested_key,encrypted_value)
+      Encryptor.decrypt(:value => encrypted_value.unpack('m*').to_s, :key => digested_key)
     end
 
 end

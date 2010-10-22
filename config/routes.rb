@@ -1,6 +1,4 @@
-ActionController::Routing::Routes.draw do |map|
-  map.connect 'feedbacks', :conditions => { :method => :get },
-                           :controller => "application", :action => "index"
+ActionController::Routing::Routes.draw do |map|  
   map.connect 'feedbacks', :conditions => { :method => :post },
                                     :controller => "feedbacks", :action => "create"
 
@@ -12,6 +10,7 @@ ActionController::Routing::Routes.draw do |map|
   
   map.login "login", :controller => "user_sessions", :action => "new"
   map.logout "logout", :controller => "user_sessions", :action => "destroy"
+  map.signout "signout", :controller => "users", :action => "delete"
   map.register "register", :controller => "users", :action => "new"
   map.lostpassword "lostpassword", :controller => "password_resets" , :action => "new"
 

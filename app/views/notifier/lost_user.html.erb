@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <h1>Lost user</h1>
+
+<p>Dear site administrator,</p>
+<p>
+Sorry but an user deleted its account from Vauban today.
+</p>
+<p>
+<b>User</b>: <%=h @user.username %><br/>
+<b>User's email</b>: <%=h @user.email %><br/>
+<b>deleted at</b>: <%= Time.now %>
+</p>
+
+</body>
+</html>

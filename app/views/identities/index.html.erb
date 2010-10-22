@@ -37,11 +37,11 @@
             resizable: false,
             buttons: {
                 'Get credentials': function() {
-                $(this).dialog('close');
+                  $(this).dialog('close');
                 id = url.slice(url.lastIndexOf("/")+1,url.length);
                 url = url.slice(0,url.lastIndexOf("/")+1) + "edit";
                 var secretkey = $("#secretkey").val();
-                $('<form method="post" action="' + url + '" />')
+                $('<form method="post" action="' + url + '" />')     
                         .append('<input type="hidden" name="id" value="'+id+'" />')
                         .append('<input type="hidden" name="secretkey" value="'+secretkey+'" />')
                         .append('<input type="hidden" name="action" value="edit" />')

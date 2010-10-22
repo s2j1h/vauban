@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_filter :require_no_user, :only => [:new, :create]
-  before_filter :require_user, :only => [:show, :edit, :update]
+  before_filter :require_user, :only => [:show, :edit, :update, :delete]
   
   ssl_required :new, :create, :edit, :update if Rails.env.production?
   ssl_allowed :index if Rails.env.production?
@@ -36,5 +36,27 @@ class UsersController < ApplicationController
     else
       render :action => 'edit'
     end
+  end
+  
+  def delete
+    @user = current_user
+    @user_session = UserSession.find
+    digested_key = hash_secretkey(params[:secretkey])
+    if current_user.secretkey != digested_key 
+      flash[:error] = 'Sorry but your secret key doesn\'t match.'
+      render :action => "edit"
+    else
+      if @user.destroy
+        Notifier.deliver_delete_account(@user)
+        Notifier.deliver_lost_user(@user)      
+        @user_session.destroy
+        flash[:notice] = "Successfully deleted your account"
+        redirect_to :controller => :application, :action => "index"
+      else
+        flash[:error] = 'Sorry an error occurs while deleting your account'
+        render :action => "edit"
+      end
+    end
+    
   end
 end

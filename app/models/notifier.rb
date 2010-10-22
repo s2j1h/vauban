@@ -26,16 +26,23 @@ class Notifier < ActionMailer::Base
     @content_type="text/html"
     @sent_on     = Time.now
     @body[:user] = user
-  end
+  end  
   
-  def connection(user)
-    @recipients  = user.email
+   def lost_user(user)
+    @recipients  = 'vauban@zeneffy.fr'
     @from        = 'vauban@zeneffy.fr'
-    @subject     = "Connection to your Vauban account"
+    @subject     = "[Vauban.zeneffy.fr] You have lost an user :("
     @content_type="text/html"
     @sent_on     = Time.now
     @body[:user] = user
   end
   
+   def delete_account(user)
+    @subject      = "Your vauban account has been successfully closed"
+    @from         = "vauban@zeneffy.fr"
+    @recipients   = user.email
+    @content_type = "text/html"
+    @sent_on      = Time.now    
+  end
   
 end
