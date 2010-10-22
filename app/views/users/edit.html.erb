@@ -21,7 +21,7 @@
             buttons: {
                 'Delete my account!': function() {
                 $(this).dialog('close');                
-                url = url.slice(0,url.lastIndexOf("/")+1) + "signout";
+                url = url.slice(0,url.lastIndexOf("/")+1) + "users/delete";
                 var secretkey = $("#secretkey").val();
                 $('<form method="post" action="' + url + '" />')                
                         .append('<input type="hidden" name="secretkey" value="'+secretkey+'" />')

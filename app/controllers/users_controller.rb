@@ -38,7 +38,7 @@ class UsersController < ApplicationController
     end
   end
   
-  def delete
+  def destroy
     @user = current_user
     @user_session = UserSession.find
     digested_key = hash_secretkey(params[:secretkey])
