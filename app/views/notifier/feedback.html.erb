@@ -11,11 +11,9 @@
 You're lucky today, you've got feedback from your users:
 </p>
 <p>
-<b>Subject</b>: <%=h @feedback.subject %>
-<b>User's email</b>: <%=h @feedback.email %>
-<b>Sent at</b>: <%= Time.now %>
-</br>
-<b>Comment:</b></br> 
+  <b>Subject</b>: <%=h @feedback.subject %><br/>
+<b>User's email</b>: <%=h @feedback.email %><br/>
+<b>Sent at</b>: <%= Time.now %></br>
 <%=h @feedback.comment %>
 </p>
 
