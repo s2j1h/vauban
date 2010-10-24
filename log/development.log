@@ -26732,3 +26732,274 @@ Processing ApplicationController#index (for 127.0.0.1 at 2010-10-24 16:40:36) [G
 Rendering template within layouts/application
 Rendering application/index
 Completed in 19ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-24 16:43:38) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+
+ActionView::TemplateError (undefined local variable or method `‘layouts' for #<ActionView::Base:0x7f364e3440c8>) on line #15 of app/views/layouts/application.html.erb:
+12:   <style>
+13:     .validateTips { border: 1px solid transparent; }  
+14:   </style> 
+15:   <%= render :partial => ‘layouts/ga’ %> <!-- if Rails.env.production? %>  -->
+16: 
+17: </head>
+18: <body>
+
+    app/views/layouts/application.html.erb:15
+    app/controllers/application_controller.rb:16:in `index'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (112.6ms)
+Rendered rescues/_request_and_response (1.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-24 16:43:47) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+
+ActionView::TemplateError (undefined local variable or method `‘ga’' for #<ActionView::Base:0x7f364e3c10f0>) on line #15 of app/views/layouts/application.html.erb:
+12:   <style>
+13:     .validateTips { border: 1px solid transparent; }  
+14:   </style> 
+15:   <%= render :partial => ‘ga’ %> <!-- if Rails.env.production? %>  -->
+16: 
+17: </head>
+18: <body>
+
+    app/views/layouts/application.html.erb:15
+    app/controllers/application_controller.rb:16:in `index'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (35.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-24 16:43:48) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+
+ActionView::TemplateError (undefined local variable or method `‘ga’' for #<ActionView::Base:0x7f364ebf9178>) on line #15 of app/views/layouts/application.html.erb:
+12:   <style>
+13:     .validateTips { border: 1px solid transparent; }  
+14:   </style> 
+15:   <%= render :partial => ‘ga’ %> <!-- if Rails.env.production? %>  -->
+16: 
+17: </head>
+18: <body>
+
+    app/views/layouts/application.html.erb:15
+    app/controllers/application_controller.rb:16:in `index'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (38.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-24 16:43:48) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+
+ActionView::TemplateError (undefined local variable or method `‘ga’' for #<ActionView::Base:0x7f364e1acc60>) on line #15 of app/views/layouts/application.html.erb:
+12:   <style>
+13:     .validateTips { border: 1px solid transparent; }  
+14:   </style> 
+15:   <%= render :partial => ‘ga’ %> <!-- if Rails.env.production? %>  -->
+16: 
+17: </head>
+18: <body>
+
+    app/views/layouts/application.html.erb:15
+    app/controllers/application_controller.rb:16:in `index'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (132.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-24 16:43:48) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+
+ActionView::TemplateError (undefined local variable or method `‘ga’' for #<ActionView::Base:0x7f364e460998>) on line #15 of app/views/layouts/application.html.erb:
+12:   <style>
+13:     .validateTips { border: 1px solid transparent; }  
+14:   </style> 
+15:   <%= render :partial => ‘ga’ %> <!-- if Rails.env.production? %>  -->
+16: 
+17: </head>
+18: <body>
+
+    app/views/layouts/application.html.erb:15
+    app/controllers/application_controller.rb:16:in `index'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (37.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-24 16:44:09) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+
+ActionView::TemplateError (Missing template laouts/_ga.erb in view path app/views) on line #15 of app/views/layouts/application.html.erb:
+12:   <style>
+13:     .validateTips { border: 1px solid transparent; }  
+14:   </style> 
+15:   <%= render :partial => "laouts/ga" %> <!-- if Rails.env.production? %>  -->
+16: 
+17: </head>
+18: <body>
+
+    app/views/layouts/application.html.erb:15
+    app/controllers/application_controller.rb:16:in `index'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (38.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-24 16:44:10) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+
+ActionView::TemplateError (Missing template laouts/_ga.erb in view path app/views) on line #15 of app/views/layouts/application.html.erb:
+12:   <style>
+13:     .validateTips { border: 1px solid transparent; }  
+14:   </style> 
+15:   <%= render :partial => "laouts/ga" %> <!-- if Rails.env.production? %>  -->
+16: 
+17: </head>
+18: <body>
+
+    app/views/layouts/application.html.erb:15
+    app/controllers/application_controller.rb:16:in `index'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (132.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-24 16:44:10) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+
+ActionView::TemplateError (Missing template laouts/_ga.erb in view path app/views) on line #15 of app/views/layouts/application.html.erb:
+12:   <style>
+13:     .validateTips { border: 1px solid transparent; }  
+14:   </style> 
+15:   <%= render :partial => "laouts/ga" %> <!-- if Rails.env.production? %>  -->
+16: 
+17: </head>
+18: <body>
+
+    app/views/layouts/application.html.erb:15
+    app/controllers/application_controller.rb:16:in `index'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (38.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-24 16:44:17) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Rendered layouts/_ga (0.5ms)
+Completed in 114ms (View: 112, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-24 16:44:43) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 24ms (View: 21, DB: 0) | 200 OK [http://127.0.0.1/]
