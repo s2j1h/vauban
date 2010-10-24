@@ -25959,3 +25959,776 @@ i ve got a selenium problem
 </body>
 </html>
 Completed in 12ms (View: 1, DB: 0) | 201 Created [http://127.0.0.1/feedbacks]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-24 16:38:57) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+
+ActionView::TemplateError (undefined local variable or method `‘production’' for #<ActionView::Base:0x7f95470ab7a0>) on line #15 of app/views/layouts/application.html.erb:
+12:   <style>
+13:     .validateTips { border: 1px solid transparent; }  
+14:   </style> 
+15: <%= render :partial => ‘layouts/ga’ if RAILS_ENV == ‘production’ %>  
+16: 
+17: </head>
+18: <body>
+
+    app/views/layouts/application.html.erb:15
+    app/controllers/application_controller.rb:16:in `index'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (102.0ms)
+Rendered rescues/_request_and_response (1.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-24 16:38:57) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+
+ActionView::TemplateError (undefined local variable or method `‘production’' for #<ActionView::Base:0x7f9547425340>) on line #15 of app/views/layouts/application.html.erb:
+12:   <style>
+13:     .validateTips { border: 1px solid transparent; }  
+14:   </style> 
+15: <%= render :partial => ‘layouts/ga’ if RAILS_ENV == ‘production’ %>  
+16: 
+17: </head>
+18: <body>
+
+    app/views/layouts/application.html.erb:15
+    app/controllers/application_controller.rb:16:in `index'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (36.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-24 16:38:57) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+
+ActionView::TemplateError (undefined local variable or method `‘production’' for #<ActionView::Base:0x7f9546c7a398>) on line #15 of app/views/layouts/application.html.erb:
+12:   <style>
+13:     .validateTips { border: 1px solid transparent; }  
+14:   </style> 
+15: <%= render :partial => ‘layouts/ga’ if RAILS_ENV == ‘production’ %>  
+16: 
+17: </head>
+18: <body>
+
+    app/views/layouts/application.html.erb:15
+    app/controllers/application_controller.rb:16:in `index'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (120.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-24 16:38:58) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+
+ActionView::TemplateError (undefined local variable or method `‘production’' for #<ActionView::Base:0x7f9546f81848>) on line #15 of app/views/layouts/application.html.erb:
+12:   <style>
+13:     .validateTips { border: 1px solid transparent; }  
+14:   </style> 
+15: <%= render :partial => ‘layouts/ga’ if RAILS_ENV == ‘production’ %>  
+16: 
+17: </head>
+18: <body>
+
+    app/views/layouts/application.html.erb:15
+    app/controllers/application_controller.rb:16:in `index'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (35.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-24 16:38:58) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+
+ActionView::TemplateError (undefined local variable or method `‘production’' for #<ActionView::Base:0x7f954757fba0>) on line #15 of app/views/layouts/application.html.erb:
+12:   <style>
+13:     .validateTips { border: 1px solid transparent; }  
+14:   </style> 
+15: <%= render :partial => ‘layouts/ga’ if RAILS_ENV == ‘production’ %>  
+16: 
+17: </head>
+18: <body>
+
+    app/views/layouts/application.html.erb:15
+    app/controllers/application_controller.rb:16:in `index'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (36.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-24 16:39:52) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 42ms (View: 40, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-10-24 16:39:52) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+Completed in 30ms (View: 15, DB: 0) | 200 OK [http://127.0.0.1/users/new]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-10-24 16:39:53) [POST]
+  Parameters: {"commit"=>"Submit", "action"=>"create", "authenticity_token"=>"KyERFhmFmsvJ+omnPygSFe1b7AC38W8LLr+cJYvKHL0=", "controller"=>"users", "user"=>{"password_confirmation"=>"[FILTERED]", "username"=>"[FILTERED]", "secretkey_confirmation"=>"[FILTERED]", "secretkey"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>"email@fr.fr"}}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'email@fr.fr') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'username') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'b834549ca1f3c2c25ba3c51bafa3fc366db8ba8cfbf00d8b39fdeb9aefc2cdf5e0633dfe9ec72f966256377fb691c93e8673a746fcc1f1704e4cce43841e888b') LIMIT 1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO "users" ("created_at", "crypted_password", "updated_at", "perishable_token", "username", "password_salt", "persistence_token", "secretkey", "email") VALUES('2010-10-24 14:39:53', '7906d64a7cf89a9e41473830defb9a1221d003c31892dd857b07a8d858aa265fdd9785e068f103bc3877b4bbd747b31088d6bc9de605cfc9e07118b350d4aa42', '2010-10-24 14:39:53', 'RqQ4tE1GpleEROHRDq6N', 'username', 'T7vUoFHOpWHMeAuCycGZ', 'b834549ca1f3c2c25ba3c51bafa3fc366db8ba8cfbf00d8b39fdeb9aefc2cdf5e0633dfe9ec72f966256377fb691c93e8673a746fcc1f1704e4cce43841e888b', 'ad165b11320bc91501ab08613cc3a48a62a6caca4d5c8b14ca82cc313b3b96cd', 'email@fr.fr')[0m
+Sent mail to vauban@zeneffy.fr
+
+Date: Sun, 24 Oct 2010 16:39:53 +0200
+From: vauban@zeneffy.fr
+To: vauban@zeneffy.fr
+Subject: [Vauban.zeneffy.fr] New user!
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <h1>New user</h1>
+
+<p>Dear site administrator,</p>
+<p>
+You're lucky today, you've got a new user!
+</p>
+<p>
+<b>User</b>: username<br/>
+<b>User's email</b>: email@fr.fr<br/>
+<b>Registered at</b>: Sun Oct 24 16:39:53 +0200 2010
+</p>
+
+</body>
+</html>
+Redirected to http://127.0.0.1:3000/identities
+Completed in 241ms (DB: 1) | 302 Found [http://127.0.0.1/users]
+
+
+Processing IdentitiesController#index (for 127.0.0.1 at 2010-10-24 16:39:53) [GET]
+  Parameters: {"action"=>"index", "controller"=>"identities"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = 'b834549ca1f3c2c25ba3c51bafa3fc366db8ba8cfbf00d8b39fdeb9aefc2cdf5e0633dfe9ec72f966256377fb691c93e8673a746fcc1f1704e4cce43841e888b') LIMIT 1[0m
+  [4;35;1mIdentity Load (0.3ms)[0m   [0mSELECT * FROM "identities" WHERE ("identities".user_id = 35) ORDER BY name,created_at[0m
+Rendering template within layouts/application
+Rendering identities/index
+Completed in 32ms (View: 10, DB: 1) | 200 OK [http://127.0.0.1/identities]
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2010-10-24 16:39:53) [GET]
+  Parameters: {"action"=>"edit", "id"=>"current", "controller"=>"users"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = 'b834549ca1f3c2c25ba3c51bafa3fc366db8ba8cfbf00d8b39fdeb9aefc2cdf5e0633dfe9ec72f966256377fb691c93e8673a746fcc1f1704e4cce43841e888b') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/edit
+Completed in 32ms (View: 14, DB: 0) | 200 OK [http://127.0.0.1/users/current/edit]
+
+
+Processing UsersController#destroy (for 127.0.0.1 at 2010-10-24 16:39:54) [DELETE]
+  Parameters: {"action"=>"destroy", "_method"=>"delete", "authenticity_token"=>"KyERFhmFmsvJ+omnPygSFe1b7AC38W8LLr+cJYvKHL0=", "id"=>"delete", "controller"=>"users", "secretkey"=>"[FILTERED]"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."persistence_token" = 'b834549ca1f3c2c25ba3c51bafa3fc366db8ba8cfbf00d8b39fdeb9aefc2cdf5e0633dfe9ec72f966256377fb691c93e8673a746fcc1f1704e4cce43841e888b') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = 'b834549ca1f3c2c25ba3c51bafa3fc366db8ba8cfbf00d8b39fdeb9aefc2cdf5e0633dfe9ec72f966256377fb691c93e8673a746fcc1f1704e4cce43841e888b') LIMIT 1[0m
+  [4;35;1mIdentity Load (0.2ms)[0m   [0mSELECT * FROM "identities" WHERE ("identities".user_id = 35) [0m
+  [4;36;1mUser Destroy (0.2ms)[0m   [0;1mDELETE FROM "users" WHERE "id" = 35[0m
+Sent mail to email@fr.fr
+
+Date: Sun, 24 Oct 2010 16:39:54 +0200
+From: vauban@zeneffy.fr
+To: email@fr.fr
+Subject: Your vauban account has been successfully closed
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <h1>Your account has been deleted</h1>
+
+<p>
+  A request to delete your account has been made today - We confirm you that none of your identities has been kept and this is the last mail you will received from us.
+</p>
+<p>
+  Feel free to contact us at vauban@zeneffy.fr if you have any comment or feedbacks after using Vauban
+</p>
+
+<p>
+  The Vauban team
+</p>
+
+</body>
+</html>
+Sent mail to vauban@zeneffy.fr
+
+Date: Sun, 24 Oct 2010 16:39:54 +0200
+From: vauban@zeneffy.fr
+To: vauban@zeneffy.fr
+Subject: [Vauban.zeneffy.fr] You have lost an user :(
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <h1>Lost user</h1>
+
+<p>Dear site administrator,</p>
+<p>
+Sorry but an user deleted its account from Vauban today.
+</p>
+<p>
+<b>User</b>: username<br/>
+<b>User's email</b>: email@fr.fr<br/>
+<b>deleted at</b>: Sun Oct 24 16:39:54 +0200 2010
+</p>
+
+</body>
+</html>
+Redirected to http://127.0.0.1:3000/
+Completed in 114ms (DB: 1) | 302 Found [http://127.0.0.1/users/delete]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-24 16:39:54) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 18ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-24 16:39:54) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 96ms (View: 93, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-10-24 16:39:54) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+Completed in 23ms (View: 9, DB: 0) | 200 OK [http://127.0.0.1/users/new]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-10-24 16:39:55) [POST]
+  Parameters: {"commit"=>"Submit", "action"=>"create", "authenticity_token"=>"KyERFhmFmsvJ+omnPygSFe1b7AC38W8LLr+cJYvKHL0=", "controller"=>"users", "user"=>{"password_confirmation"=>"[FILTERED]", "username"=>"[FILTERED]", "secretkey_confirmation"=>"[FILTERED]", "secretkey"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>"email@fr.fr"}}
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'email@fr.fr') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'username') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '16eb0777348ab223faa38a65cd28bc67a5de35e7ebd9e5cbb02faf93551cad89ab7da6f954d0ae72f204fdb86bbbf6d938e300c69e222edf03f46860cbdc3edb') LIMIT 1[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO "users" ("created_at", "crypted_password", "updated_at", "perishable_token", "username", "password_salt", "persistence_token", "secretkey", "email") VALUES('2010-10-24 14:39:55', '94078d8095837bb9626872b015888f844fd1a311dda22b38bdf17980cf12908119efddf881bad26d4bf1625c3bc878420d495bbbddb14a2aead4c8886ad1304d', '2010-10-24 14:39:55', 'wpcKL1DiautNSbQDe6', 'username', 'PBkybGlRORqbVHR74jrc', '16eb0777348ab223faa38a65cd28bc67a5de35e7ebd9e5cbb02faf93551cad89ab7da6f954d0ae72f204fdb86bbbf6d938e300c69e222edf03f46860cbdc3edb', 'ad165b11320bc91501ab08613cc3a48a62a6caca4d5c8b14ca82cc313b3b96cd', 'email@fr.fr')[0m
+Sent mail to vauban@zeneffy.fr
+
+Date: Sun, 24 Oct 2010 16:39:55 +0200
+From: vauban@zeneffy.fr
+To: vauban@zeneffy.fr
+Subject: [Vauban.zeneffy.fr] New user!
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <h1>New user</h1>
+
+<p>Dear site administrator,</p>
+<p>
+You're lucky today, you've got a new user!
+</p>
+<p>
+<b>User</b>: username<br/>
+<b>User's email</b>: email@fr.fr<br/>
+<b>Registered at</b>: Sun Oct 24 16:39:55 +0200 2010
+</p>
+
+</body>
+</html>
+Redirected to http://127.0.0.1:3000/identities
+Completed in 35ms (DB: 0) | 302 Found [http://127.0.0.1/users]
+
+
+Processing IdentitiesController#index (for 127.0.0.1 at 2010-10-24 16:39:55) [GET]
+  Parameters: {"action"=>"index", "controller"=>"identities"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."persistence_token" = '16eb0777348ab223faa38a65cd28bc67a5de35e7ebd9e5cbb02faf93551cad89ab7da6f954d0ae72f204fdb86bbbf6d938e300c69e222edf03f46860cbdc3edb') LIMIT 1[0m
+  [4;36;1mIdentity Load (0.2ms)[0m   [0;1mSELECT * FROM "identities" WHERE ("identities".user_id = 36) ORDER BY name,created_at[0m
+Rendering template within layouts/application
+Rendering identities/index
+Completed in 26ms (View: 5, DB: 0) | 200 OK [http://127.0.0.1/identities]
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2010-10-24 16:39:55) [GET]
+  Parameters: {"action"=>"edit", "id"=>"current", "controller"=>"users"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."persistence_token" = '16eb0777348ab223faa38a65cd28bc67a5de35e7ebd9e5cbb02faf93551cad89ab7da6f954d0ae72f204fdb86bbbf6d938e300c69e222edf03f46860cbdc3edb') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/edit
+Completed in 27ms (View: 8, DB: 0) | 200 OK [http://127.0.0.1/users/current/edit]
+
+
+Processing UsersController#destroy (for 127.0.0.1 at 2010-10-24 16:39:56) [DELETE]
+  Parameters: {"action"=>"destroy", "_method"=>"delete", "authenticity_token"=>"KyERFhmFmsvJ+omnPygSFe1b7AC38W8LLr+cJYvKHL0=", "id"=>"delete", "controller"=>"users", "secretkey"=>"[FILTERED]"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = '16eb0777348ab223faa38a65cd28bc67a5de35e7ebd9e5cbb02faf93551cad89ab7da6f954d0ae72f204fdb86bbbf6d938e300c69e222edf03f46860cbdc3edb') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."persistence_token" = '16eb0777348ab223faa38a65cd28bc67a5de35e7ebd9e5cbb02faf93551cad89ab7da6f954d0ae72f204fdb86bbbf6d938e300c69e222edf03f46860cbdc3edb') LIMIT 1[0m
+  [4;36;1mIdentity Load (0.1ms)[0m   [0;1mSELECT * FROM "identities" WHERE ("identities".user_id = 36) [0m
+  [4;35;1mUser Destroy (0.2ms)[0m   [0mDELETE FROM "users" WHERE "id" = 36[0m
+Sent mail to email@fr.fr
+
+Date: Sun, 24 Oct 2010 16:39:56 +0200
+From: vauban@zeneffy.fr
+To: email@fr.fr
+Subject: Your vauban account has been successfully closed
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <h1>Your account has been deleted</h1>
+
+<p>
+  A request to delete your account has been made today - We confirm you that none of your identities has been kept and this is the last mail you will received from us.
+</p>
+<p>
+  Feel free to contact us at vauban@zeneffy.fr if you have any comment or feedbacks after using Vauban
+</p>
+
+<p>
+  The Vauban team
+</p>
+
+</body>
+</html>
+Sent mail to vauban@zeneffy.fr
+
+Date: Sun, 24 Oct 2010 16:39:56 +0200
+From: vauban@zeneffy.fr
+To: vauban@zeneffy.fr
+Subject: [Vauban.zeneffy.fr] You have lost an user :(
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <h1>Lost user</h1>
+
+<p>Dear site administrator,</p>
+<p>
+Sorry but an user deleted its account from Vauban today.
+</p>
+<p>
+<b>User</b>: username<br/>
+<b>User's email</b>: email@fr.fr<br/>
+<b>deleted at</b>: Sun Oct 24 16:39:56 +0200 2010
+</p>
+
+</body>
+</html>
+Redirected to http://127.0.0.1:3000/
+Completed in 108ms (DB: 1) | 302 Found [http://127.0.0.1/users/delete]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-24 16:39:56) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 24ms (View: 19, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-24 16:39:56) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 18ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-10-24 16:39:56) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 26ms (View: 11, DB: 0) | 200 OK [http://127.0.0.1/login]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-10-24 16:39:57) [POST]
+  Parameters: {"commit"=>"Submit", "user_session"=>{"username"=>"[FILTERED]", "password"=>"[FILTERED]"}, "action"=>"create", "authenticity_token"=>"KyERFhmFmsvJ+omnPygSFe1b7AC38W8LLr+cJYvKHL0=", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE (LOWER("users".username) = 'selenium') LIMIT 1[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-10-24 14:39:57', "perishable_token" = 'VeSt7gZHeIIEalLRwj' WHERE "id" = 14[0m
+Redirected to http://127.0.0.1:3000/identities
+Completed in 103ms (DB: 1) | 302 Found [http://127.0.0.1/user_sessions]
+
+
+Processing IdentitiesController#index (for 127.0.0.1 at 2010-10-24 16:39:57) [GET]
+  Parameters: {"action"=>"index", "controller"=>"identities"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '14') LIMIT 1[0m
+  [4;35;1mIdentity Load (0.2ms)[0m   [0mSELECT * FROM "identities" WHERE ("identities".user_id = 14) ORDER BY name,created_at[0m
+Rendering template within layouts/application
+Rendering identities/index
+Completed in 26ms (View: 5, DB: 0) | 200 OK [http://127.0.0.1/identities]
+
+
+Processing IdentitiesController#new (for 127.0.0.1 at 2010-10-24 16:39:57) [GET]
+  Parameters: {"action"=>"new", "controller"=>"identities"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '14') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering identities/new
+Completed in 114ms (View: 15, DB: 0) | 200 OK [http://127.0.0.1/identities/new]
+
+
+Processing IdentitiesController#create (for 127.0.0.1 at 2010-10-24 16:39:57) [POST]
+  Parameters: {"identity"=>{"comment"=>"comment", "name"=>"name", "url"=>"url", "password"=>"[FILTERED]", "login"=>"[FILTERED]"}, "commit"=>"Create", "action"=>"create", "authenticity_token"=>"KyERFhmFmsvJ+omnPygSFe1b7AC38W8LLr+cJYvKHL0=", "controller"=>"identities", "secretkey"=>"[FILTERED]"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '14') LIMIT 1[0m
+  [4;36;1mIdentity Create (0.2ms)[0m   [0;1mINSERT INTO "identities" ("name", "comment", "created_at", "updated_at", "url", "user_id", "login", "password") VALUES('name', 'comment', '2010-10-24 14:39:57', '2010-10-24 14:39:57', 'url', 14, 'gBDt1sLRnJ420kJJIJfdEw==
+', 'flF/IolhU0ELqQBk0zIoUA==
+')[0m
+Redirected to http://127.0.0.1:3000/identities
+Completed in 31ms (DB: 0) | 302 Found [http://127.0.0.1/identities]
+
+
+Processing IdentitiesController#index (for 127.0.0.1 at 2010-10-24 16:39:58) [GET]
+  Parameters: {"action"=>"index", "controller"=>"identities"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '14') LIMIT 1[0m
+  [4;36;1mIdentity Load (0.3ms)[0m   [0;1mSELECT * FROM "identities" WHERE ("identities".user_id = 14) ORDER BY name,created_at[0m
+Rendering template within layouts/application
+Rendering identities/index
+Completed in 36ms (View: 8, DB: 1) | 200 OK [http://127.0.0.1/identities]
+
+
+Processing IdentitiesController#edit (for 127.0.0.1 at 2010-10-24 16:39:58) [POST]
+  Parameters: {"action"=>"edit", "_method"=>"edit", "authenticity_token"=>"KyERFhmFmsvJ+omnPygSFe1b7AC38W8LLr+cJYvKHL0=", "id"=>"46", "controller"=>"identities", "secretkey"=>"[FILTERED]"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '14') LIMIT 1[0m
+  [4;36;1mIdentity Load (0.2ms)[0m   [0;1mSELECT * FROM "identities" WHERE ("identities"."id" = 46 AND ("identities".user_id = 14)) [0m
+Rendering template within layouts/application
+Rendering identities/edit
+Completed in 43ms (View: 17, DB: 0) | 200 OK [http://127.0.0.1/identities/edit]
+
+
+Processing IdentitiesController#destroy (for 127.0.0.1 at 2010-10-24 16:39:58) [DELETE]
+  Parameters: {"action"=>"destroy", "_method"=>"delete", "authenticity_token"=>"KyERFhmFmsvJ+omnPygSFe1b7AC38W8LLr+cJYvKHL0=", "id"=>"46", "controller"=>"identities"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '14') LIMIT 1[0m
+  [4;36;1mIdentity Load (0.2ms)[0m   [0;1mSELECT * FROM "identities" WHERE ("identities"."id" = 46 AND ("identities".user_id = 14)) [0m
+  [4;35;1mIdentity Destroy (0.1ms)[0m   [0mDELETE FROM "identities" WHERE "id" = 46[0m
+Redirected to http://127.0.0.1:3000/identities
+Completed in 26ms (DB: 1) | 302 Found [http://127.0.0.1/identities/46]
+
+
+Processing IdentitiesController#index (for 127.0.0.1 at 2010-10-24 16:39:58) [GET]
+  Parameters: {"action"=>"index", "controller"=>"identities"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '14') LIMIT 1[0m
+  [4;35;1mIdentity Load (0.2ms)[0m   [0mSELECT * FROM "identities" WHERE ("identities".user_id = 14) ORDER BY name,created_at[0m
+Rendering template within layouts/application
+Rendering identities/index
+Completed in 25ms (View: 5, DB: 0) | 200 OK [http://127.0.0.1/identities]
+
+
+Processing UserSessionsController#destroy (for 127.0.0.1 at 2010-10-24 16:39:59) [GET]
+  Parameters: {"action"=>"destroy", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '14') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '14') LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/
+Completed in 19ms (DB: 0) | 302 Found [http://127.0.0.1/logout]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-24 16:39:59) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 18ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-24 16:39:59) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 21ms (View: 19, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-10-24 16:39:59) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 95ms (View: 7, DB: 0) | 200 OK [http://127.0.0.1/login]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-10-24 16:40:00) [POST]
+  Parameters: {"commit"=>"Submit", "user_session"=>{"username"=>"[FILTERED]", "password"=>"[FILTERED]"}, "action"=>"create", "authenticity_token"=>"KyERFhmFmsvJ+omnPygSFe1b7AC38W8LLr+cJYvKHL0=", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE (LOWER("users".username) = 'selenium') LIMIT 1[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-10-24 14:40:00', "perishable_token" = '7eg8bh5gQBXlRO4nSe1' WHERE "id" = 14[0m
+Redirected to http://127.0.0.1:3000/identities
+Completed in 24ms (DB: 1) | 302 Found [http://127.0.0.1/user_sessions]
+
+
+Processing IdentitiesController#index (for 127.0.0.1 at 2010-10-24 16:40:00) [GET]
+  Parameters: {"action"=>"index", "controller"=>"identities"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '14') LIMIT 1[0m
+  [4;35;1mIdentity Load (0.2ms)[0m   [0mSELECT * FROM "identities" WHERE ("identities".user_id = 14) ORDER BY name,created_at[0m
+Rendering template within layouts/application
+Rendering identities/index
+Completed in 27ms (View: 5, DB: 0) | 200 OK [http://127.0.0.1/identities]
+
+
+Processing IdentitiesController#new (for 127.0.0.1 at 2010-10-24 16:40:00) [GET]
+  Parameters: {"action"=>"new", "controller"=>"identities"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '14') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering identities/new
+Completed in 31ms (View: 9, DB: 0) | 200 OK [http://127.0.0.1/identities/new]
+
+
+Processing IdentitiesController#create (for 127.0.0.1 at 2010-10-24 16:40:00) [POST]
+  Parameters: {"identity"=>{"comment"=>"comment", "name"=>"name", "url"=>"url", "password"=>"[FILTERED]", "login"=>"[FILTERED]"}, "commit"=>"Create", "action"=>"create", "authenticity_token"=>"KyERFhmFmsvJ+omnPygSFe1b7AC38W8LLr+cJYvKHL0=", "controller"=>"identities", "secretkey"=>"[FILTERED]"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '14') LIMIT 1[0m
+  [4;36;1mIdentity Create (0.2ms)[0m   [0;1mINSERT INTO "identities" ("name", "comment", "created_at", "updated_at", "url", "user_id", "login", "password") VALUES('name', 'comment', '2010-10-24 14:40:00', '2010-10-24 14:40:00', 'url', 14, 'gBDt1sLRnJ420kJJIJfdEw==
+', 'flF/IolhU0ELqQBk0zIoUA==
+')[0m
+Redirected to http://127.0.0.1:3000/identities
+Completed in 31ms (DB: 0) | 302 Found [http://127.0.0.1/identities]
+
+
+Processing IdentitiesController#index (for 127.0.0.1 at 2010-10-24 16:40:01) [GET]
+  Parameters: {"action"=>"index", "controller"=>"identities"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '14') LIMIT 1[0m
+  [4;36;1mIdentity Load (0.3ms)[0m   [0;1mSELECT * FROM "identities" WHERE ("identities".user_id = 14) ORDER BY name,created_at[0m
+Rendering template within layouts/application
+Rendering identities/index
+Completed in 29ms (View: 7, DB: 1) | 200 OK [http://127.0.0.1/identities]
+
+
+Processing IdentitiesController#edit (for 127.0.0.1 at 2010-10-24 16:40:01) [POST]
+  Parameters: {"action"=>"edit", "_method"=>"edit", "authenticity_token"=>"KyERFhmFmsvJ+omnPygSFe1b7AC38W8LLr+cJYvKHL0=", "id"=>"47", "controller"=>"identities", "secretkey"=>"[FILTERED]"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '14') LIMIT 1[0m
+  [4;36;1mIdentity Load (0.2ms)[0m   [0;1mSELECT * FROM "identities" WHERE ("identities"."id" = 47 AND ("identities".user_id = 14)) [0m
+Rendering template within layouts/application
+Rendering identities/edit
+Completed in 36ms (View: 10, DB: 0) | 200 OK [http://127.0.0.1/identities/edit]
+
+
+Processing IdentitiesController#update (for 127.0.0.1 at 2010-10-24 16:40:01) [PUT]
+  Parameters: {"identity"=>{"comment"=>"comment", "name"=>"another_name", "url"=>"url", "password"=>"[FILTERED]", "login"=>"[FILTERED]"}, "commit"=>"Update", "action"=>"update", "_method"=>"put", "authenticity_token"=>"KyERFhmFmsvJ+omnPygSFe1b7AC38W8LLr+cJYvKHL0=", "id"=>"47", "controller"=>"identities", "secretkey"=>"[FILTERED]"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '14') LIMIT 1[0m
+  [4;36;1mIdentity Load (0.2ms)[0m   [0;1mSELECT * FROM "identities" WHERE ("identities"."id" = 47 AND ("identities".user_id = 14)) [0m
+  [4;35;1mIdentity Update (0.2ms)[0m   [0mUPDATE "identities" SET "updated_at" = '2010-10-24 14:40:01', "name" = 'another_name' WHERE "id" = 47[0m
+Redirected to http://127.0.0.1:3000/identities
+Completed in 31ms (DB: 1) | 302 Found [http://127.0.0.1/identities/47]
+
+
+Processing IdentitiesController#index (for 127.0.0.1 at 2010-10-24 16:40:01) [GET]
+  Parameters: {"action"=>"index", "controller"=>"identities"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '14') LIMIT 1[0m
+  [4;35;1mIdentity Load (0.4ms)[0m   [0mSELECT * FROM "identities" WHERE ("identities".user_id = 14) ORDER BY name,created_at[0m
+Rendering template within layouts/application
+Rendering identities/index
+Completed in 33ms (View: 8, DB: 1) | 200 OK [http://127.0.0.1/identities]
+
+
+Processing IdentitiesController#edit (for 127.0.0.1 at 2010-10-24 16:40:02) [POST]
+  Parameters: {"action"=>"edit", "_method"=>"edit", "authenticity_token"=>"KyERFhmFmsvJ+omnPygSFe1b7AC38W8LLr+cJYvKHL0=", "id"=>"47", "controller"=>"identities", "secretkey"=>"[FILTERED]"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '14') LIMIT 1[0m
+  [4;35;1mIdentity Load (0.2ms)[0m   [0mSELECT * FROM "identities" WHERE ("identities"."id" = 47 AND ("identities".user_id = 14)) [0m
+Rendering template within layouts/application
+Rendering identities/edit
+Completed in 110ms (View: 85, DB: 0) | 200 OK [http://127.0.0.1/identities/edit]
+
+
+Processing IdentitiesController#destroy (for 127.0.0.1 at 2010-10-24 16:40:02) [DELETE]
+  Parameters: {"action"=>"destroy", "_method"=>"delete", "authenticity_token"=>"KyERFhmFmsvJ+omnPygSFe1b7AC38W8LLr+cJYvKHL0=", "id"=>"47", "controller"=>"identities"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '14') LIMIT 1[0m
+  [4;35;1mIdentity Load (0.2ms)[0m   [0mSELECT * FROM "identities" WHERE ("identities"."id" = 47 AND ("identities".user_id = 14)) [0m
+  [4;36;1mIdentity Destroy (0.1ms)[0m   [0;1mDELETE FROM "identities" WHERE "id" = 47[0m
+Redirected to http://127.0.0.1:3000/identities
+Completed in 24ms (DB: 1) | 302 Found [http://127.0.0.1/identities/47]
+
+
+Processing IdentitiesController#index (for 127.0.0.1 at 2010-10-24 16:40:02) [GET]
+  Parameters: {"action"=>"index", "controller"=>"identities"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '14') LIMIT 1[0m
+  [4;36;1mIdentity Load (0.1ms)[0m   [0;1mSELECT * FROM "identities" WHERE ("identities".user_id = 14) ORDER BY name,created_at[0m
+Rendering template within layouts/application
+Rendering identities/index
+Completed in 111ms (View: 5, DB: 0) | 200 OK [http://127.0.0.1/identities]
+
+
+Processing UserSessionsController#destroy (for 127.0.0.1 at 2010-10-24 16:40:03) [GET]
+  Parameters: {"action"=>"destroy", "controller"=>"user_sessions"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '14') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '14') LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/
+Completed in 21ms (DB: 0) | 302 Found [http://127.0.0.1/logout]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-24 16:40:03) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 18ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-24 16:40:03) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 21ms (View: 18, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-10-24 16:40:03) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 98ms (View: 8, DB: 0) | 200 OK [http://127.0.0.1/login]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-10-24 16:40:04) [POST]
+  Parameters: {"commit"=>"Submit", "user_session"=>{"username"=>"[FILTERED]", "password"=>"[FILTERED]"}, "action"=>"create", "authenticity_token"=>"KyERFhmFmsvJ+omnPygSFe1b7AC38W8LLr+cJYvKHL0=", "controller"=>"user_sessions"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE (LOWER("users".username) = 'selenium') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 41ms (View: 12, DB: 0) | 200 OK [http://127.0.0.1/user_sessions]
+
+
+Processing PasswordResetsController#new (for 127.0.0.1 at 2010-10-24 16:40:04) [GET]
+  Parameters: {"action"=>"new", "controller"=>"password_resets"}
+Rendering template within layouts/application
+Rendering password_resets/new
+Completed in 26ms (View: 10, DB: 0) | 200 OK [http://127.0.0.1/lostpassword]
+
+
+Processing PasswordResetsController#create (for 127.0.0.1 at 2010-10-24 16:40:04) [POST]
+  Parameters: {"commit"=>"Reset Password", "action"=>"create", "authenticity_token"=>"KyERFhmFmsvJ+omnPygSFe1b7AC38W8LLr+cJYvKHL0=", "controller"=>"password_resets", "email"=>"selenium@fr.nt"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" = 'selenium@fr.nt') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering password_resets/new
+Completed in 20ms (View: 5, DB: 0) | 200 OK [http://127.0.0.1/password_resets]
+
+
+Processing PasswordResetsController#create (for 127.0.0.1 at 2010-10-24 16:40:05) [POST]
+  Parameters: {"commit"=>"Reset Password", "action"=>"create", "authenticity_token"=>"KyERFhmFmsvJ+omnPygSFe1b7AC38W8LLr+cJYvKHL0=", "controller"=>"password_resets", "email"=>"selenium@fr.fr"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."email" = 'selenium@fr.fr') LIMIT 1[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-10-24 14:40:05', "perishable_token" = 'UN60Qq2pFUxxOAg0ZD' WHERE "id" = 14[0m
+Sent mail to selenium@fr.fr
+
+Date: Sun, 24 Oct 2010 16:40:05 +0200
+From: vauban@zeneffy.fr
+To: selenium@fr.fr
+Subject: Password Reset Instructions for Vauban
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <h1>Password Reset Instructions</h1>
+
+<p>
+  A request to reset your password has been made. If you did not make
+  this request, simply ignore this email. If you did make this
+  request, please follow the link below.
+</p>
+
+<a href="http://vauban.heroku.com/password_resets/UN60Qq2pFUxxOAg0ZD/edit">Reset Password!</a>
+
+<p>
+If the above URL does not work try copying and pasting it into your browser. If you continue to have problem please feel free to contact us at vauban@zeneffy.fr.
+</p>
+
+<p>
+  The Vauban team
+</p>
+
+</body>
+</html>
+Redirected to http://127.0.0.1:3000/
+Completed in 53ms (DB: 1) | 302 Found [http://127.0.0.1/password_resets]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-24 16:40:05) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 19ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-24 16:40:36) [GET]
+  Parameters: {"action"=>"index", "controller"=>"application"}
+Rendering template within layouts/application
+Rendering application/index
+Completed in 19ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/]
