@@ -87,3 +87,6 @@
             </tbody>
           </table>
 </div>
+<% if current_user.last_login_at %>
+  <p align="center">Your last login was <%= time_ago_in_words(current_user.last_login_at)%> ago from <%=current_user.last_login_ip%>.</p>
+<% end %>
